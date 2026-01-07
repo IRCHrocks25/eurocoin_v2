@@ -54,53 +54,125 @@ export function HeroSection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 px-4 md:px-0">
-          {/* Primary Button - Premium Gradient with Holographic Effect */}
+          {/* Early Access Button - Premium Style */}
           <button 
-            style={{ padding: '1.5rem 3rem' }}
-            className="w-full sm:w-auto flex items-center justify-center gap-4 rounded-full transition-all duration-500 ease-out text-base sm:text-lg md:text-xl font-semibold group relative overflow-hidden"
+            onClick={() => {
+              window.location.href = '/contact-us';
+            }}
+            className="group relative flex items-center justify-center gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 w-full sm:w-auto cursor-pointer"
+            style={{
+              fontFamily: 'ibrand, sans-serif',
+              fontSize: 'clamp(1rem, 1.3vw, 1.125rem)',
+              fontWeight: '700',
+              padding: '18px 36px',
+              minWidth: '240px',
+              background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%)',
+              border: '2px solid rgba(255, 255, 255, 0.8)',
+              backdropFilter: 'blur(20px)',
+              boxShadow: `
+                0 8px 32px rgba(0, 0, 0, 0.12),
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+                inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.05)
+              `,
+              color: '#000000',
+              position: 'relative'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = `
+                0 12px 48px rgba(0, 0, 0, 0.18),
+                0 0 0 2px rgba(255, 255, 255, 0.6) inset,
+                inset 0 1px 0 rgba(255, 255, 255, 1),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.08),
+                0 0 40px rgba(255, 255, 255, 0.3)
+              `;
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 1)';
+              e.currentTarget.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 100%)';
+              e.currentTarget.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = `
+                0 8px 32px rgba(0, 0, 0, 0.12),
+                0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+                inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.05)
+              `;
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.8)';
+              e.currentTarget.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%)';
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
           >
-            {/* Animated gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            
-            {/* Glow effect */}
-            <div className="absolute inset-0 blur-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 opacity-50 group-hover:opacity-75 transition-opacity duration-500 scale-105"></div>
-            
-            {/* Inner border highlight */}
-            <div className="absolute inset-[1px] bg-gradient-to-br from-white/20 to-transparent rounded-full opacity-60"></div>
-            
-            {/* Shimmer effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
-            
-            {/* Content */}
-            <span className="relative z-10 text-white drop-shadow-lg">Early Access Only</span>
-            <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300 relative z-10 text-white drop-shadow-lg" />
-            
-            {/* Pulsing ring on hover */}
-            <div className="absolute inset-0 rounded-full border-2 border-white/30 scale-100 group-hover:scale-110 opacity-100 group-hover:opacity-0 transition-all duration-500"></div>
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-in-out"></span>
+            <span className="relative z-10 flex items-center gap-3" style={{ letterSpacing: '0.02em', color: '#000000', fontWeight: '700' }}>
+              Early Access Only
+              <div className="relative z-10 flex items-center justify-center rounded-full bg-gradient-to-br from-gray-900 to-black transition-all duration-300 group-hover:scale-110" style={{
+                width: '38px',
+                height: '38px',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.3)',
+                border: '1.5px solid rgba(255, 255, 255, 0.1)'
+              }}>
+                <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.8', stroke: 'white', fill: 'none' }} />
+              </div>
+            </span>
           </button>
 
-          {/* Secondary Button - Modern Glass with Gradient Border */}
+          {/* Schedule Demo Button - Premium Style */}
           <button 
-            style={{ padding: '1.5rem 3rem' }}
-            className="w-full sm:w-auto flex items-center justify-center gap-4 rounded-full transition-all duration-500 ease-out text-base sm:text-lg md:text-xl font-semibold group relative overflow-hidden backdrop-blur-xl"
+            onClick={() => {
+              window.location.href = '/contact-us';
+            }}
+            className="group relative flex items-center justify-center gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 w-full sm:w-auto cursor-pointer"
+            style={{
+              fontFamily: 'ibrand, sans-serif',
+              fontSize: 'clamp(1rem, 1.3vw, 1.125rem)',
+              fontWeight: '700',
+              padding: '18px 36px',
+              minWidth: '240px',
+              background: 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)',
+              border: '2px solid rgba(148, 190, 252, 0.5)',
+              backdropFilter: 'blur(20px)',
+              boxShadow: `
+                0 8px 32px rgba(148, 190, 252, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                0 2px 8px rgba(0, 0, 0, 0.2)
+              `,
+              color: '#FFFFFF',
+              position: 'relative'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = `
+                0 12px 48px rgba(148, 190, 252, 0.5),
+                0 0 0 2px rgba(255, 255, 255, 0.2) inset,
+                0 4px 16px rgba(0, 0, 0, 0.3),
+                0 0 60px rgba(148, 190, 252, 0.4)
+              `;
+              e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.8)';
+              e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.35) 0%, rgba(91, 159, 255, 0.4) 50%, rgba(148, 190, 252, 0.35) 100%)';
+              e.currentTarget.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = `
+                0 8px 32px rgba(148, 190, 252, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                0 2px 8px rgba(0, 0, 0, 0.2)
+              `;
+              e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.5)';
+              e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)';
+              e.currentTarget.style.transform = 'scale(1)';
+            }}
           >
-            {/* Gradient border effect */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute inset-[2px] rounded-full bg-black/40 group-hover:bg-black/30 transition-colors duration-500"></div>
-            
-            {/* Glow effect */}
-            <div className="absolute inset-0 blur-md bg-gradient-to-r from-cyan-400/30 via-blue-500/30 to-purple-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 scale-105"></div>
-            
-            {/* Inner gradient on hover */}
-            <div className="absolute inset-[2px] rounded-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            
-            {/* Shimmer effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
-            
-            {/* Content */}
-            <span className="relative z-10 text-white drop-shadow-lg">DEMO</span>
-            <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7 group-hover:translate-x-2 transition-transform duration-300 relative z-10 text-white drop-shadow-lg" />
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000"></span>
+            <span className="relative z-10 flex items-center gap-3 text-white font-medium" style={{ fontFamily: 'ibrand, sans-serif', letterSpacing: '0.02em', textShadow: '0 1px 2px rgba(0,0,0,0.1)' }}>
+              Schedule a Demo
+              <div className="relative z-10 flex items-center justify-center rounded-full bg-gradient-to-br from-white to-gray-100 transition-all duration-300 group-hover:scale-110" style={{
+                width: '38px',
+                height: '38px',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.1)',
+                border: '1.5px solid rgba(0, 0, 0, 0.1)'
+              }}>
+                <ArrowRight className="w-5 h-5 text-[#0a0e27] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.8', stroke: '#0a0e27', fill: 'none' }} />
+              </div>
+            </span>
           </button>
         </div>
       </div>

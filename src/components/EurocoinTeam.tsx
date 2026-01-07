@@ -17,7 +17,7 @@ export function EurocoinTeam() {
       
       {/* Hero Section */}
       <section 
-        className="pt-48 pb-40 px-6 md:px-12 lg:px-24 relative min-h-[900px] flex items-center"
+        className="pt-48 pb-40 relative min-h-[900px] flex items-center justify-center"
         style={{
           backgroundImage: `linear-gradient(to bottom, transparent 70%, rgba(10, 14, 39, 0.8) 90%, rgba(10, 14, 39, 1) 100%), url(${heroBgImage})`,
           backgroundSize: 'cover',
@@ -25,15 +25,8 @@ export function EurocoinTeam() {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div 
-          className="max-w-6xl text-center relative z-10 w-full"
-          style={{
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            paddingLeft: '24px',
-            paddingRight: '24px'
-          }}
-        >
+        <div className="w-full flex justify-center relative z-10">
+          <div className="w-full max-w-6xl mx-auto px-4 md:px-8 lg:px-12 text-center">
           {/* Main Heading */}
           <h1 
             className="mb-8"
@@ -79,41 +72,142 @@ export function EurocoinTeam() {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" style={{ marginTop: '40px' }}>
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center" style={{ marginTop: '40px' }}>
+            {/* Request Early Access Button */}
             <button 
-              className="flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="group relative flex items-center justify-center gap-3 rounded-full transition-all duration-500 ease-out overflow-hidden w-full sm:w-auto"
               style={{
                 fontFamily: 'ibrand, sans-serif',
-                fontSize: 'clamp(14px, 2vw, 16px)',
-                backgroundColor: '#FFFFFF',
+                fontSize: 'clamp(1rem, 1.3vw, 1.125rem)',
+                fontWeight: '700',
+                padding: '18px 36px',
+                cursor: 'pointer',
+                minWidth: '240px',
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%)',
+                border: '2px solid rgba(0, 0, 0, 0.1)',
+                backdropFilter: 'blur(20px)',
+                boxShadow: `
+                  0 6px 24px rgba(0, 0, 0, 0.1),
+                  0 0 0 1px rgba(255, 255, 255, 0.6) inset,
+                  inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.05)
+                `,
                 color: '#000000',
-                border: '2px solid #000000'
+                position: 'relative'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = `
+                  0 10px 36px rgba(0, 0, 0, 0.15),
+                  0 0 0 2px rgba(255, 255, 255, 0.7) inset,
+                  inset 0 1px 0 rgba(255, 255, 255, 1),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.08),
+                  0 0 30px rgba(255, 255, 255, 0.2)
+                `;
+                e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.15)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.98) 100%)';
+                e.currentTarget.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = `
+                  0 6px 24px rgba(0, 0, 0, 0.1),
+                  0 0 0 1px rgba(255, 255, 255, 0.6) inset,
+                  inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.05)
+                `;
+                e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%)';
+                e.currentTarget.style.transform = 'scale(1)';
               }}
             >
-              Request Early Access
-              <ArrowRight className="w-5 h-5" />
+              {/* Shimmer effect */}
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-in-out"></span>
+              
+              {/* Content */}
+              <span className="relative z-10 flex items-center gap-3" style={{ letterSpacing: '0.02em', color: '#000000', fontWeight: '700' }}>
+                Request Early Access
+                <div className="relative z-10 flex items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:scale-110" style={{ 
+                  width: '38px', 
+                  height: '38px',
+                  boxShadow: '0 3px 10px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(0, 0, 0, 0.05)',
+                  border: '2px solid rgba(0, 0, 0, 0.2)'
+                }}>
+                  <ArrowRight className="w-5 h-5 text-[#333333] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '3', stroke: '#333333', fill: 'none' }} />
+                </div>
+              </span>
             </button>
             
+            {/* Schedule a Demo Button */}
             <button 
-              className="flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="group relative flex items-center justify-center gap-3 rounded-full transition-all duration-500 ease-out overflow-hidden w-full sm:w-auto"
               style={{
                 fontFamily: 'ibrand, sans-serif',
-                fontSize: 'clamp(14px, 2vw, 16px)',
-                backgroundColor: 'transparent',
-                color: '#5B9FFF',
-                border: '2px solid #5B9FFF'
+                fontSize: 'clamp(1rem, 1.3vw, 1.125rem)',
+                fontWeight: '700',
+                padding: '18px 36px',
+                cursor: 'pointer',
+                minWidth: '240px',
+                background: 'linear-gradient(135deg, rgba(91, 159, 255, 0.95) 0%, rgba(74, 143, 232, 0.98) 100%)',
+                border: '2px solid rgba(91, 159, 255, 0.7)',
+                backdropFilter: 'blur(20px)',
+                boxShadow: `
+                  0 6px 24px rgba(91, 159, 255, 0.35),
+                  0 0 0 1px rgba(255, 255, 255, 0.25) inset,
+                  inset 0 1px 0 rgba(255, 255, 255, 0.35),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.2),
+                  0 0 25px rgba(91, 159, 255, 0.25)
+                `,
+                color: '#FFFFFF',
+                position: 'relative'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = `
+                  0 10px 36px rgba(91, 159, 255, 0.5),
+                  0 0 0 2px rgba(255, 255, 255, 0.35) inset,
+                  inset 0 1px 0 rgba(255, 255, 255, 0.45),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.15),
+                  0 0 40px rgba(91, 159, 255, 0.4)
+                `;
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(107, 175, 255, 0.98) 0%, rgba(90, 159, 248, 1) 100%)';
+                e.currentTarget.style.borderColor = 'rgba(91, 159, 255, 0.9)';
+                e.currentTarget.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = `
+                  0 6px 24px rgba(91, 159, 255, 0.35),
+                  0 0 0 1px rgba(255, 255, 255, 0.25) inset,
+                  inset 0 1px 0 rgba(255, 255, 255, 0.35),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.2),
+                  0 0 25px rgba(91, 159, 255, 0.25)
+                `;
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(91, 159, 255, 0.95) 0%, rgba(74, 143, 232, 0.98) 100%)';
+                e.currentTarget.style.borderColor = 'rgba(91, 159, 255, 0.7)';
+                e.currentTarget.style.transform = 'scale(1)';
               }}
             >
-              Schedule a Demo
-              <ArrowRight className="w-5 h-5" />
+              {/* Shimmer effect */}
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-in-out"></span>
+              
+              {/* Content */}
+              <span className="relative z-10 flex items-center gap-3" style={{ letterSpacing: '0.02em', color: '#FFFFFF', fontWeight: '700', textShadow: '0 2px 6px rgba(0, 0, 0, 0.3)' }}>
+                Schedule a Demo
+                <div className="relative z-10 flex items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:scale-110" style={{ 
+                  width: '38px', 
+                  height: '38px',
+                  boxShadow: '0 3px 10px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(0, 0, 0, 0.05)',
+                  border: '2px solid rgba(0, 0, 0, 0.15)'
+                }}>
+                  <ArrowRight className="w-5 h-5 text-[#000000] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '3', stroke: '#000000', fill: '#000000' }} />
+                </div>
+              </span>
             </button>
+          </div>
           </div>
         </div>
       </section>
 
       {/* Leadership Team Section */}
       <section 
-        className="px-6 md:px-12 lg:px-24 relative overflow-hidden"
+        className="relative overflow-hidden flex justify-center"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(10, 14, 39, 1) 0%, rgba(10, 14, 39, 0.7) 10%, transparent 20%), url(${teamBgImage})`,
           backgroundSize: 'cover',
@@ -121,10 +215,10 @@ export function EurocoinTeam() {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10">
           {/* Section Header */}
           <h2 
-            className="md:translate-x-[80px]"
+            className="text-center"
             style={{
               fontFamily: 'Poppins, sans-serif',
               fontSize: 'clamp(28px, 5vw, 42px)',
@@ -143,7 +237,7 @@ export function EurocoinTeam() {
             <img 
               src={profilesImage}
               alt="Leadership Team"
-              className="max-w-full md:max-w-6xl w-full mx-auto md:translate-x-[80px]"
+              className="max-w-full md:max-w-6xl w-full mx-auto"
               style={{ 
                 objectFit: 'contain',
                 display: 'block',
@@ -156,7 +250,7 @@ export function EurocoinTeam() {
 
       {/* Structure for Leadership Section */}
       <section 
-        className="py-16 md:py-32 px-6 md:px-12 lg:px-24 relative overflow-hidden"
+        className="py-16 md:py-32 relative overflow-hidden flex justify-center"
         style={{
           backgroundImage: `url(${structureBgImage})`,
           backgroundSize: 'cover',
@@ -166,7 +260,7 @@ export function EurocoinTeam() {
           paddingBottom: '120px'
         }}
       >
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 
@@ -199,7 +293,7 @@ export function EurocoinTeam() {
               <img 
                 src={coinImage}
                 alt="Eurocoin"
-                className="lg:translate-x-[140px]"
+                className=""
                 style={{
                   maxWidth: '320px',
                   width: '100%',
@@ -324,7 +418,7 @@ export function EurocoinTeam() {
 
       {/* Trust. Driven by Purpose Section */}
       <section 
-        className="py-16 md:py-32 px-6 md:px-12 lg:px-24 relative overflow-hidden"
+        className="py-16 md:py-32 relative overflow-hidden flex justify-center"
         style={{
           backgroundImage: `url(${earthBgImage})`,
           backgroundSize: 'cover',
@@ -335,7 +429,7 @@ export function EurocoinTeam() {
           paddingBottom: '120px'
         }}
       >
-        <div className="max-w-5xl text-center relative z-10 md:translate-x-[60px] md:-translate-y-[20px] w-full" style={{ marginLeft: 'auto', marginRight: 'auto', padding: '0 24px' }}>
+        <div className="w-full max-w-5xl mx-auto px-4 md:px-8 lg:px-12 text-center relative z-10">
           {/* Main Heading */}
           <h2 
             style={{
@@ -379,27 +473,55 @@ export function EurocoinTeam() {
           {/* Contact Us Button */}
           <div className="flex justify-center">
             <button 
-              className="flex items-center gap-3 px-12 py-5 rounded-full transition-all duration-300 hover:scale-105"
+              className="group relative flex items-center justify-center gap-5 px-14 md:px-24 py-6 md:py-7 rounded-full overflow-hidden transition-all duration-500 hover:scale-105"
               style={{
                 fontFamily: 'ibrand, sans-serif',
                 fontSize: 'clamp(18px, 2.5vw, 22px)',
-                backgroundColor: '#B8D4F1',
-                color: '#000000',
+                background: 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)',
+                border: '2px solid rgba(148, 190, 252, 0.5)',
+                backdropFilter: 'blur(20px)',
+                boxShadow: `
+                  0 8px 32px rgba(148, 190, 252, 0.3),
+                  0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                  0 2px 8px rgba(0, 0, 0, 0.2)
+                `,
+                color: '#FFFFFF',
                 fontWeight: '600',
-                boxShadow: '0 0 40px rgba(184, 212, 241, 0.3)'
+                letterSpacing: '0.5px',
+                position: 'relative'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = `
+                  0 12px 48px rgba(148, 190, 252, 0.5),
+                  0 0 0 2px rgba(255, 255, 255, 0.2) inset,
+                  0 4px 16px rgba(0, 0, 0, 0.3),
+                  0 0 60px rgba(148, 190, 252, 0.4)
+                `;
+                e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.8)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.35) 0%, rgba(91, 159, 255, 0.4) 50%, rgba(148, 190, 252, 0.35) 100%)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = `
+                  0 8px 32px rgba(148, 190, 252, 0.3),
+                  0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                  0 2px 8px rgba(0, 0, 0, 0.2)
+                `;
+                e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.5)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)';
               }}
             >
-              Contact Us
+              <span className="relative z-10" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)', marginLeft: '8px' }}>Contact Us</span>
               <div 
-                className="flex items-center justify-center rounded-full"
+                className="relative z-10 flex items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:scale-110"
                 style={{
-                  backgroundColor: '#000000',
-                  width: '40px',
-                  height: '40px'
+                  width: '42px',
+                  height: '42px',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)'
                 }}
               >
-                <ArrowRight className="w-6 h-6" style={{ color: '#FFFFFF' }} />
+                <ArrowRight className="w-6 h-6 text-black group-hover:translate-x-1 transition-transform duration-300" />
               </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-700"></div>
             </button>
           </div>
         </div>

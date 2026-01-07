@@ -25,7 +25,7 @@ export function PartnersAndIntegrations() {
       
       {/* Hero Section with Background Effects */}
       <section 
-        className="pt-32 px-6 md:px-12 lg:px-24 relative overflow-hidden min-h-screen flex items-center"
+        className="pt-32 px-4 md:px-8 lg:px-12 relative overflow-hidden min-h-screen flex items-center justify-center"
         style={{
           backgroundImage: `url(${heroBackground})`,
           backgroundSize: 'cover',
@@ -37,7 +37,7 @@ export function PartnersAndIntegrations() {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#020219]/60 via-[#020219]/40 to-[#020219]/80 pointer-events-none"></div>
 
-        <div className="max-w-[1440px] mx-auto text-center relative z-10 w-full px-12 md:px-16 lg:px-24">
+        <div className="w-full max-w-[1440px] mx-auto text-center relative z-10 px-4 md:px-8 lg:px-12">
           {/* Badge */}
           <div className="inline-flex items-center px-5 py-2 rounded-full mb-12" style={{
             background: 'rgba(255, 255, 255, 0.05)',
@@ -119,7 +119,7 @@ export function PartnersAndIntegrations() {
 
       {/* Two Image Cards Section */}
       <section 
-        className="py-40 px-6 md:px-12 lg:px-24 relative overflow-hidden" 
+        className="py-40 px-4 md:px-8 lg:px-12 relative overflow-hidden flex items-center justify-center" 
         style={{
           backgroundImage: `url(${cardsBgImage})`,
           backgroundSize: 'cover',
@@ -130,8 +130,9 @@ export function PartnersAndIntegrations() {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#5646D4]/80 via-[#0D0042]/70 to-[#01010C]/90 pointer-events-none"></div>
 
-        <div className="max-w-[1440px] mx-auto px-12 md:px-16 lg:px-24 relative z-10" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto translate-x-48">
+        <div className="w-full flex justify-center relative z-10" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
+          <div className="w-full max-w-[1200px] px-4 md:px-8 lg:px-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Card 1 - Powering New Financial Ecosystem */}
             <div className="rounded-[24px] overflow-hidden shadow-2xl">
               {/* Image with Overlay */}
@@ -222,13 +223,14 @@ export function PartnersAndIntegrations() {
                 </p>
               </div>
             </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Accordion Section */}
       <section 
-        className="py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden" 
+        className="py-24 px-4 md:px-8 lg:px-12 relative overflow-hidden flex items-center justify-center" 
         style={{
           backgroundImage: `url(${accordionBgImage})`,
           backgroundSize: 'cover',
@@ -238,7 +240,7 @@ export function PartnersAndIntegrations() {
           paddingBottom: '120px'
         }}
       >
-        <div className="max-w-5xl mx-auto space-y-6 px-8 md:px-12 translate-x-48">
+        <div className="w-full max-w-5xl mx-auto space-y-6 px-4 md:px-8">
           
           {/* Enterprise Adoption & Industry Leaders */}
           <div 
@@ -561,7 +563,7 @@ export function PartnersAndIntegrations() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden flex items-center justify-center">
         {/* Background Image */}
         <div 
           className="absolute inset-0"
@@ -573,8 +575,8 @@ export function PartnersAndIntegrations() {
           }}
         />
 
-        <div className="relative z-10 py-48 md:py-64 px-6 md:px-12 lg:px-24">
-          <div className="max-w-[1400px] mx-auto text-center" style={{ paddingTop: '150px', paddingBottom: '150px' }}>
+        <div className="relative z-10 w-full py-48 md:py-64 px-4 md:px-8 lg:px-12 flex items-center justify-center">
+          <div className="w-full max-w-[1400px] mx-auto text-center" style={{ paddingTop: '150px', paddingBottom: '150px' }}>
             {/* Main Heading */}
             <h2 style={{
               fontFamily: 'ibrand, sans-serif',
@@ -606,42 +608,125 @@ export function PartnersAndIntegrations() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               {/* Primary Button - Contact Us */}
-              <button 
-                className="group flex items-center justify-center gap-3 px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
+              <button
+                onClick={() => {
+                  window.location.href = '/contact-us';
+                }}
+                className="group relative flex items-center justify-center gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 w-full sm:w-auto"
                 style={{
-                  background: 'linear-gradient(135deg, #A5BFFF 0%, #94BEFC 100%)',
-                  boxShadow: '0 8px 24px rgba(148, 190, 252, 0.3)'
+                  fontFamily: 'ibrand, sans-serif',
+                  fontSize: 'clamp(1rem, 1.3vw, 1.125rem)',
+                  fontWeight: '700',
+                  padding: '18px 36px',
+                  cursor: 'pointer',
+                  minWidth: '240px',
+                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%)',
+                  border: '2px solid rgba(255, 255, 255, 0.8)',
+                  backdropFilter: 'blur(20px)',
+                  boxShadow: `
+                    0 8px 32px rgba(0, 0, 0, 0.12),
+                    0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+                    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                    inset 0 -1px 0 rgba(0, 0, 0, 0.05)
+                  `,
+                  color: '#000000',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = `
+                    0 12px 48px rgba(0, 0, 0, 0.18),
+                    0 0 0 2px rgba(255, 255, 255, 0.6) inset,
+                    inset 0 1px 0 rgba(255, 255, 255, 1),
+                    inset 0 -1px 0 rgba(0, 0, 0, 0.08),
+                    0 0 40px rgba(255, 255, 255, 0.3)
+                  `;
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 1)';
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 100%)';
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = `
+                    0 8px 32px rgba(0, 0, 0, 0.12),
+                    0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+                    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                    inset 0 -1px 0 rgba(0, 0, 0, 0.05)
+                  `;
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.8)';
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%)';
+                  e.currentTarget.style.transform = 'scale(1)';
                 }}
               >
-                <span style={{
-                  fontFamily: 'Manrope, sans-serif',
-                  fontSize: '16px',
-                  fontWeight: '600',
-                  color: '#020219'
-                }}>
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-in-out"></span>
+                <span className="relative z-10 flex items-center gap-3" style={{ letterSpacing: '0.02em', color: '#000000', fontWeight: '700' }}>
                   Contact Us for Onboarding
+                  <div className="relative z-10 flex items-center justify-center rounded-full bg-gradient-to-br from-gray-900 to-black transition-all duration-300 group-hover:scale-110" style={{
+                    width: '38px',
+                    height: '38px',
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.3)',
+                    border: '1.5px solid rgba(255, 255, 255, 0.1)'
+                  }}>
+                    <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.8', stroke: 'white', fill: 'none' }} />
+                  </div>
                 </span>
-                <ArrowRight className="w-5 h-5 text-[#020219] group-hover:translate-x-1 transition-transform duration-300" />
               </button>
 
               {/* Secondary Button - View Documentation */}
-              <button 
-                className="group flex items-center justify-center px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
+              <button
+                onClick={() => {
+                  window.open('#', '_blank');
+                }}
+                className="group relative flex items-center justify-center gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 w-full sm:w-auto"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  backdropFilter: 'blur(10px)'
+                  fontFamily: 'ibrand, sans-serif',
+                  fontSize: 'clamp(1rem, 1.3vw, 1.125rem)',
+                  fontWeight: '700',
+                  padding: '18px 36px',
+                  cursor: 'pointer',
+                  minWidth: '240px',
+                  background: 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)',
+                  border: '2px solid rgba(148, 190, 252, 0.5)',
+                  backdropFilter: 'blur(20px)',
+                  boxShadow: `
+                    0 8px 32px rgba(148, 190, 252, 0.3),
+                    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                    0 2px 8px rgba(0, 0, 0, 0.2)
+                  `,
+                  color: '#FFFFFF',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = `
+                    0 12px 48px rgba(148, 190, 252, 0.5),
+                    0 0 0 2px rgba(255, 255, 255, 0.2) inset,
+                    0 4px 16px rgba(0, 0, 0, 0.3),
+                    0 0 60px rgba(148, 190, 252, 0.4)
+                  `;
+                  e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.8)';
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.35) 0%, rgba(91, 159, 255, 0.4) 50%, rgba(148, 190, 252, 0.35) 100%)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = `
+                    0 8px 32px rgba(148, 190, 252, 0.3),
+                    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                    0 2px 8px rgba(0, 0, 0, 0.2)
+                  `;
+                  e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.5)';
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)';
                 }}
               >
-                <span style={{
-                  fontFamily: 'Manrope, sans-serif',
-                  fontSize: '16px',
-                  fontWeight: '600',
-                  color: '#FFFFFF'
-                }}>
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000"></span>
+                <span className="relative z-10 flex items-center gap-3 text-white font-medium" style={{ fontFamily: 'ibrand, sans-serif', letterSpacing: '0.02em', textShadow: '0 1px 2px rgba(0,0,0,0.1)' }}>
                   View Documentation
+                  <div className="relative z-10 flex items-center justify-center rounded-full bg-gradient-to-br from-white to-gray-100 transition-all duration-300 group-hover:scale-110" style={{
+                    width: '38px',
+                    height: '38px',
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.1)',
+                    border: '1.5px solid rgba(0, 0, 0, 0.1)'
+                  }}>
+                    <ArrowRight className="w-5 h-5 text-[#0a0e27] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.8', stroke: '#0a0e27', fill: 'none' }} />
+                  </div>
                 </span>
               </button>
             </div>

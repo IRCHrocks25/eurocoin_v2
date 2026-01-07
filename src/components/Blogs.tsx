@@ -1,5 +1,6 @@
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { Link } from 'react-router';
 import blogsBg from 'figma:asset/a1c5190388a6ec68c52884ec6b432334310e83fc.png';
 import cardBg from 'figma:asset/2d26682965662b7f8dbe12fe6eca500f40ae0635.png';
 import whyFollowBg from 'figma:asset/b9af2b82f68755636199483448497671bb80c99f.png';
@@ -48,37 +49,38 @@ export function Blogs() {
       
       {/* Hero Section with original background */}
       <section 
-        className="pt-32 pb-20"
+        className="pt-32 pb-20 flex items-center justify-center"
         style={{
           backgroundImage: `url(${blogsBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           paddingTop: '8rem',
-          paddingBottom: '8rem'
+          paddingBottom: '8rem',
+          minHeight: '600px'
         }}
       >
-        <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6" style={{ marginLeft: 'calc(50% + 2rem)', transform: 'translateX(-50%)' }}>
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-4 md:px-6">
           {/* Hero Section */}
-          <div className="text-center">
+          <div className="text-center w-full flex flex-col items-center">
             {/* Our Blogs Label */}
             <div className="mb-8">
-              <span className="px-6 py-2 border border-white/30 rounded-full text-white/80 text-sm md:text-base">
+              <span className="px-6 py-2 border border-white/30 rounded-full text-white/80 text-sm md:text-base inline-block">
                 Our Blogs
               </span>
             </div>
             
             {/* Main Heading */}
-            <h1 className="text-white mb-8" style={{ fontSize: 'clamp(32px, 5vw, 56px)', lineHeight: '1.2' }}>
+            <h1 className="text-white w-full" style={{ fontSize: 'clamp(32px, 5vw, 56px)', lineHeight: '1.2', marginBottom: '2rem' }}>
               Stay Ahead with Eurocoin
             </h1>
             
             {/* Description Paragraphs */}
-            <div className="max-w-4xl mx-auto space-y-4">
-              <p className="text-white/70 text-center" style={{ fontSize: 'clamp(16px, 2vw, 20px)', lineHeight: '1.6', marginTop: '3rem' }}>
+            <div className="max-w-4xl mx-auto w-full">
+              <p className="text-white/70 text-center" style={{ fontSize: 'clamp(16px, 2vw, 20px)', lineHeight: '1.6', marginBottom: '2rem', marginLeft: 'auto', marginRight: 'auto' }}>
                 As Europe's digital finance landscape evolves, Eurocoin is at the center defining best practices, sharing regulatory updates, and spotlighting the technology shaping the next generation of money.
               </p>
-              <p className="text-white/70 text-center" style={{ fontSize: 'clamp(16px, 2vw, 20px)', lineHeight: '1.6', marginTop: '3rem' }}>
+              <p className="text-white/70 text-center" style={{ fontSize: 'clamp(16px, 2vw, 20px)', lineHeight: '1.6', marginLeft: 'auto', marginRight: 'auto' }}>
                 Our blog and news section is your go-to source for the latest on MiCA compliance, stablecoin innovation, digital euro strategy, and more.
               </p>
             </div>
@@ -98,53 +100,91 @@ export function Blogs() {
           paddingBottom: '6rem'
         }}
       >
-        <div className="w-full max-w-[1100px] px-4 md:px-8">
+        <div className="w-full max-w-[1100px] mx-auto px-4 md:px-8 flex flex-col items-center">
           {/* Section Title */}
-          <h2 className="text-white/40 text-center mb-12 pb-8" style={{ fontSize: 'clamp(28px, 4vw, 42px)', lineHeight: '1.2', marginTop: '-2rem' }}>
+          <h2 className="text-white text-center w-full" style={{ 
+            fontSize: 'clamp(28px, 4vw, 42px)', 
+            lineHeight: '1.2', 
+            marginTop: '-2rem',
+            marginBottom: '4rem',
+            paddingBottom: '2rem',
+            fontWeight: '600',
+            textShadow: `
+              0 0 20px rgba(255, 255, 255, 0.5),
+              0 0 40px rgba(165, 191, 255, 0.4),
+              0 0 60px rgba(111, 75, 255, 0.3),
+              0 2px 4px rgba(0, 0, 0, 0.3)
+            `,
+            color: 'rgba(255, 255, 255, 0.95)'
+          }}>
             Articles & Executive Thought Leadership
           </h2>
           
           {/* Blog Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center w-full">
             {blogPosts.map((post, index) => (
               <div 
                 key={index} 
-                className="rounded-3xl overflow-hidden transition-all duration-300 backdrop-blur-sm w-full max-w-[320px]"
+                className="rounded-3xl overflow-hidden transition-all duration-300 backdrop-blur-sm w-full max-w-[380px] hover:scale-105 hover:shadow-2xl"
                 style={{
-                  background: 'linear-gradient(135deg, #A5BFFF 0%, #6F4BFF 50%, #0D0042 100%)',
-                  border: '2px solid rgba(139, 92, 246, 0.5)',
-                  boxShadow: '0 0 30px rgba(139, 92, 246, 0.4)',
-                  height: '400px',
+                  background: 'linear-gradient(135deg, rgba(165, 191, 255, 0.95) 0%, rgba(111, 75, 255, 0.95) 50%, rgba(13, 0, 66, 0.98) 100%)',
+                  border: '2px solid rgba(255, 255, 255, 0.3)',
+                  boxShadow: '0 10px 40px rgba(139, 92, 246, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
+                  minHeight: '500px',
                   display: 'flex',
                   flexDirection: 'column'
                 }}
               >
                 {/* Image */}
-                <div className="overflow-hidden" style={{ flexShrink: 0 }}>
+                <div className="overflow-hidden relative" style={{ flexShrink: 0, height: '180px' }}>
                   <img 
                     src={post.image} 
                     alt={post.title} 
-                    className="w-full h-40 object-cover"
+                    className="w-full h-full object-cover"
                   />
+                  {/* Overlay for better text contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40"></div>
                 </div>
                 
                 {/* Content */}
-                <div className="p-5" style={{ flex: 1, display: 'flex', flexDirection: 'column', paddingBottom: '1.5rem' }}>
+                <div className="p-7 flex-1 flex flex-col" style={{ paddingBottom: '2rem', background: 'rgba(0, 0, 0, 0.2)' }}>
                   {/* Title */}
-                  <h3 className="text-white mb-3" style={{ fontSize: '15px', lineHeight: '1.4', paddingTop: '0.5rem' }}>
+                  <h3 className="text-white mb-5 font-bold" style={{ 
+                    fontSize: 'clamp(18px, 2vw, 22px)', 
+                    lineHeight: '1.5', 
+                    fontWeight: '700',
+                    letterSpacing: '0.01em',
+                    wordSpacing: '0.05em',
+                    textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+                    paddingBottom: '0.5rem'
+                  }}>
                     {post.title}
                   </h3>
                   
                   {/* Author */}
                   {post.author && (
-                    <div className="flex items-center gap-2 mb-3">
-                      <User className="w-3 h-3 text-white/70" />
-                      <span className="text-white/70" style={{ fontSize: '13px' }}>{post.author}</span>
+                    <div className="flex items-center gap-2 mb-5" style={{ marginTop: '0.5rem' }}>
+                      <User className="w-4 h-4 text-white/90" style={{ filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5))' }} />
+                      <span className="text-white/90 font-medium" style={{ 
+                        fontSize: 'clamp(14px, 1.5vw, 16px)',
+                        letterSpacing: '0.02em',
+                        textShadow: '0 1px 4px rgba(0, 0, 0, 0.5)'
+                      }}>
+                        {post.author}
+                      </span>
                     </div>
                   )}
                   
                   {/* Description */}
-                  <p className="text-white/70 leading-relaxed" style={{ fontSize: '13px', lineHeight: '1.5', marginTop: '8px' }}>
+                  <p className="text-white/95 flex-1" style={{ 
+                    fontSize: 'clamp(15px, 1.8vw, 17px)', 
+                    lineHeight: '2',
+                    letterSpacing: '0.02em',
+                    wordSpacing: '0.1em',
+                    textShadow: '0 1px 4px rgba(0, 0, 0, 0.5)',
+                    marginTop: '0.5rem',
+                    paddingTop: '0.5rem'
+                  }}>
                     {post.description}
                   </p>
                 </div>
@@ -166,13 +206,13 @@ export function Blogs() {
           paddingBottom: '8rem'
         }}
       >
-        <div className="w-full max-w-[1200px] px-4 md:px-8">
+        <div className="w-full max-w-[1200px] mx-auto px-4 md:px-8 flex flex-col items-center">
           {/* Section Title */}
-          <div className="text-center mb-4">
-            <h2 className="text-white mb-3" style={{ fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: '1.2' }}>
+          <div className="text-center mb-4 w-full">
+            <h2 className="text-white w-full" style={{ fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: '1.2', marginBottom: '1rem' }}>
               Why Follow Eurocoin?
             </h2>
-            <p className="text-white/70" style={{ fontSize: 'clamp(14px, 1.5vw, 18px)' }}>
+            <p className="text-white/70 w-full" style={{ fontSize: 'clamp(14px, 1.5vw, 18px)' }}>
               Eurocoin isn't just powered by leaders, it's powered by structure.
             </p>
           </div>
@@ -220,40 +260,141 @@ export function Blogs() {
           paddingBottom: '8rem'
         }}
       >
-        <div className="w-full max-w-[900px] px-4 md:px-8 text-center">
+        <div className="w-full max-w-[900px] mx-auto px-4 md:px-8 text-center flex flex-col items-center">
           {/* Main Heading */}
-          <h2 className="text-white mb-6" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: '1.2' }}>
+          <h2 className="text-white w-full" style={{ fontSize: 'clamp(32px, 4vw, 52px)', lineHeight: '1.2', marginBottom: '2rem' }}>
             Instant. Compliant. Built for Everyone.
           </h2>
           
           {/* Subtitle */}
-          <p className="text-white/80 mb-6" style={{ fontSize: 'clamp(16px, 1.8vw, 20px)', lineHeight: '1.5' }}>
+          <p className="text-white/80 w-full" style={{ fontSize: 'clamp(16px, 1.8vw, 20px)', lineHeight: '1.5', marginBottom: '2rem' }}>
             See how simple it is to integrate, transact, and build on the Eurocoin network.
           </p>
           
           {/* Question */}
-          <p className="text-white mb-8" style={{ fontSize: 'clamp(14px, 1.5vw, 18px)' }}>
+          <p className="text-white w-full" style={{ fontSize: 'clamp(14px, 1.5vw, 18px)', marginBottom: '3rem' }}>
             Want to partner, invest, or connect with our team?
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" style={{ marginTop: '2.5rem' }}>
-            {/* Contact Us Button */}
-            <button 
-              className="px-8 py-3 rounded-full bg-white text-black flex items-center gap-2 transition-all hover:bg-white/90"
-              style={{ fontSize: '16px' }}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center w-full">
+            {/* Contact Us Button - Premium Style */}
+            <Link
+              to="/contact-us"
+              className="group relative flex items-center justify-center gap-3 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 w-full sm:w-auto cursor-pointer"
+              style={{
+                fontFamily: 'ibrand, sans-serif',
+                fontSize: 'clamp(0.9rem, 1.2vw, 1rem)',
+                fontWeight: '700',
+                padding: '14px 28px',
+                minWidth: '200px',
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%)',
+                border: '2px solid rgba(255, 255, 255, 0.8)',
+                backdropFilter: 'blur(20px)',
+                boxShadow: `
+                  0 8px 32px rgba(0, 0, 0, 0.12),
+                  0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+                  inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.05)
+                `,
+                color: '#000000',
+                position: 'relative'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = `
+                  0 12px 48px rgba(0, 0, 0, 0.18),
+                  0 0 0 2px rgba(255, 255, 255, 0.6) inset,
+                  inset 0 1px 0 rgba(255, 255, 255, 1),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.08),
+                  0 0 40px rgba(255, 255, 255, 0.3)
+                `;
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 1)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 100%)';
+                e.currentTarget.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = `
+                  0 8px 32px rgba(0, 0, 0, 0.12),
+                  0 0 0 1px rgba(255, 255, 255, 0.5) inset,
+                  inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.05)
+                `;
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.8)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%)';
+                e.currentTarget.style.transform = 'scale(1)';
+              }}
             >
-              Contact Us for Onboarding
-              <ArrowRight className="w-5 h-5" />
-            </button>
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-in-out"></span>
+              <span className="relative z-10 flex items-center gap-3" style={{ letterSpacing: '0.02em', color: '#000000', fontWeight: '700' }}>
+                Contact Us for Onboarding
+                <div className="relative z-10 flex items-center justify-center rounded-full bg-gradient-to-br from-gray-900 to-black transition-all duration-300 group-hover:scale-110" style={{
+                  width: '32px',
+                  height: '32px',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.3)',
+                  border: '1.5px solid rgba(255, 255, 255, 0.1)'
+                }}>
+                  <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.8', stroke: 'white', fill: 'none' }} />
+                </div>
+              </span>
+            </Link>
 
-            {/* View Docs Button */}
-            <button 
-              className="px-8 py-3 rounded-full border-2 border-white text-white flex items-center gap-2 transition-all hover:bg-white/10"
-              style={{ fontSize: '16px' }}
+            {/* View Integration Docs Button - Premium Style */}
+            <button
+              onClick={() => {
+                window.open('#', '_blank');
+              }}
+              className="group relative flex items-center justify-center gap-3 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 w-full sm:w-auto cursor-pointer"
+              style={{
+                fontFamily: 'ibrand, sans-serif',
+                fontSize: 'clamp(0.9rem, 1.2vw, 1rem)',
+                fontWeight: '700',
+                padding: '14px 28px',
+                minWidth: '200px',
+                background: 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)',
+                border: '2px solid rgba(148, 190, 252, 0.5)',
+                backdropFilter: 'blur(20px)',
+                boxShadow: `
+                  0 8px 32px rgba(148, 190, 252, 0.3),
+                  0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                  0 2px 8px rgba(0, 0, 0, 0.2)
+                `,
+                color: '#FFFFFF',
+                position: 'relative'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = `
+                  0 12px 48px rgba(148, 190, 252, 0.5),
+                  0 0 0 2px rgba(255, 255, 255, 0.2) inset,
+                  0 4px 16px rgba(0, 0, 0, 0.3),
+                  0 0 60px rgba(148, 190, 252, 0.4)
+                `;
+                e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.8)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.35) 0%, rgba(91, 159, 255, 0.4) 50%, rgba(148, 190, 252, 0.35) 100%)';
+                e.currentTarget.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = `
+                  0 8px 32px rgba(148, 190, 252, 0.3),
+                  0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+                  0 2px 8px rgba(0, 0, 0, 0.2)
+                `;
+                e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.5)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)';
+                e.currentTarget.style.transform = 'scale(1)';
+              }}
             >
-              View Integration Docs
-              <ArrowRight className="w-5 h-5" />
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000"></span>
+              <span className="relative z-10 flex items-center gap-3 text-white font-medium" style={{ fontFamily: 'ibrand, sans-serif', letterSpacing: '0.02em', textShadow: '0 1px 2px rgba(0,0,0,0.1)' }}>
+                View Integration Docs
+                <div className="relative z-10 flex items-center justify-center rounded-full bg-gradient-to-br from-white to-gray-100 transition-all duration-300 group-hover:scale-110" style={{
+                  width: '32px',
+                  height: '32px',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.1)',
+                  border: '1.5px solid rgba(0, 0, 0, 0.1)'
+                }}>
+                  <ArrowRight className="w-4 h-4 text-[#0a0e27] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.8', stroke: '#0a0e27', fill: 'none' }} />
+                </div>
+              </span>
             </button>
           </div>
         </div>

@@ -27,7 +27,7 @@ export function WhyUs() {
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-24 lg:py-32 w-full">
-          <div className="max-w-2xl md:ml-16" style={{ marginLeft: '100px' }}>
+          <div className="max-w-2xl mx-auto">
             {/* Main Heading */}
             <h1 className="text-white mb-8" style={{ fontSize: 'clamp(40px, 7vw, 64px)', lineHeight: '1.1' }}>
               Why Eurocoin?

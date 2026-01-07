@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react';
 import mythsCardsImg from 'figma:asset/4b9b6eadb89b6d3279db24ce88577982f6657393.png';
 import gradientBg from 'figma:asset/5c4d6a21b832f6bc03ea9d307a429652416b7757.png';
 
@@ -51,29 +52,27 @@ export function CommonMythsBusted() {
         }}
       />
 
-      <div className="container mx-auto px-4" style={{ position: 'relative', zIndex: 10 }}>
-        {/* Section Title */}
-        <h2 
-          className="text-white text-center mb-16"
-          style={{
-            fontFamily: 'ibrand',
-            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-            marginBottom: '80px',
-            marginLeft: '8%'
-          }}
-        >
-          Common Myths Busted
-        </h2>
+      <div className="w-full flex justify-center" style={{ position: 'relative', zIndex: 10 }}>
+        <div className="w-full max-w-[1200px] mx-auto px-4">
+          {/* Section Title */}
+          <h2 
+            className="text-white text-center"
+            style={{
+              fontFamily: 'ibrand',
+              fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+              marginBottom: '80px'
+            }}
+          >
+            Common Myths Busted
+          </h2>
 
-        {/* Myths Grid */}
-        <div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-          style={{
-            maxWidth: '1400px',
-            margin: '0 auto 100px auto',
-            marginLeft: '12%'
-          }}
-        >
+          {/* Myths Grid */}
+          <div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+            style={{
+              marginBottom: '100px'
+            }}
+          >
           {myths.map((myth, index) => (
             <div
               key={index}
@@ -142,57 +141,128 @@ export function CommonMythsBusted() {
               </div>
             </div>
           ))}
-        </div>
+          </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" style={{ marginLeft: '8%' }}>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          {/* Request Early Access Button */}
           <button
-            className="px-8 py-4 rounded-full transition-all duration-300"
+            className="group relative flex items-center justify-center gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden"
             style={{
-              background: 'linear-gradient(135deg, #8A55FF 0%, #6B3FD9 100%)',
-              color: 'white',
               fontFamily: 'ibrand',
-              fontSize: '1rem',
-              fontWeight: '500',
-              border: 'none',
+              fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)',
+              fontWeight: '600',
+              padding: '22px 44px',
               cursor: 'pointer',
-              minWidth: '220px'
+              minWidth: '280px',
+              background: 'linear-gradient(135deg, #8A55FF 0%, #6B3FD9 50%, #5A2FC7 100%)',
+              border: '2px solid rgba(138, 85, 255, 0.5)',
+              boxShadow: `
+                0 10px 40px rgba(138, 85, 255, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.2)
+              `,
+              color: 'white',
+              position: 'relative'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(138, 85, 255, 0.4)';
+              e.currentTarget.style.boxShadow = `
+                0 20px 60px rgba(138, 85, 255, 0.5),
+                0 0 0 4px rgba(138, 85, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+              `;
+              e.currentTarget.style.background = 'linear-gradient(135deg, #9A65FF 0%, #7B4FE9 50%, #6A3FD7 100%)';
+              e.currentTarget.style.borderColor = 'rgba(138, 85, 255, 0.8)';
+              e.currentTarget.style.transform = 'scale(1.05)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = 'none';
+              e.currentTarget.style.boxShadow = `
+                0 10px 40px rgba(138, 85, 255, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.2)
+              `;
+              e.currentTarget.style.background = 'linear-gradient(135deg, #8A55FF 0%, #6B3FD9 50%, #5A2FC7 100%)';
+              e.currentTarget.style.borderColor = 'rgba(138, 85, 255, 0.5)';
+              e.currentTarget.style.transform = 'scale(1)';
             }}
           >
-            Request Early Access
+            {/* Shimmer effect */}
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-in-out"></span>
+            
+            {/* Content */}
+            <span className="relative z-10 flex items-center gap-3" style={{ letterSpacing: '0.02em' }}>
+              Request Early Access
+              <div className="relative z-10 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110" style={{ 
+                width: '36px', 
+                height: '36px',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)'
+              }}>
+                <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-300" />
+              </div>
+            </span>
           </button>
 
+          {/* Schedule a Demo Button */}
           <button
-            className="px-8 py-4 rounded-full transition-all duration-300"
+            className="group relative flex items-center justify-center gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden"
             style={{
-              background: 'transparent',
-              color: 'white',
               fontFamily: 'ibrand',
-              fontSize: '1rem',
-              fontWeight: '500',
-              border: '1px solid rgba(255, 255, 255, 0.3)',
+              fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)',
+              fontWeight: '600',
+              padding: '22px 44px',
               cursor: 'pointer',
-              minWidth: '220px'
+              minWidth: '280px',
+              background: 'rgba(138, 85, 255, 0.1)',
+              border: '2px solid rgba(138, 85, 255, 0.5)',
+              boxShadow: `
+                0 10px 40px rgba(138, 85, 255, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1)
+              `,
+              color: 'white',
+              position: 'relative',
+              backdropFilter: 'blur(10px)'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(138, 85, 255, 0.6)';
-              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = `
+                0 20px 60px rgba(138, 85, 255, 0.4),
+                0 0 0 4px rgba(138, 85, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2)
+              `;
+              e.currentTarget.style.background = 'rgba(138, 85, 255, 0.2)';
+              e.currentTarget.style.borderColor = 'rgba(138, 85, 255, 0.8)';
+              e.currentTarget.style.transform = 'scale(1.05)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = `
+                0 10px 40px rgba(138, 85, 255, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1)
+              `;
+              e.currentTarget.style.background = 'rgba(138, 85, 255, 0.1)';
+              e.currentTarget.style.borderColor = 'rgba(138, 85, 255, 0.5)';
+              e.currentTarget.style.transform = 'scale(1)';
             }}
           >
-            Schedule a Demo
+            {/* Shimmer effect */}
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-in-out"></span>
+            
+            {/* Content */}
+            <span className="relative z-10 flex items-center gap-3" style={{ letterSpacing: '0.02em' }}>
+              Schedule a Demo
+              <div className="relative z-10 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:scale-110" style={{ 
+                width: '36px', 
+                height: '36px',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)'
+              }}>
+                <ArrowRight className="w-5 h-5 text-white group-hover:translate-x-1 transition-transform duration-300" />
+              </div>
+            </span>
           </button>
+          </div>
         </div>
       </div>
     </div>

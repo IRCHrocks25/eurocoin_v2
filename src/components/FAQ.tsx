@@ -17,7 +17,7 @@ export function FAQ() {
       
       {/* Hero Section */}
       <div 
-        className="w-full"
+        className="w-full flex items-center justify-center"
         style={{
           backgroundImage: `url(${faqHeroBg})`,
           backgroundSize: 'cover',
@@ -44,8 +44,8 @@ export function FAQ() {
           }}
         />
         
-        <div className="container mx-auto px-4" style={{ position: 'relative', zIndex: 10 }}>
-          <div className="flex flex-col items-center text-center max-w-5xl mx-auto" style={{ marginLeft: '14%', marginTop: '60px' }}>
+        <div className="w-full max-w-7xl mx-auto px-4 flex items-center justify-center" style={{ position: 'relative', zIndex: 10 }}>
+          <div className="flex flex-col items-center text-center max-w-5xl w-full">
             {/* FAQ Badge */}
             <div 
               className="inline-block px-5 py-2 rounded-full mb-8"
@@ -72,11 +72,11 @@ export function FAQ() {
       </div>
       
       {/* Content will go here */}
-      <div className="flex-1" style={{ backgroundColor: '#020219' }}>
-        <div className="w-full px-4 py-20" style={{ paddingBottom: '120px' }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12" style={{ marginLeft: '10%', width: '85%' }}>
+      <div className="flex-1 flex justify-center" style={{ backgroundColor: '#020219' }}>
+        <div className="w-full max-w-[1200px] mx-auto px-4 py-20" style={{ paddingBottom: '120px' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Column */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+            <div className="w-full" style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
               <FAQItem 
                 question="What is Eurocoin (EURDT)?"
                 answer={
@@ -161,7 +161,7 @@ export function FAQ() {
             </div>
 
             {/* Right Column */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+            <div className="w-full" style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
               <FAQItem 
                 question="Is Eurocoin safe and legally protected?"
                 answer={
