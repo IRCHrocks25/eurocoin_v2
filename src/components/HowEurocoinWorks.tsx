@@ -1,3 +1,4 @@
+import React from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { ArrowRight } from 'lucide-react';
@@ -21,15 +22,15 @@ export function HowEurocoinWorks() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '700px',
+          minHeight: 'clamp(500px, 80vh, 700px)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          paddingTop: '150px',
-          paddingBottom: '100px'
+          paddingTop: 'clamp(100px, 15vh, 150px)',
+          paddingBottom: 'clamp(60px, 10vh, 100px)'
         }}
       >
-        <div className="w-full max-w-7xl mx-auto px-4 flex justify-center">
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex justify-center">
           <div className="flex flex-col items-center text-center max-w-4xl w-full">
             {/* Badge */}
             <div 
@@ -38,16 +39,16 @@ export function HowEurocoinWorks() {
                 backgroundColor: 'rgba(255, 255, 255, 0.1)',
                 border: '1px solid rgba(255, 255, 255, 0.2)',
                 borderRadius: '50px',
-                padding: '10px 24px',
+                padding: 'clamp(8px, 1.5vw, 10px) clamp(20px, 4vw, 24px)',
                 backdropFilter: 'blur(10px)',
-                marginBottom: '2rem'
+                marginBottom: 'clamp(1.5rem, 4vw, 2rem)'
               }}
             >
               <span 
                 className="text-white"
                 style={{
                   fontFamily: 'ibrand',
-                  fontSize: 'clamp(0.875rem, 1.2vw, 1rem)',
+                  fontSize: 'clamp(0.75rem, 2vw, 1rem)',
                   fontWeight: '500',
                   opacity: 0.9
                 }}
@@ -61,10 +62,11 @@ export function HowEurocoinWorks() {
               className="text-white"
               style={{ 
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+                fontSize: 'clamp(2rem, 8vw, 4.5rem)',
                 lineHeight: '1.15',
-                whiteSpace: 'nowrap',
-                marginBottom: '2rem'
+                marginBottom: 'clamp(1.5rem, 4vw, 2rem)',
+                paddingLeft: '1rem',
+                paddingRight: '1rem'
               }}
             >
               Simple. Instant. Secure.
@@ -75,10 +77,12 @@ export function HowEurocoinWorks() {
               className="text-white"
               style={{ 
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(1.25rem, 2.5vw, 2rem)',
+                fontSize: 'clamp(1.125rem, 4vw, 2rem)',
                 lineHeight: '1.3',
                 opacity: 0.9,
-                marginBottom: '2rem'
+                marginBottom: 'clamp(1.5rem, 4vw, 2rem)',
+                paddingLeft: '1rem',
+                paddingRight: '1rem'
               }}
             >
               The Fastest Path to Regulated Digital Cash
@@ -89,13 +93,15 @@ export function HowEurocoinWorks() {
               className="text-white"
               style={{ 
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+                fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
                 lineHeight: '1.7',
                 opacity: 0.85,
                 maxWidth: '800px',
-                marginBottom: '2rem',
+                marginBottom: 'clamp(1.5rem, 4vw, 2rem)',
                 marginLeft: 'auto',
-                marginRight: 'auto'
+                marginRight: 'auto',
+                paddingLeft: '1rem',
+                paddingRight: '1rem'
               }}
             >
               Eurocoin (EURDT) is a euro-backed digital token that gives you the speed of crypto with the stability of traditional currency. Built on blockchain, compliant with EU regulation, and backed by real reserves — it's money reimagined for the digital age.
@@ -106,11 +112,13 @@ export function HowEurocoinWorks() {
               className="text-white"
               style={{ 
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+                fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
                 lineHeight: '1.7',
                 opacity: 0.85,
                 marginLeft: 'auto',
-                marginRight: 'auto'
+                marginRight: 'auto',
+                paddingLeft: '1rem',
+                paddingRight: '1rem'
               }}
             >
               Here's how it works, from deposit to instant settlement.
@@ -125,16 +133,20 @@ export function HowEurocoinWorks() {
           className="relative w-full flex items-center justify-center"
           style={{
             background: 'linear-gradient(to bottom, rgba(5, 8, 25, 1) 0%, rgba(8, 12, 35, 0.95) 50%, rgba(10, 15, 40, 0.7) 100%)',
-            paddingTop: '80px',
-            paddingBottom: '80px'
+            paddingTop: 'clamp(40px, 8vw, 80px)',
+            paddingBottom: 'clamp(40px, 8vw, 80px)'
           }}
         >
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center px-4 md:px-6 lg:px-8">
             <div className="w-full flex items-center justify-center">
               <img 
                 src={processSteps}
                 alt="How Eurocoin Works - Process Steps"
                 className="w-full h-auto max-w-7xl mx-auto"
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto'
+                }}
               />
             </div>
           </div>
@@ -148,36 +160,39 @@ export function HowEurocoinWorks() {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            paddingTop: '100px',
-            paddingBottom: '120px'
+            paddingTop: 'clamp(60px, 12vw, 100px)',
+            paddingBottom: 'clamp(60px, 12vw, 120px)'
           }}
         >
-          <div className="w-full max-w-6xl mx-auto px-4 md:px-8 flex flex-col items-center">
+          <div className="w-full max-w-6xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col items-center">
             {/* Section Heading */}
             <h2 
-              className="text-white text-center mb-16 w-full"
+              className="text-white text-center w-full"
               style={{
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+                fontSize: 'clamp(1.75rem, 6vw, 3.5rem)',
                 lineHeight: '1.2',
-                fontWeight: '600'
+                fontWeight: '600',
+                marginBottom: 'clamp(2rem, 6vw, 4rem)',
+                paddingLeft: '1rem',
+                paddingRight: '1rem'
               }}
             >
               Why Eurocoin Is Different
             </h2>
 
             {/* Three Feature Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 w-full max-w-5xl mx-auto" style={{ marginTop: '6rem', marginBottom: '4rem' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 w-full max-w-5xl mx-auto" style={{ marginTop: 'clamp(2rem, 6vw, 6rem)', marginBottom: 'clamp(2rem, 6vw, 4rem)' }}>
               {/* Card 1 - Instant Minting */}
               <div 
-                className="rounded-3xl"
+                className="rounded-2xl md:rounded-3xl"
                 style={{
                   background: 'linear-gradient(135deg, rgba(56, 68, 150, 0.5) 0%, rgba(40, 50, 120, 0.5) 100%)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   backdropFilter: 'blur(10px)',
-                  padding: '45px 50px',
+                  padding: 'clamp(24px, 5vw, 45px) clamp(20px, 4vw, 50px)',
                   textAlign: 'center',
-                  height: '280px',
+                  minHeight: 'clamp(200px, 40vw, 280px)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
@@ -185,12 +200,13 @@ export function HowEurocoinWorks() {
                 }}
               >
                 <h3 
-                  className="text-white mb-4"
+                  className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: '1.75rem',
+                    fontSize: 'clamp(1.25rem, 4vw, 1.75rem)',
                     fontWeight: '600',
-                    lineHeight: '1.2'
+                    lineHeight: '1.2',
+                    marginBottom: 'clamp(12px, 3vw, 16px)'
                   }}
                 >
                   Instant Minting
@@ -199,7 +215,7 @@ export function HowEurocoinWorks() {
                   className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: '1.1rem',
+                    fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
                     lineHeight: '1.5',
                     opacity: 0.85
                   }}
@@ -210,14 +226,14 @@ export function HowEurocoinWorks() {
 
               {/* Card 2 - Unbreakable Trust */}
               <div 
-                className="rounded-3xl"
+                className="rounded-2xl md:rounded-3xl"
                 style={{
                   background: 'linear-gradient(135deg, rgba(56, 68, 150, 0.5) 0%, rgba(40, 50, 120, 0.5) 100%)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   backdropFilter: 'blur(10px)',
-                  padding: '45px 50px',
+                  padding: 'clamp(24px, 5vw, 45px) clamp(20px, 4vw, 50px)',
                   textAlign: 'center',
-                  height: '280px',
+                  minHeight: 'clamp(200px, 40vw, 280px)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
@@ -225,12 +241,13 @@ export function HowEurocoinWorks() {
                 }}
               >
                 <h3 
-                  className="text-white mb-4"
+                  className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: '1.75rem',
+                    fontSize: 'clamp(1.25rem, 4vw, 1.75rem)',
                     fontWeight: '600',
-                    lineHeight: '1.2'
+                    lineHeight: '1.2',
+                    marginBottom: 'clamp(12px, 3vw, 16px)'
                   }}
                 >
                   Unbreakable Trust
@@ -239,7 +256,7 @@ export function HowEurocoinWorks() {
                   className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: '1.1rem',
+                    fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
                     lineHeight: '1.5',
                     opacity: 0.85
                   }}
@@ -250,14 +267,14 @@ export function HowEurocoinWorks() {
 
               {/* Card 3 - Fully Backed */}
               <div 
-                className="rounded-3xl"
+                className="rounded-2xl md:rounded-3xl"
                 style={{
                   background: 'linear-gradient(135deg, rgba(56, 68, 150, 0.5) 0%, rgba(40, 50, 120, 0.5) 100%)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   backdropFilter: 'blur(10px)',
-                  padding: '45px 50px',
+                  padding: 'clamp(24px, 5vw, 45px) clamp(20px, 4vw, 50px)',
                   textAlign: 'center',
-                  height: '280px',
+                  minHeight: 'clamp(200px, 40vw, 280px)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
@@ -265,12 +282,13 @@ export function HowEurocoinWorks() {
                 }}
               >
                 <h3 
-                  className="text-white mb-4"
+                  className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: '1.75rem',
+                    fontSize: 'clamp(1.25rem, 4vw, 1.75rem)',
                     fontWeight: '600',
-                    lineHeight: '1.2'
+                    lineHeight: '1.2',
+                    marginBottom: 'clamp(12px, 3vw, 16px)'
                   }}
                 >
                   Fully Backed, Fully Redeemable
@@ -279,7 +297,7 @@ export function HowEurocoinWorks() {
                   className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: '1.1rem',
+                    fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
                     lineHeight: '1.5',
                     opacity: 0.85
                   }}
@@ -290,12 +308,12 @@ export function HowEurocoinWorks() {
             </div>
 
             {/* Centered Coin Image */}
-            <div className="flex justify-center">
+            <div className="flex justify-center px-4">
               <img 
                 src={coinImage}
                 alt="Eurocoin"
                 style={{
-                  maxWidth: '500px',
+                  maxWidth: 'clamp(280px, 60vw, 500px)',
                   width: '100%',
                   height: 'auto'
                 }}
@@ -308,9 +326,9 @@ export function HowEurocoinWorks() {
         <section 
           className="relative w-full flex items-center justify-center overflow-hidden"
           style={{
-            paddingTop: '120px',
-            paddingBottom: '120px',
-            minHeight: '600px'
+            paddingTop: 'clamp(80px, 15vw, 120px)',
+            paddingBottom: 'clamp(80px, 15vw, 120px)',
+            minHeight: 'clamp(500px, 70vh, 700px)'
           }}
         >
           {/* Background with hero image */}
@@ -320,20 +338,23 @@ export function HowEurocoinWorks() {
               alt="Background" 
               className="w-full h-full object-cover"
             />
-            {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/40" />
+            {/* Enhanced dark overlay for better text readability on mobile */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/50" />
           </div>
 
-          <div className="relative z-10 w-full max-w-4xl mx-auto px-4 text-center flex flex-col items-center">
+          <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center flex flex-col items-center">
             {/* Main Heading */}
             <h2 
               className="text-white w-full"
               style={{
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-                lineHeight: '1.2',
-                fontWeight: '500',
-                marginBottom: '2rem'
+                fontSize: 'clamp(2rem, 7vw, 3.5rem)',
+                lineHeight: '1.15',
+                fontWeight: '600',
+                marginBottom: 'clamp(1.5rem, 5vw, 2.5rem)',
+                paddingLeft: '0.5rem',
+                paddingRight: '0.5rem',
+                letterSpacing: '-0.02em'
               }}
             >
               Instant. Compliant. Built for Everyone.
@@ -344,10 +365,15 @@ export function HowEurocoinWorks() {
               className="text-white w-full"
               style={{
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(1rem, 1.5vw, 1.25rem)',
-                lineHeight: '1.6',
-                opacity: 0.9,
-                marginBottom: '2rem'
+                fontSize: 'clamp(1rem, 3vw, 1.25rem)',
+                lineHeight: '1.7',
+                opacity: 0.95,
+                marginBottom: 'clamp(1.5rem, 5vw, 2.5rem)',
+                paddingLeft: '1rem',
+                paddingRight: '1rem',
+                maxWidth: '700px',
+                marginLeft: 'auto',
+                marginRight: 'auto'
               }}
             >
               See how simple it is to integrate, transact, and build on the Eurocoin network.
@@ -358,35 +384,39 @@ export function HowEurocoinWorks() {
               className="text-white w-full"
               style={{
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(0.95rem, 1.3vw, 1.125rem)',
-                lineHeight: '1.5',
-                opacity: 0.85,
-                marginBottom: '3rem'
+                fontSize: 'clamp(0.95rem, 2.8vw, 1.125rem)',
+                lineHeight: '1.6',
+                opacity: 0.9,
+                marginBottom: 'clamp(2.5rem, 6vw, 4rem)',
+                paddingLeft: '1rem',
+                paddingRight: '1rem',
+                fontWeight: '500'
               }}
             >
               Want to partner, invest, or connect with our team?
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center w-full">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center w-full max-w-2xl mx-auto px-2 sm:px-4">
               {/* Contact Us Button - Premium Style */}
-              <Link to="/contact-us">
+              <Link to="/contact-us" className="w-full sm:w-auto sm:flex-1">
                 <button
-                  className="group relative flex items-center justify-center gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 w-full sm:w-auto"
+                  className="group relative flex items-center justify-center gap-3 md:gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 active:scale-95 w-full"
                   style={{
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)',
+                    fontSize: 'clamp(1rem, 3vw, 1.25rem)',
                     fontWeight: '700',
-                    padding: '22px 44px',
+                    padding: 'clamp(18px, 5vw, 24px) clamp(32px, 7vw, 48px)',
                     cursor: 'pointer',
-                    minWidth: '280px',
+                    minHeight: '56px',
                     background: 'linear-gradient(135deg, #FFFFFF 0%, #E6F0FF 100%)',
-                    border: '2px solid rgba(255, 255, 255, 0.8)',
+                    border: '2px solid rgba(255, 255, 255, 0.9)',
                     boxShadow: `
                       0 8px 32px rgba(148, 190, 252, 0.3),
                       0 0 0 1px rgba(255, 255, 255, 0.5) inset,
                       inset 0 1px 0 rgba(255, 255, 255, 0.9),
-                      inset 0 -1px 0 rgba(0, 0, 0, 0.05)
+                      inset 0 -1px 0 rgba(0, 0, 0, 0.05),
+                      0 4px 16px rgba(148, 190, 252, 0.2)
                     `,
                     color: '#000000',
                     position: 'relative'
@@ -414,15 +444,16 @@ export function HowEurocoinWorks() {
                   }}
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-in-out"></span>
-                  <span className="relative z-10 flex items-center gap-3" style={{ letterSpacing: '0.02em' }}>
+                  <span className="relative z-10 flex items-center justify-center gap-3 md:gap-4" style={{ letterSpacing: '0.02em', whiteSpace: 'nowrap' }}>
                     Contact Us for Onboarding
                     <div className="relative z-10 flex items-center justify-center rounded-full bg-[#0a0e27] transition-all duration-300 group-hover:scale-110" style={{
-                      width: '42px',
-                      height: '42px',
-                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
-                      border: '1px solid rgba(0, 0, 0, 0.3)'
+                      width: 'clamp(38px, 9vw, 44px)',
+                      height: 'clamp(38px, 9vw, 44px)',
+                      boxShadow: '0 4px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+                      border: '1.5px solid rgba(0, 0, 0, 0.3)',
+                      flexShrink: 0
                     }}>
-                      <ArrowRight className="w-6 h-6 text-white group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.5', fill: 'white' }} />
+                      <ArrowRight className="text-white group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.8', fill: 'white', width: 'clamp(22px, 5.5vw, 26px)', height: 'clamp(22px, 5.5vw, 26px)' }} />
                     </div>
                   </span>
                 </button>
@@ -434,21 +465,23 @@ export function HowEurocoinWorks() {
                   // Navigate to technology page or open docs
                   window.open('#', '_blank');
                 }}
-                className="group relative flex items-center justify-center gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 w-full sm:w-auto"
+                className="group relative flex items-center justify-center gap-3 md:gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 active:scale-95 w-full sm:w-auto sm:flex-1"
                 style={{
                   fontFamily: 'ibrand, sans-serif',
-                  fontSize: 'clamp(1.125rem, 1.5vw, 1.25rem)',
+                  fontSize: 'clamp(1rem, 3vw, 1.25rem)',
                   fontWeight: '700',
-                  padding: '22px 44px',
+                  padding: 'clamp(18px, 5vw, 24px) clamp(32px, 7vw, 48px)',
                   cursor: 'pointer',
-                  minWidth: '280px',
-                  background: 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)',
-                  border: '2px solid rgba(148, 190, 252, 0.5)',
+                  minHeight: '56px',
+                  background: 'linear-gradient(135deg, rgba(148, 190, 252, 0.3) 0%, rgba(91, 159, 255, 0.35) 50%, rgba(148, 190, 252, 0.3) 100%)',
+                  border: '2px solid rgba(148, 190, 252, 0.6)',
                   backdropFilter: 'blur(20px)',
+                  WebkitBackdropFilter: 'blur(20px)',
                   boxShadow: `
-                    0 8px 32px rgba(148, 190, 252, 0.3),
-                    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-                    0 2px 8px rgba(0, 0, 0, 0.2)
+                    0 8px 32px rgba(148, 190, 252, 0.35),
+                    0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+                    0 2px 8px rgba(0, 0, 0, 0.2),
+                    0 4px 16px rgba(148, 190, 252, 0.25)
                   `,
                   color: '#FFFFFF',
                   position: 'relative'
@@ -456,32 +489,35 @@ export function HowEurocoinWorks() {
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = `
                     0 12px 48px rgba(148, 190, 252, 0.5),
-                    0 0 0 2px rgba(255, 255, 255, 0.2) inset,
+                    0 0 0 2px rgba(255, 255, 255, 0.25) inset,
                     0 4px 16px rgba(0, 0, 0, 0.3),
                     0 0 60px rgba(148, 190, 252, 0.4)
                   `;
-                  e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.8)';
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.35) 0%, rgba(91, 159, 255, 0.4) 50%, rgba(148, 190, 252, 0.35) 100%)';
+                  e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.85)';
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.4) 0%, rgba(91, 159, 255, 0.45) 50%, rgba(148, 190, 252, 0.4) 100%)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.boxShadow = `
-                    0 8px 32px rgba(148, 190, 252, 0.3),
-                    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-                    0 2px 8px rgba(0, 0, 0, 0.2)
+                    0 8px 32px rgba(148, 190, 252, 0.35),
+                    0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+                    0 2px 8px rgba(0, 0, 0, 0.2),
+                    0 4px 16px rgba(148, 190, 252, 0.25)
                   `;
-                  e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.5)';
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)';
+                  e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.6)';
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.3) 0%, rgba(91, 159, 255, 0.35) 50%, rgba(148, 190, 252, 0.3) 100%)';
                 }}
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000"></span>
-                <span className="relative z-10 flex items-center gap-3 text-white font-medium" style={{ fontFamily: 'ibrand, sans-serif', letterSpacing: '0.02em', textShadow: '0 1px 2px rgba(0,0,0,0.1)' }}>
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000"></span>
+                <span className="relative z-10 flex items-center justify-center gap-3 md:gap-4 text-white font-medium" style={{ fontFamily: 'ibrand, sans-serif', letterSpacing: '0.02em', textShadow: '0 2px 4px rgba(0,0,0,0.2)', whiteSpace: 'nowrap' }}>
                   View Integration Docs
                   <div className="relative z-10 flex items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:scale-110" style={{
-                    width: '42px',
-                    height: '42px',
-                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)'
+                    width: 'clamp(38px, 9vw, 44px)',
+                    height: 'clamp(38px, 9vw, 44px)',
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.9)',
+                    border: '1.5px solid rgba(0, 0, 0, 0.1)',
+                    flexShrink: 0
                   }}>
-                    <ArrowRight className="w-6 h-6 text-[#0a0e27] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.5', fill: '#0a0e27' }} />
+                    <ArrowRight className="text-[#0a0e27] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.8', fill: '#0a0e27', width: 'clamp(22px, 5.5vw, 26px)', height: 'clamp(22px, 5.5vw, 26px)' }} />
                   </div>
                 </span>
               </button>

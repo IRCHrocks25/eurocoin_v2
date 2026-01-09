@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
 import { ArrowRight, Menu, X, ChevronDown } from 'lucide-react';
 import logo from 'figma:asset/ba00e1228c75b9db4ef3b7e8988aea2b960cbbb4.png';
-import { useState } from 'react';
 import { Link } from 'react-router';
 
 export function Header() {
@@ -33,11 +33,11 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8 xl:gap-12">
-            <Link to="/" className="text-white/80 hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
+            <Link to="/" className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
               Home
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-200 group-hover:w-full"></span>
             </Link>
-            <Link to="/blogs" className="text-white/80 hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
+            <Link to="/blogs" className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
               Blogs
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-200 group-hover:w-full"></span>
             </Link>
@@ -47,7 +47,7 @@ export function Header() {
               onMouseLeave={() => setTechnologyDropdownOpen(false)}
             >
               <button
-                className="text-white/80 hover:text-white transition-colors duration-200 relative group text-base xl:text-lg flex items-center gap-1"
+                className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg flex items-center gap-1"
               >
                 Technology
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${technologyDropdownOpen ? 'rotate-180' : ''}`} />
@@ -158,7 +158,7 @@ export function Header() {
                 </div>
               )}
             </div>
-            <Link to="/open-platform" className="text-white/80 hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
+            <Link to="/open-platform" className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
               How It Works
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-200 group-hover:w-full"></span>
             </Link>
@@ -168,7 +168,7 @@ export function Header() {
               onMouseLeave={() => setWhyUsDropdownOpen(false)}
             >
               <button
-                className="text-white/80 hover:text-white transition-colors duration-200 relative group text-base xl:text-lg flex items-center gap-1"
+                className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg flex items-center gap-1"
               >
                 Why Us
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${whyUsDropdownOpen ? 'rotate-180' : ''}`} />
@@ -285,7 +285,7 @@ export function Header() {
               onMouseLeave={() => setAboutUsDropdownOpen(false)}
             >
               <button
-                className="text-white/80 hover:text-white transition-colors duration-200 relative group text-base xl:text-lg flex items-center gap-1"
+                className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg flex items-center gap-1"
               >
                 About Us
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${aboutUsDropdownOpen ? 'rotate-180' : ''}`} />
@@ -438,7 +438,7 @@ export function Header() {
                 </div>
               )}
             </div>
-            <Link to="/faq" className="text-white/80 hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
+            <Link to="/faq" className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
               FAQ
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-200 group-hover:w-full"></span>
             </Link>
@@ -508,54 +508,99 @@ export function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t border-white/10 pt-4">
-            <div className="flex flex-col gap-4">
+          <nav className="lg:hidden mt-4 border-t border-white/10 max-h-[85vh] overflow-y-auto" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+            <div className="flex flex-col gap-3">
               <Link 
                 to="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-white/80 hover:text-white transition-colors duration-200 py-2"
+                className="text-white/80 hover:text-white transition-colors duration-200 py-4 px-4 rounded-lg hover:bg-white/5"
               >
                 Home
               </Link>
               <Link 
                 to="/blogs"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-white/80 hover:text-white transition-colors duration-200 py-2"
+                className="text-white/80 hover:text-white transition-colors duration-200 py-4 px-4 rounded-lg hover:bg-white/5"
               >
                 Blogs
               </Link>
-              <Link 
-                to="/technology"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-white/80 hover:text-white transition-colors duration-200 py-2"
-              >
-                Technology
-              </Link>
+              
+              {/* Technology Dropdown */}
+              <div className="flex flex-col">
+                <div className="py-4 px-4 text-base" style={{ color: '#94BEFC', fontWeight: 'bold' }}>Technology</div>
+                <Link 
+                  to="/technology"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                >
+                  Technology of Eurocoin
+                </Link>
+                <Link 
+                  to="/how-eurocoin-works"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                >
+                  How Eurocoin Works
+                </Link>
+              </div>
+              
               <Link 
                 to="/open-platform"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-white/80 hover:text-white transition-colors duration-200 py-2"
+                className="text-white/80 hover:text-white transition-colors duration-200 py-4 px-4 rounded-lg hover:bg-white/5"
               >
                 How It Works
               </Link>
-              <Link 
-                to="/why-us"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-white/80 hover:text-white transition-colors duration-200 py-2"
-              >
-                Why Us
-              </Link>
-              <Link 
-                to="/about-us"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-white/80 hover:text-white transition-colors duration-200 py-2"
-              >
-                About Us
-              </Link>
+              
+              {/* Why Us Dropdown */}
+              <div className="flex flex-col">
+                <div className="py-4 px-4 text-base" style={{ color: '#94BEFC', fontWeight: 'bold' }}>Why Us</div>
+                <Link 
+                  to="/advantage-of-eurocoin"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                >
+                  Advantage of Eurocoin
+                </Link>
+                <Link 
+                  to="/use-cases-and-solution"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                >
+                  Use Cases and Solution
+                </Link>
+              </div>
+              
+              {/* About Us Dropdown */}
+              <div className="flex flex-col">
+                <div className="py-4 px-4 text-base" style={{ color: '#94BEFC', fontWeight: 'bold' }}>About Us</div>
+                <Link 
+                  to="/eurocoin-team"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                >
+                  Eurocoin Team
+                </Link>
+                <Link 
+                  to="/partners-integrations"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                >
+                  Partners and Integrations
+                </Link>
+                <Link 
+                  to="/compliance-security"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                >
+                  Compliance & Security
+                </Link>
+              </div>
+              
               <Link 
                 to="/faq"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-white/80 hover:text-white transition-colors duration-200 py-2"
+                className="text-white/80 hover:text-white transition-colors duration-200 py-4 px-4 rounded-lg hover:bg-white/5"
               >
                 FAQ
               </Link>

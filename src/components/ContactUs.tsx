@@ -1,3 +1,4 @@
+import React from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { Mail, ArrowRight } from 'lucide-react';
@@ -28,10 +29,10 @@ export function ContactUs() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-24 w-full">
           {/* Main Heading */}
           <h1 
-            className="text-center mb-6"
+            className="text-center mb-4 md:mb-6"
             style={{
               fontFamily: 'ibrand, sans-serif',
-              fontSize: '64px',
+              fontSize: 'clamp(32px, 8vw, 64px)',
               lineHeight: '1.2',
               color: '#000000'
             }}
@@ -41,10 +42,10 @@ export function ContactUs() {
 
           {/* Subtitle */}
           <p 
-            className="text-center mx-auto mb-16"
+            className="text-center mx-auto mb-8 md:mb-16"
             style={{
               fontFamily: 'ibrand, sans-serif',
-              fontSize: '24px',
+              fontSize: 'clamp(16px, 4vw, 24px)',
               lineHeight: '1.5',
               color: '#000000',
               maxWidth: '1400px',
@@ -57,21 +58,21 @@ export function ContactUs() {
           </p>
 
           {/* Contact Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-auto mb-12" style={{ maxWidth: '1400px', marginTop: '48px' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mx-auto mb-8 md:mb-12" style={{ maxWidth: '1400px', marginTop: '32px' }}>
             {/* Media or Press Card */}
             <div 
-              className="rounded-3xl border-2"
+              className="rounded-2xl md:rounded-3xl border-2"
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.9)',
                 borderColor: '#60A5FA',
                 backdropFilter: 'blur(10px)',
-                padding: '24px 20px'
+                padding: '20px 16px'
               }}
             >
               <p 
                 className="mb-3"
                 style={{
-                  fontSize: '15px',
+                  fontSize: 'clamp(14px, 3.5vw, 15px)',
                   lineHeight: '1.5',
                   color: '#000000'
                 }}
@@ -79,12 +80,12 @@ export function ContactUs() {
                 <strong>For media or press:</strong>
               </p>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" style={{ color: '#60A5FA', flexShrink: 0 }} />
+                <Mail className="w-5 h-5 md:w-4 md:h-4" style={{ color: '#60A5FA', flexShrink: 0 }} />
                 <a 
                   href="mailto:contact@billongroup.com"
                   className="hover:underline"
                   style={{
-                    fontSize: '15px',
+                    fontSize: 'clamp(14px, 3.5vw, 15px)',
                     color: '#60A5FA',
                     wordBreak: 'break-word'
                   }}
@@ -96,18 +97,18 @@ export function ContactUs() {
 
             {/* Business Inquiries Card */}
             <div 
-              className="rounded-3xl border-2"
+              className="rounded-2xl md:rounded-3xl border-2"
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.9)',
                 borderColor: '#60A5FA',
                 backdropFilter: 'blur(10px)',
-                padding: '24px 20px'
+                padding: '20px 16px'
               }}
             >
               <p 
                 className="mb-3"
                 style={{
-                  fontSize: '15px',
+                  fontSize: 'clamp(14px, 3.5vw, 15px)',
                   lineHeight: '1.5',
                   color: '#000000'
                 }}
@@ -115,12 +116,12 @@ export function ContactUs() {
                 <strong>For business inquiries, partnerships, or integrations:</strong>
               </p>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" style={{ color: '#60A5FA', flexShrink: 0 }} />
+                <Mail className="w-5 h-5 md:w-4 md:h-4" style={{ color: '#60A5FA', flexShrink: 0 }} />
                 <a 
                   href="mailto:contact@billongroup.com"
                   className="hover:underline"
                   style={{
-                    fontSize: '15px',
+                    fontSize: 'clamp(14px, 3.5vw, 15px)',
                     color: '#60A5FA',
                     wordBreak: 'break-word'
                   }}
@@ -132,18 +133,18 @@ export function ContactUs() {
 
             {/* Compliance Card */}
             <div 
-              className="rounded-3xl border-2"
+              className="rounded-2xl md:rounded-3xl border-2"
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.9)',
                 borderColor: '#60A5FA',
                 backdropFilter: 'blur(10px)',
-                padding: '24px 20px'
+                padding: '20px 16px'
               }}
             >
               <p 
                 className="mb-3"
                 style={{
-                  fontSize: '15px',
+                  fontSize: 'clamp(14px, 3.5vw, 15px)',
                   lineHeight: '1.5',
                   color: '#000000'
                 }}
@@ -151,12 +152,12 @@ export function ContactUs() {
                 <strong>For compliance, audit, or legal requests:</strong>
               </p>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" style={{ color: '#60A5FA', flexShrink: 0 }} />
+                <Mail className="w-5 h-5 md:w-4 md:h-4" style={{ color: '#60A5FA', flexShrink: 0 }} />
                 <a 
                   href="mailto:contact@billongroup.com"
                   className="hover:underline"
                   style={{
-                    fontSize: '15px',
+                    fontSize: 'clamp(14px, 3.5vw, 15px)',
                     color: '#60A5FA',
                     wordBreak: 'break-word'
                   }}
@@ -171,10 +172,10 @@ export function ContactUs() {
           <p 
             className="text-center"
             style={{
-              fontSize: '18px',
+              fontSize: 'clamp(14px, 4vw, 18px)',
               lineHeight: '1.5',
               color: '#000000',
-              marginTop: '48px'
+              marginTop: '32px'
             }}
           >
             We aim to respond to all inquiries within one business day.
@@ -190,8 +191,8 @@ export function ContactUs() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          paddingTop: '120px',
-          paddingBottom: '120px'
+          paddingTop: '60px',
+          paddingBottom: '60px'
         }}
       >
         <div className="w-full max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
@@ -212,19 +213,19 @@ export function ContactUs() {
           <div className="flex justify-center w-full" style={{ marginTop: '60px' }}>
             <div className="w-full max-w-[1000px] mx-auto">
               <h2 
-                className="text-center mb-16 w-full"
+                className="text-center mb-8 md:mb-16 w-full"
                 style={{
                   fontFamily: 'ibrand, sans-serif',
-                  fontSize: '36px',
+                  fontSize: 'clamp(24px, 6vw, 36px)',
                   lineHeight: '1.2',
                   color: '#FFFFFF',
-                  paddingBottom: '24px'
+                  paddingBottom: '16px'
                 }}
               >
                 Legal Information & User Protection
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 w-full relative mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-16 gap-y-8 md:gap-y-12 w-full relative mx-auto">
                 {/* Vertical Divider Line - Hidden on Mobile */}
                 <div 
                   className="hidden md:block absolute left-1/2 top-0 bottom-0"
@@ -238,10 +239,10 @@ export function ContactUs() {
                 {/* Privacy Policy */}
                 <div className="w-full">
                   <h3 
-                    className="mb-4"
+                    className="mb-3 md:mb-4"
                     style={{
                       fontFamily: 'ibrand, sans-serif',
-                      fontSize: '18px',
+                      fontSize: 'clamp(16px, 4vw, 18px)',
                       lineHeight: '1.4',
                       color: '#FFFFFF',
                       fontWeight: '600'
@@ -252,7 +253,7 @@ export function ContactUs() {
                   <p 
                     style={{
                       fontFamily: 'ibrand, sans-serif',
-                      fontSize: '14px',
+                      fontSize: 'clamp(13px, 3.5vw, 14px)',
                       lineHeight: '1.7',
                       color: 'rgba(255, 255, 255, 0.6)'
                     }}
@@ -264,10 +265,10 @@ export function ContactUs() {
                 {/* Terms of Service */}
                 <div className="w-full">
                   <h3 
-                    className="mb-4"
+                    className="mb-3 md:mb-4"
                     style={{
                       fontFamily: 'ibrand, sans-serif',
-                      fontSize: '18px',
+                      fontSize: 'clamp(16px, 4vw, 18px)',
                       lineHeight: '1.4',
                       color: '#FFFFFF',
                       fontWeight: '600'
@@ -278,7 +279,7 @@ export function ContactUs() {
                   <p 
                     style={{
                       fontFamily: 'ibrand, sans-serif',
-                      fontSize: '14px',
+                      fontSize: 'clamp(13px, 3.5vw, 14px)',
                       lineHeight: '1.7',
                       color: 'rgba(255, 255, 255, 0.6)'
                     }}
@@ -290,10 +291,10 @@ export function ContactUs() {
                 {/* Regulatory Disclosures */}
                 <div className="w-full">
                   <h3 
-                    className="mb-4"
+                    className="mb-3 md:mb-4"
                     style={{
                       fontFamily: 'ibrand, sans-serif',
-                      fontSize: '18px',
+                      fontSize: 'clamp(16px, 4vw, 18px)',
                       lineHeight: '1.4',
                       color: '#FFFFFF',
                       fontWeight: '600'
@@ -304,7 +305,7 @@ export function ContactUs() {
                   <p 
                     style={{
                       fontFamily: 'ibrand, sans-serif',
-                      fontSize: '14px',
+                      fontSize: 'clamp(13px, 3.5vw, 14px)',
                       lineHeight: '1.7',
                       color: 'rgba(255, 255, 255, 0.6)'
                     }}
@@ -316,10 +317,10 @@ export function ContactUs() {
                 {/* Disclaimer */}
                 <div className="w-full">
                   <h3 
-                    className="mb-4"
+                    className="mb-3 md:mb-4"
                     style={{
                       fontFamily: 'ibrand, sans-serif',
-                      fontSize: '18px',
+                      fontSize: 'clamp(16px, 4vw, 18px)',
                       lineHeight: '1.4',
                       color: '#FFFFFF',
                       fontWeight: '600'
@@ -330,7 +331,7 @@ export function ContactUs() {
                   <p 
                     style={{
                       fontFamily: 'ibrand, sans-serif',
-                      fontSize: '14px',
+                      fontSize: 'clamp(13px, 3.5vw, 14px)',
                       lineHeight: '1.7',
                       color: 'rgba(255, 255, 255, 0.6)'
                     }}
@@ -352,33 +353,33 @@ export function ContactUs() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '100vh',
-          paddingTop: '120px',
-          paddingBottom: '120px'
+          minHeight: 'auto',
+          paddingTop: '60px',
+          paddingBottom: '60px'
         }}
       >
         <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
           {/* Support Section */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-12 mb-32">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-16 md:mb-32">
             {/* Thumbs Up Icon */}
             <div className="flex-shrink-0">
               <img 
                 src={thumbsUpImage} 
                 alt="Thumbs Up" 
-                style={{ width: '280px', height: '280px', objectFit: 'contain' }}
+                style={{ width: 'clamp(180px, 40vw, 280px)', height: 'clamp(180px, 40vw, 280px)', objectFit: 'contain' }}
               />
             </div>
             
             {/* Support Content */}
             <div className="flex-1 text-center md:text-left">
               <h2 
-                className="mb-6"
+                className="mb-4 md:mb-6"
                 style={{
                   fontFamily: 'ibrand, sans-serif',
-                  fontSize: '48px',
+                  fontSize: 'clamp(32px, 8vw, 48px)',
                   lineHeight: '1.2',
                   color: '#FFFFFF',
-                  paddingBottom: '12px'
+                  paddingBottom: '8px'
                 }}
               >
                 Support
@@ -387,7 +388,7 @@ export function ContactUs() {
                 className="mb-3"
                 style={{
                   fontFamily: 'ibrand, sans-serif',
-                  fontSize: '16px',
+                  fontSize: 'clamp(14px, 3.5vw, 16px)',
                   lineHeight: '1.6',
                   color: '#FFFFFF'
                 }}
@@ -395,13 +396,13 @@ export function ContactUs() {
                 For help with onboarding, integration, or technical questions, reach out to our support team: <span style={{ fontWeight: 600 }}>contact@billongroup.com</span>
               </p>
               <p 
-                className="mb-6"
+                className="mb-4 md:mb-6"
                 style={{
                   fontFamily: 'ibrand, sans-serif',
-                  fontSize: '16px',
+                  fontSize: 'clamp(14px, 3.5vw, 16px)',
                   lineHeight: '1.6',
                   color: '#FFFFFF',
-                  marginTop: '16px'
+                  marginTop: '12px'
                 }}
               >
                 For urgent issues, please indicate "Urgent" in your email subject for fastest routing.
@@ -474,35 +475,35 @@ export function ContactUs() {
           </div>
 
           {/* Compliance Commitment Section */}
-          <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-12" style={{ marginTop: '80px' }}>
+          <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-8 md:gap-12" style={{ marginTop: '40px' }}>
             {/* Euro Coin Icon */}
             <div className="flex-shrink-0">
               <img 
                 src={euroCoinImage} 
                 alt="Euro Coin" 
-                style={{ width: '280px', height: '280px', objectFit: 'contain' }}
+                style={{ width: 'clamp(180px, 40vw, 280px)', height: 'clamp(180px, 40vw, 280px)', objectFit: 'contain' }}
               />
             </div>
             
             {/* Compliance Content */}
             <div className="flex-1 text-center md:text-left">
               <h2 
-                className="mb-6"
+                className="mb-4 md:mb-6"
                 style={{
                   fontFamily: 'ibrand, sans-serif',
-                  fontSize: '48px',
+                  fontSize: 'clamp(32px, 8vw, 48px)',
                   lineHeight: '1.2',
                   color: '#FFFFFF',
-                  paddingBottom: '12px'
+                  paddingBottom: '8px'
                 }}
               >
                 Compliance Commitment
               </h2>
               <p 
-                className="mb-4"
+                className="mb-3 md:mb-4"
                 style={{
                   fontFamily: 'ibrand, sans-serif',
-                  fontSize: '20px',
+                  fontSize: 'clamp(16px, 4vw, 20px)',
                   lineHeight: '1.5',
                   color: '#FFFFFF',
                   fontWeight: 500
@@ -511,10 +512,10 @@ export function ContactUs() {
                 Your safety, privacy, and compliance are our highest priorities.
               </p>
               <p 
-                className="mb-6"
+                className="mb-4 md:mb-6"
                 style={{
                   fontFamily: 'ibrand, sans-serif',
-                  fontSize: '16px',
+                  fontSize: 'clamp(14px, 3.5vw, 16px)',
                   lineHeight: '1.6',
                   color: '#FFFFFF'
                 }}
@@ -598,21 +599,21 @@ export function ContactUs() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '60vh',
-          paddingTop: '80px',
-          paddingBottom: '80px'
+          minHeight: 'auto',
+          paddingTop: '60px',
+          paddingBottom: '60px'
         }}
       >
         <div className="max-w-5xl mx-auto px-6 md:px-8 lg:px-12 w-full text-center">
           {/* Main Heading */}
           <h2 
-            className="mb-8"
+            className="mb-6 md:mb-8"
             style={{
               fontFamily: 'ibrand, sans-serif',
-              fontSize: '48px',
+              fontSize: 'clamp(28px, 7vw, 48px)',
               lineHeight: '1.2',
               color: '#FFFFFF',
-              paddingBottom: '12px'
+              paddingBottom: '8px'
             }}
           >
             Instant. Compliant. Built for Everyone.
@@ -620,10 +621,10 @@ export function ContactUs() {
 
           {/* First Subtitle */}
           <p 
-            className="mb-6"
+            className="mb-4 md:mb-6"
             style={{
               fontFamily: 'ibrand, sans-serif',
-              fontSize: '18px',
+              fontSize: 'clamp(14px, 3.5vw, 18px)',
               lineHeight: '1.6',
               color: '#FFFFFF'
             }}
@@ -633,10 +634,10 @@ export function ContactUs() {
 
           {/* Second Subtitle */}
           <p 
-            className="mb-10"
+            className="mb-6 md:mb-10"
             style={{
               fontFamily: 'ibrand, sans-serif',
-              fontSize: '18px',
+              fontSize: 'clamp(14px, 3.5vw, 18px)',
               lineHeight: '1.6',
               color: '#FFFFFF'
             }}

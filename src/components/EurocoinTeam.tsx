@@ -1,3 +1,4 @@
+import React from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import heroBgImage from 'figma:asset/16dc135f24de769da9df3f28a47cbb0da6cbbafb.png';
@@ -17,25 +18,30 @@ export function EurocoinTeam() {
       
       {/* Hero Section */}
       <section 
-        className="pt-48 pb-40 relative min-h-[900px] flex items-center justify-center"
+        className="relative flex items-center justify-center"
         style={{
           backgroundImage: `linear-gradient(to bottom, transparent 70%, rgba(10, 14, 39, 0.8) 90%, rgba(10, 14, 39, 1) 100%), url(${heroBgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          minHeight: 'clamp(600px, 90vh, 900px)',
+          paddingTop: 'clamp(120px, 18vh, 180px)',
+          paddingBottom: 'clamp(60px, 10vh, 100px)'
         }}
       >
         <div className="w-full flex justify-center relative z-10">
-          <div className="w-full max-w-6xl mx-auto px-4 md:px-8 lg:px-12 text-center">
+          <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
           {/* Main Heading */}
           <h1 
-            className="mb-8"
             style={{
               fontFamily: 'Poppins, sans-serif',
-              fontSize: 'clamp(36px, 5.5vw, 56px)',
+              fontSize: 'clamp(28px, 7vw, 56px)',
               fontWeight: 'bold',
-              lineHeight: '1.2',
-              color: '#000000'
+              lineHeight: '1.15',
+              color: '#000000',
+              marginBottom: 'clamp(1.5rem, 5vw, 2rem)',
+              paddingLeft: '1rem',
+              paddingRight: '1rem'
             }}
           >
             The Visionaries Powering Europe's Digital Future
@@ -43,13 +49,15 @@ export function EurocoinTeam() {
 
           {/* First Paragraph */}
           <p 
-            className="mb-6"
             style={{
               fontFamily: 'ibrand, sans-serif',
-              fontSize: 'clamp(16px, 2.2vw, 18px)',
-              lineHeight: '1.6',
+              fontSize: 'clamp(14px, 3vw, 18px)',
+              lineHeight: '1.7',
               color: '#000000',
-              marginTop: '24px'
+              marginTop: 'clamp(1rem, 3vw, 1.5rem)',
+              marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
+              paddingLeft: '1rem',
+              paddingRight: '1rem'
             }}
           >
             At the core of Eurocoin lies a leadership team that doesn't just understand the intersection of finance and technology they built it. With decades of experience across regulated finance, blockchain innovation, and enterprise infrastructure, these leaders are shaping a new era of trust, transparency, and performance in European digital money.
@@ -57,32 +65,34 @@ export function EurocoinTeam() {
 
           {/* Bold Statement */}
           <p 
-            className="mb-8"
             style={{
               fontFamily: 'ibrand, sans-serif',
-              fontSize: 'clamp(16px, 2.2vw, 18px)',
+              fontSize: 'clamp(14px, 3vw, 18px)',
               fontWeight: '700',
-              lineHeight: '1.6',
+              lineHeight: '1.7',
               color: '#000000',
               textShadow: '0.5px 0 0 #000000, -0.5px 0 0 #000000',
-              marginTop: '24px'
+              marginTop: 'clamp(1rem, 3vw, 1.5rem)',
+              marginBottom: 'clamp(2rem, 5vw, 3rem)',
+              paddingLeft: '1rem',
+              paddingRight: '1rem'
             }}
           >
             Together, they bring the vision, execution power, and credibility to make Eurocoin <strong>Europe's most compliant, most scalable, and most trusted stablecoin.</strong>
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center" style={{ marginTop: '40px' }}>
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center items-stretch sm:items-center px-2" style={{ marginTop: 'clamp(2rem, 5vw, 2.5rem)' }}>
             {/* Request Early Access Button */}
             <button 
-              className="group relative flex items-center justify-center gap-3 rounded-full transition-all duration-500 ease-out overflow-hidden w-full sm:w-auto"
+              className="group relative flex items-center justify-center gap-3 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 active:scale-95 w-full sm:w-auto sm:flex-1"
               style={{
                 fontFamily: 'ibrand, sans-serif',
-                fontSize: 'clamp(1rem, 1.3vw, 1.125rem)',
+                fontSize: 'clamp(0.95rem, 2.5vw, 1.125rem)',
                 fontWeight: '700',
-                padding: '18px 36px',
+                padding: 'clamp(16px, 4vw, 20px) clamp(28px, 6vw, 40px)',
                 cursor: 'pointer',
-                minWidth: '240px',
+                minHeight: '52px',
                 background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%)',
                 border: '2px solid rgba(0, 0, 0, 0.1)',
                 backdropFilter: 'blur(20px)',
@@ -123,29 +133,29 @@ export function EurocoinTeam() {
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-in-out"></span>
               
               {/* Content */}
-              <span className="relative z-10 flex items-center gap-3" style={{ letterSpacing: '0.02em', color: '#000000', fontWeight: '700' }}>
-                Request Early Access
-                <div className="relative z-10 flex items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:scale-110" style={{ 
-                  width: '38px', 
-                  height: '38px',
+              <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3" style={{ letterSpacing: '0.02em', color: '#000000', fontWeight: '700' }}>
+                <span className="whitespace-normal sm:whitespace-nowrap text-center">Request Early Access</span>
+                <div className="relative z-10 flex items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:scale-110 flex-shrink-0" style={{ 
+                  width: 'clamp(36px, 8vw, 40px)', 
+                  height: 'clamp(36px, 8vw, 40px)',
                   boxShadow: '0 3px 10px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(0, 0, 0, 0.05)',
                   border: '2px solid rgba(0, 0, 0, 0.2)'
                 }}>
-                  <ArrowRight className="w-5 h-5 text-[#333333] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '3', stroke: '#333333', fill: 'none' }} />
+                  <ArrowRight className="text-[#333333] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '3', stroke: '#333333', fill: 'none', width: 'clamp(20px, 4.5vw, 22px)', height: 'clamp(20px, 4.5vw, 22px)' }} />
                 </div>
               </span>
             </button>
             
             {/* Schedule a Demo Button */}
             <button 
-              className="group relative flex items-center justify-center gap-3 rounded-full transition-all duration-500 ease-out overflow-hidden w-full sm:w-auto"
+              className="group relative flex items-center justify-center gap-3 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 active:scale-95 w-full sm:w-auto sm:flex-1"
               style={{
                 fontFamily: 'ibrand, sans-serif',
-                fontSize: 'clamp(1rem, 1.3vw, 1.125rem)',
+                fontSize: 'clamp(0.95rem, 2.5vw, 1.125rem)',
                 fontWeight: '700',
-                padding: '18px 36px',
+                padding: 'clamp(16px, 4vw, 20px) clamp(28px, 6vw, 40px)',
                 cursor: 'pointer',
-                minWidth: '240px',
+                minHeight: '52px',
                 background: 'linear-gradient(135deg, rgba(91, 159, 255, 0.95) 0%, rgba(74, 143, 232, 0.98) 100%)',
                 border: '2px solid rgba(91, 159, 255, 0.7)',
                 backdropFilter: 'blur(20px)',
@@ -188,15 +198,15 @@ export function EurocoinTeam() {
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-in-out"></span>
               
               {/* Content */}
-              <span className="relative z-10 flex items-center gap-3" style={{ letterSpacing: '0.02em', color: '#FFFFFF', fontWeight: '700', textShadow: '0 2px 6px rgba(0, 0, 0, 0.3)' }}>
-                Schedule a Demo
-                <div className="relative z-10 flex items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:scale-110" style={{ 
-                  width: '38px', 
-                  height: '38px',
+              <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3" style={{ letterSpacing: '0.02em', color: '#FFFFFF', fontWeight: '700', textShadow: '0 2px 6px rgba(0, 0, 0, 0.3)' }}>
+                <span className="whitespace-normal sm:whitespace-nowrap text-center">Schedule a Demo</span>
+                <div className="relative z-10 flex items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:scale-110 flex-shrink-0" style={{ 
+                  width: 'clamp(36px, 8vw, 40px)', 
+                  height: 'clamp(36px, 8vw, 40px)',
                   boxShadow: '0 3px 10px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(0, 0, 0, 0.05)',
                   border: '2px solid rgba(0, 0, 0, 0.15)'
                 }}>
-                  <ArrowRight className="w-5 h-5 text-[#000000] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '3', stroke: '#000000', fill: '#000000' }} />
+                  <ArrowRight className="text-[#000000] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '3', stroke: '#000000', fill: '#000000', width: 'clamp(20px, 4.5vw, 22px)', height: 'clamp(20px, 4.5vw, 22px)' }} />
                 </div>
               </span>
             </button>
@@ -212,28 +222,32 @@ export function EurocoinTeam() {
           backgroundImage: `linear-gradient(to bottom, rgba(10, 14, 39, 1) 0%, rgba(10, 14, 39, 0.7) 10%, transparent 20%), url(${teamBgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          paddingTop: 'clamp(40px, 8vw, 60px)',
+          paddingBottom: 'clamp(40px, 8vw, 60px)'
         }}
       >
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
           {/* Section Header */}
           <h2 
             className="text-center"
             style={{
               fontFamily: 'Poppins, sans-serif',
-              fontSize: 'clamp(28px, 5vw, 42px)',
+              fontSize: 'clamp(24px, 6vw, 42px)',
               fontWeight: 'bold',
               textAlign: 'center',
               color: '#FFFFFF',
-              marginBottom: '80px',
-              paddingTop: '60px'
+              marginBottom: 'clamp(2rem, 6vw, 5rem)',
+              paddingTop: 'clamp(2rem, 5vw, 3.75rem)',
+              paddingLeft: '1rem',
+              paddingRight: '1rem'
             }}
           >
             Visionary Leadership. Proven Impact.
           </h2>
 
           {/* Display the full team profiles image */}
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center px-4 sm:px-6">
             <img 
               src={profilesImage}
               alt="Leadership Team"
@@ -241,7 +255,7 @@ export function EurocoinTeam() {
               style={{ 
                 objectFit: 'contain',
                 display: 'block',
-                paddingBottom: '60px'
+                paddingBottom: 'clamp(2rem, 5vw, 3.75rem)'
               }}
             />
           </div>
@@ -250,27 +264,29 @@ export function EurocoinTeam() {
 
       {/* Structure for Leadership Section */}
       <section 
-        className="py-16 md:py-32 relative overflow-hidden flex justify-center"
+        className="relative overflow-hidden flex justify-center"
         style={{
           backgroundImage: `url(${structureBgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          paddingTop: '120px',
-          paddingBottom: '120px'
+          paddingTop: 'clamp(60px, 12vw, 120px)',
+          paddingBottom: 'clamp(60px, 12vw, 120px)'
         }}
       >
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center" style={{ marginBottom: 'clamp(2rem, 6vw, 4rem)' }}>
             <h2 
               style={{
                 fontFamily: 'Poppins, sans-serif',
-                fontSize: 'clamp(32px, 5vw, 48px)',
+                fontSize: 'clamp(24px, 6vw, 48px)',
                 fontWeight: 'bold',
                 color: '#B8D4F1',
-                marginBottom: '16px',
-                lineHeight: '1.2'
+                marginBottom: 'clamp(12px, 3vw, 16px)',
+                lineHeight: '1.2',
+                paddingLeft: '1rem',
+                paddingRight: '1rem'
               }}
             >
               A Strategic Structure for European Leadership
@@ -278,8 +294,10 @@ export function EurocoinTeam() {
             <p 
               style={{
                 fontFamily: 'ibrand, sans-serif',
-                fontSize: 'clamp(16px, 2vw, 18px)',
-                color: '#B8D4F1'
+                fontSize: 'clamp(14px, 2.5vw, 18px)',
+                color: '#B8D4F1',
+                paddingLeft: '1rem',
+                paddingRight: '1rem'
               }}
             >
               Eurocoin isn't just powered by leaders, it's powered by structure.
@@ -287,15 +305,15 @@ export function EurocoinTeam() {
           </div>
 
           {/* Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" style={{ marginTop: '40px' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center" style={{ marginTop: 'clamp(2rem, 5vw, 2.5rem)' }}>
             {/* Coin Image */}
-            <div className="flex justify-center lg:justify-start order-2 lg:order-1">
+            <div className="flex justify-center lg:justify-start order-2 lg:order-1 px-4">
               <img 
                 src={coinImage}
                 alt="Eurocoin"
                 className=""
                 style={{
-                  maxWidth: '320px',
+                  maxWidth: 'clamp(240px, 50vw, 320px)',
                   width: '100%',
                   objectFit: 'contain'
                 }}
@@ -303,22 +321,23 @@ export function EurocoinTeam() {
             </div>
 
             {/* Info Cards */}
-            <div className="flex flex-col gap-8 order-1 lg:order-2 lg:scale-[1.15]">
+            <div className="flex flex-col gap-6 md:gap-8 order-1 lg:order-2" style={{ transform: 'scale(1)', paddingLeft: '0.5rem', paddingRight: '0.5rem' }}>
               {/* Card 1 */}
               <div 
-                className="p-6 md:p-8 rounded-3xl"
+                className="rounded-2xl md:rounded-3xl"
                 style={{
                   backgroundColor: '#0A1628',
-                  border: '1px solid rgba(91, 159, 255, 0.2)'
+                  border: '1px solid rgba(91, 159, 255, 0.2)',
+                  padding: 'clamp(20px, 4vw, 32px)'
                 }}
               >
                 <h3 
                   style={{
                     fontFamily: 'Poppins, sans-serif',
-                    fontSize: 'clamp(18px, 3vw, 22px)',
+                    fontSize: 'clamp(16px, 3.5vw, 22px)',
                     fontWeight: '600',
                     color: '#FFFFFF',
-                    marginBottom: '12px'
+                    marginBottom: 'clamp(10px, 2vw, 12px)'
                   }}
                 >
                   Technology Backbone
@@ -326,9 +345,9 @@ export function EurocoinTeam() {
                 <p 
                   style={{
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(13px, 2vw, 14px)',
+                    fontSize: 'clamp(13px, 2.5vw, 14px)',
                     color: '#B8D4F1',
-                    lineHeight: '1.6'
+                    lineHeight: '1.7'
                   }}
                 >
                   Built on Billon's enterprise-grade DLT protocol: audited, compliant, and proven at scale.
@@ -337,19 +356,20 @@ export function EurocoinTeam() {
 
               {/* Card 2 */}
               <div 
-                className="p-6 md:p-8 rounded-3xl"
+                className="rounded-2xl md:rounded-3xl"
                 style={{
                   backgroundColor: '#0A1628',
-                  border: '1px solid rgba(91, 159, 255, 0.2)'
+                  border: '1px solid rgba(91, 159, 255, 0.2)',
+                  padding: 'clamp(20px, 4vw, 32px)'
                 }}
               >
                 <h3 
                   style={{
                     fontFamily: 'Poppins, sans-serif',
-                    fontSize: 'clamp(18px, 3vw, 22px)',
+                    fontSize: 'clamp(16px, 3.5vw, 22px)',
                     fontWeight: '600',
                     color: '#FFFFFF',
-                    marginBottom: '12px'
+                    marginBottom: 'clamp(10px, 2vw, 12px)'
                   }}
                 >
                   UK Holding, European Reach
@@ -357,9 +377,9 @@ export function EurocoinTeam() {
                 <p 
                   style={{
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(13px, 2vw, 14px)',
+                    fontSize: 'clamp(13px, 2.5vw, 14px)',
                     color: '#B8D4F1',
-                    lineHeight: '1.6'
+                    lineHeight: '1.7'
                   }}
                 >
                   The Eurocoin Group operates from a UK base with full European distribution rights, enabling rapid cross-border deployment under a unified regulatory strategy.
@@ -368,19 +388,20 @@ export function EurocoinTeam() {
 
               {/* Card 3 */}
               <div 
-                className="p-6 md:p-8 rounded-3xl"
+                className="rounded-2xl md:rounded-3xl"
                 style={{
                   backgroundColor: '#0A1628',
-                  border: '1px solid rgba(91, 159, 255, 0.2)'
+                  border: '1px solid rgba(91, 159, 255, 0.2)',
+                  padding: 'clamp(20px, 4vw, 32px)'
                 }}
               >
                 <h3 
                   style={{
                     fontFamily: 'Poppins, sans-serif',
-                    fontSize: 'clamp(18px, 3vw, 22px)',
+                    fontSize: 'clamp(16px, 3.5vw, 22px)',
                     fontWeight: '600',
                     color: '#FFFFFF',
-                    marginBottom: '12px'
+                    marginBottom: 'clamp(10px, 2vw, 12px)'
                   }}
                 >
                   Planned Billon Merger
@@ -388,9 +409,9 @@ export function EurocoinTeam() {
                 <p 
                   style={{
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(13px, 2vw, 14px)',
+                    fontSize: 'clamp(13px, 2.5vw, 14px)',
                     color: '#B8D4F1',
-                    lineHeight: '1.6'
+                    lineHeight: '1.7'
                   }}
                 >
                   Eurocoin's roadmap includes a merger with Billon, consolidating technology, licenses, and expertise to accelerate growth and amplify shareholder value.
@@ -400,14 +421,15 @@ export function EurocoinTeam() {
           </div>
 
           {/* Bottom Text */}
-          <div className="text-center mt-16">
+          <div className="text-center" style={{ marginTop: 'clamp(2rem, 6vw, 5rem)' }}>
             <p 
               style={{
                 fontFamily: 'ibrand, sans-serif',
-                fontSize: 'clamp(16px, 2vw, 18px)',
+                fontSize: 'clamp(14px, 2.5vw, 18px)',
                 color: '#B8D4F1',
-                lineHeight: '1.6',
-                marginTop: '80px'
+                lineHeight: '1.7',
+                paddingLeft: '1rem',
+                paddingRight: '1rem'
               }}
             >
               This integrated structure positions Eurocoin as the premier digital euro ecosystem rooted in compliance, engineered for scale.
@@ -418,27 +440,29 @@ export function EurocoinTeam() {
 
       {/* Trust. Driven by Purpose Section */}
       <section 
-        className="py-16 md:py-32 relative overflow-hidden flex justify-center"
+        className="relative overflow-hidden flex justify-center"
         style={{
           backgroundImage: `url(${earthBgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: '600px',
-          paddingTop: '120px',
-          paddingBottom: '120px'
+          minHeight: 'clamp(500px, 70vh, 700px)',
+          paddingTop: 'clamp(60px, 12vw, 120px)',
+          paddingBottom: 'clamp(60px, 12vw, 120px)'
         }}
       >
-        <div className="w-full max-w-5xl mx-auto px-4 md:px-8 lg:px-12 text-center relative z-10">
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center relative z-10">
           {/* Main Heading */}
           <h2 
             style={{
               fontFamily: 'Poppins, sans-serif',
-              fontSize: 'clamp(36px, 6vw, 64px)',
+              fontSize: 'clamp(28px, 7vw, 64px)',
               fontWeight: 'bold',
               color: '#FFFFFF',
-              marginBottom: '48px',
-              lineHeight: '1.2'
+              marginBottom: 'clamp(2rem, 5vw, 3rem)',
+              lineHeight: '1.15',
+              paddingLeft: '1rem',
+              paddingRight: '1rem'
             }}
           >
             Trust. Driven by Purpose.
@@ -448,10 +472,12 @@ export function EurocoinTeam() {
           <p 
             style={{
               fontFamily: 'ibrand, sans-serif',
-              fontSize: 'clamp(16px, 2vw, 18px)',
+              fontSize: 'clamp(14px, 2.5vw, 18px)',
               color: '#B8D4F1',
               lineHeight: '1.8',
-              marginBottom: '32px'
+              marginBottom: 'clamp(1.5rem, 4vw, 2rem)',
+              paddingLeft: '1rem',
+              paddingRight: '1rem'
             }}
           >
             The Eurocoin leadership team combines financial discipline with innovative spirit. Together, they are redefining what it means to issue a digital euro fast, secure, and fully compliant.
@@ -461,67 +487,74 @@ export function EurocoinTeam() {
           <p 
             style={{
               fontFamily: 'ibrand, sans-serif',
-              fontSize: 'clamp(16px, 2vw, 18px)',
+              fontSize: 'clamp(14px, 2.5vw, 18px)',
               color: '#B8D4F1',
               lineHeight: '1.8',
-              marginBottom: '60px'
+              marginBottom: 'clamp(2.5rem, 6vw, 3.75rem)',
+              paddingLeft: '1rem',
+              paddingRight: '1rem'
             }}
           >
             Their mission is simple but powerful: <strong>to deliver the safest, fastest, and most compliant euro stablecoin for Europe's digital future.</strong>
           </p>
 
           {/* Contact Us Button */}
-          <div className="flex justify-center">
+          <div className="flex justify-center px-4">
             <button 
-              className="group relative flex items-center justify-center gap-5 px-14 md:px-24 py-6 md:py-7 rounded-full overflow-hidden transition-all duration-500 hover:scale-105"
+              className="group relative flex items-center justify-center gap-3 md:gap-5 rounded-full overflow-hidden transition-all duration-500 hover:scale-105 active:scale-95 w-full sm:w-auto"
               style={{
                 fontFamily: 'ibrand, sans-serif',
-                fontSize: 'clamp(18px, 2.5vw, 22px)',
-                background: 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)',
-                border: '2px solid rgba(148, 190, 252, 0.5)',
+                fontSize: 'clamp(1rem, 3vw, 1.375rem)',
+                background: 'linear-gradient(135deg, rgba(148, 190, 252, 0.3) 0%, rgba(91, 159, 255, 0.35) 50%, rgba(148, 190, 252, 0.3) 100%)',
+                border: '2px solid rgba(148, 190, 252, 0.6)',
                 backdropFilter: 'blur(20px)',
                 boxShadow: `
-                  0 8px 32px rgba(148, 190, 252, 0.3),
-                  0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-                  0 2px 8px rgba(0, 0, 0, 0.2)
+                  0 8px 32px rgba(148, 190, 252, 0.35),
+                  0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+                  0 2px 8px rgba(0, 0, 0, 0.2),
+                  0 4px 16px rgba(148, 190, 252, 0.25)
                 `,
                 color: '#FFFFFF',
                 fontWeight: '600',
                 letterSpacing: '0.5px',
-                position: 'relative'
+                position: 'relative',
+                padding: 'clamp(18px, 5vw, 24px) clamp(32px, 7vw, 56px)',
+                minHeight: '56px'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow = `
                   0 12px 48px rgba(148, 190, 252, 0.5),
-                  0 0 0 2px rgba(255, 255, 255, 0.2) inset,
+                  0 0 0 2px rgba(255, 255, 255, 0.25) inset,
                   0 4px 16px rgba(0, 0, 0, 0.3),
                   0 0 60px rgba(148, 190, 252, 0.4)
                 `;
-                e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.8)';
-                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.35) 0%, rgba(91, 159, 255, 0.4) 50%, rgba(148, 190, 252, 0.35) 100%)';
+                e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.85)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.4) 0%, rgba(91, 159, 255, 0.45) 50%, rgba(148, 190, 252, 0.4) 100%)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = `
-                  0 8px 32px rgba(148, 190, 252, 0.3),
-                  0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-                  0 2px 8px rgba(0, 0, 0, 0.2)
+                  0 8px 32px rgba(148, 190, 252, 0.35),
+                  0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+                  0 2px 8px rgba(0, 0, 0, 0.2),
+                  0 4px 16px rgba(148, 190, 252, 0.25)
                 `;
-                e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.5)';
-                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)';
+                e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.6)';
+                e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.3) 0%, rgba(91, 159, 255, 0.35) 50%, rgba(148, 190, 252, 0.3) 100%)';
               }}
             >
-              <span className="relative z-10" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)', marginLeft: '8px' }}>Contact Us</span>
+              <span className="relative z-10" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)' }}>Contact Us</span>
               <div 
-                className="relative z-10 flex items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:scale-110"
+                className="relative z-10 flex items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:scale-110 flex-shrink-0"
                 style={{
-                  width: '42px',
-                  height: '42px',
-                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)'
+                  width: 'clamp(38px, 9vw, 44px)',
+                  height: 'clamp(38px, 9vw, 44px)',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.9)',
+                  border: '1.5px solid rgba(0, 0, 0, 0.1)'
                 }}
               >
-                <ArrowRight className="w-6 h-6 text-black group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="text-black group-hover:translate-x-1 transition-transform duration-300" style={{ width: 'clamp(22px, 5.5vw, 26px)', height: 'clamp(22px, 5.5vw, 26px)' }} />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-700"></div>
             </button>
           </div>
         </div>
