@@ -36,7 +36,10 @@ export function AboutUs() {
             {/* Left Column - Text Content */}
             <div className="w-full">
               {/* Main Heading */}
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 md:mb-6 lg:mb-8 leading-tight">
+              <h1 
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white mb-4 md:mb-6 lg:mb-8 leading-tight"
+                style={{ fontFamily: 'ibrand, sans-serif' }}
+              >
                 The Future of Europe's Digital Finance
               </h1>
 

@@ -16,11 +16,14 @@ export function PartnershipsSection() {
   ];
 
   return (
-    <section className="relative py-12 md:py-20 pb-32 md:pb-64 bg-[#0a0e27] border-none">
+    <section className="relative py-12 md:py-16 pb-16 md:pb-24 bg-[#0a0e27] border-none">
       <div className="w-full flex flex-col items-center -mt-20 md:-mt-40">
         {/* Section Title */}
         <div className="text-center mb-8 md:mb-12">
-          <span className="text-cyan-400 tracking-wider uppercase text-sm md:text-base font-medium">
+          <span 
+            className="text-cyan-400 tracking-wider uppercase text-sm md:text-base font-medium"
+            style={{ fontFamily: 'ibrand, sans-serif' }}
+          >
             PARTNERSHIPS
           </span>
         </div>

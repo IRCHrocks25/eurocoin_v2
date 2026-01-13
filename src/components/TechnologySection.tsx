@@ -35,6 +35,7 @@ export function TechnologySection() {
             <h2 
               className="text-center text-3xl md:text-5xl lg:text-7xl relative text-white px-4"
               style={{ 
+                fontFamily: 'ibrand, sans-serif',
                 fontWeight: '800', 
                 letterSpacing: '-0.03em',
                 marginBottom: '40px'

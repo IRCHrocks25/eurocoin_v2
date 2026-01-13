@@ -30,7 +30,7 @@ export function ParadigmShiftSection() {
   ];
 
   return (
-    <section className="relative pt-16 md:pt-32 pb-24 md:pb-48 mt-24 md:mt-48 bg-[#0a0e27] overflow-hidden">
+    <section className="relative pt-16 md:pt-24 pb-16 md:pb-24 mt-8 md:mt-12 bg-[#0a0e27] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
@@ -60,14 +60,23 @@ export function ParadigmShiftSection() {
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-20 mt-8 md:mt-32">
           <div className="inline-block mb-4">
-            <span className="px-4 md:px-5 py-2 md:py-2.5 rounded-full bg-transparent border border-white/20 text-white text-sm md:text-base">
+            <span 
+              className="px-4 md:px-5 py-2 md:py-2.5 rounded-full bg-transparent border border-white/20 text-white text-sm md:text-base"
+              style={{ fontFamily: 'ibrand, sans-serif' }}
+            >
               The Problem with Legacy Stablecoins
             </span>
           </div>
-          <h2 className="text-white mb-4 md:mb-6 px-4">
+          <h2 
+            className="text-white mb-4 md:mb-6 px-4"
+            style={{ fontFamily: 'ibrand, sans-serif' }}
+          >
             The Paradigm Shift
           </h2>
-          <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto px-4">
+          <p 
+            className="text-white/70 text-base md:text-lg max-w-2xl mx-auto px-4"
+            style={{ fontFamily: 'ibrand, sans-serif' }}
+          >
             The current stablecoin infrastructure is fundamentally broken
           </p>
         </div>
@@ -93,10 +102,16 @@ export function ParadigmShiftSection() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-white mb-2 md:mb-3">
+                <h3 
+                  className="text-white mb-2 md:mb-3"
+                  style={{ fontFamily: 'ibrand, sans-serif' }}
+                >
                   {problem.title}
                 </h3>
-                <p className="text-white/60 text-sm md:text-base leading-relaxed">
+                <p 
+                  className="text-white/60 text-sm md:text-base leading-relaxed"
+                  style={{ fontFamily: 'ibrand, sans-serif' }}
+                >
                   {problem.description}
                 </p>
               </div>
@@ -107,10 +122,16 @@ export function ParadigmShiftSection() {
         {/* Bottom Message and CTAs */}
         <div className="h-8 md:h-12"></div>
         <div className="text-center px-4">
-          <p className="text-white/90 text-base md:text-lg mb-1 md:mb-2">
+          <p 
+            className="text-white/90 text-base md:text-lg mb-1 md:mb-2"
+            style={{ fontFamily: 'ibrand, sans-serif' }}
+          >
             The market doesn't need another iteration.
           </p>
-          <p className="text-white text-lg md:text-xl font-medium">
+          <p 
+            className="text-white text-lg md:text-xl font-medium"
+            style={{ fontFamily: 'ibrand, sans-serif' }}
+          >
             It needs a complete rebuild.
           </p>
         </div>

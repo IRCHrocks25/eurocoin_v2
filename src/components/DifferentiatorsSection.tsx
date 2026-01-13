@@ -4,7 +4,7 @@ import card03 from 'figma:asset/6c3ee306199c1d73dae8ff43f092689a201937d4.png';
 
 export function DifferentiatorsSection() {
   return (
-    <section className="relative py-24 md:py-40 pt-32 md:pt-48 bg-[#0a0e27] overflow-hidden">
+    <section className="relative py-16 md:py-24 pt-16 md:pt-24 bg-[#0a0e27] overflow-hidden">
       <div className="hidden md:block absolute left-12 top-32 w-20 h-20 opacity-20">
         <div className="grid grid-cols-5 gap-2">
           {Array.from({ length: 25 }).map((_, i) => (
@@ -36,7 +36,8 @@ export function DifferentiatorsSection() {
             <h2 
               className="text-center text-3xl md:text-5xl lg:text-7xl relative text-white px-4"
               style={{ 
-                paddingTop: '120px', 
+                fontFamily: 'ibrand, sans-serif',
+                paddingTop: '32px', 
                 fontWeight: '800', 
                 letterSpacing: '-0.03em'
               }}

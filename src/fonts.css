@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'ibrand';
+  src: url('./assets/font/ibrand-logo-font-2024-05-10-18-52-26-utc/Ibrand.woff2') format('woff2'),
+       url('./assets/font/ibrand-logo-font-2024-05-10-18-52-26-utc/Ibrand.woff') format('woff'),
+       url('./assets/font/ibrand-logo-font-2024-05-10-18-52-26-utc/Ibrand.ttf') format('truetype'),
+       url('./assets/font/ibrand-logo-font-2024-05-10-18-52-26-utc/Ibrand.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+

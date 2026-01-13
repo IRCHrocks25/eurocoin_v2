@@ -6,7 +6,7 @@ import cardsImage from 'figma:asset/f26e5bf123022cc757ac78bb03891c63f6cad9fa.png
 export function BondPlaySection() {
   return (
     <section 
-      className="relative py-24 md:py-40 pt-32 md:pt-48 bg-[#0a0e27] overflow-hidden"
+      className="relative py-16 md:py-24 pt-16 md:pt-24 bg-[#0a0e27] overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -17,12 +17,13 @@ export function BondPlaySection() {
       <div className="relative w-full px-4 md:px-8">
         <div className="w-full mx-auto">
           
-          <div className="flex flex-col items-center justify-center mb-12 md:mb-20" style={{ paddingTop: '200px' }}>
+          <div className="flex flex-col items-center justify-center mb-12 md:mb-20" style={{ paddingTop: '32px' }}>
             {/* Badge */}
             <div className="inline-block px-4" style={{ marginBottom: '48px' }}>
               <span 
                 className="px-6 md:px-8 py-3 rounded-full text-white text-xs md:text-sm tracking-wider uppercase text-center block"
                 style={{
+                  fontFamily: 'ibrand, sans-serif',
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   backdropFilter: 'blur(10px)',
@@ -37,6 +38,7 @@ export function BondPlaySection() {
             <h2 
               className="text-center text-3xl md:text-5xl lg:text-7xl relative text-white px-4"
               style={{ 
+                fontFamily: 'ibrand, sans-serif',
                 fontWeight: '800', 
                 letterSpacing: '-0.03em',
                 marginBottom: '40px'
@@ -48,7 +50,13 @@ export function BondPlaySection() {
             {/* Subtitle */}
             <p 
               className="text-center text-xl md:text-2xl lg:text-3xl xl:text-4xl px-4"
-              style={{ fontWeight: '600', letterSpacing: '-0.01em', marginBottom: '36px', color: '#B8D5FF' }}
+              style={{ 
+                fontFamily: 'ibrand, sans-serif',
+                fontWeight: '600', 
+                letterSpacing: '-0.01em', 
+                marginBottom: '36px', 
+                color: '#B8D5FF' 
+              }}
             >
               Proprietary DLT Built for Regulated Finance
             </p>

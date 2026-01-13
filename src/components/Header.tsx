@@ -33,11 +33,19 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8 xl:gap-12">
-            <Link to="/" className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
+            <Link 
+              to="/" 
+              className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg"
+              style={{ fontFamily: 'ibrand, sans-serif' }}
+            >
               Home
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-200 group-hover:w-full"></span>
             </Link>
-            <Link to="/blogs" className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
+            <Link 
+              to="/blogs" 
+              className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg"
+              style={{ fontFamily: 'ibrand, sans-serif' }}
+            >
               Blogs
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-200 group-hover:w-full"></span>
             </Link>
@@ -48,6 +56,7 @@ export function Header() {
             >
               <button
                 className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg flex items-center gap-1"
+                style={{ fontFamily: 'ibrand, sans-serif' }}
               >
                 Technology
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${technologyDropdownOpen ? 'rotate-180' : ''}`} />
@@ -158,7 +167,11 @@ export function Header() {
                 </div>
               )}
             </div>
-            <Link to="/open-platform" className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
+            <Link 
+              to="/open-platform" 
+              className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg"
+              style={{ fontFamily: 'ibrand, sans-serif' }}
+            >
               How It Works
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-200 group-hover:w-full"></span>
             </Link>
@@ -169,6 +182,7 @@ export function Header() {
             >
               <button
                 className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg flex items-center gap-1"
+                style={{ fontFamily: 'ibrand, sans-serif' }}
               >
                 Why Us
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${whyUsDropdownOpen ? 'rotate-180' : ''}`} />
@@ -286,6 +300,7 @@ export function Header() {
             >
               <button
                 className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg flex items-center gap-1"
+                style={{ fontFamily: 'ibrand, sans-serif' }}
               >
                 About Us
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${aboutUsDropdownOpen ? 'rotate-180' : ''}`} />
@@ -438,7 +453,11 @@ export function Header() {
                 </div>
               )}
             </div>
-            <Link to="/faq" className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg">
+            <Link 
+              to="/faq" 
+              className="text-[#94BEFC] hover:text-white transition-colors duration-200 relative group text-base xl:text-lg"
+              style={{ fontFamily: 'ibrand, sans-serif' }}
+            >
               FAQ
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-200 group-hover:w-full"></span>
             </Link>
@@ -514,6 +533,7 @@ export function Header() {
                 to="/"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-white/80 hover:text-white transition-colors duration-200 py-4 px-4 rounded-lg hover:bg-white/5"
+                style={{ fontFamily: 'ibrand, sans-serif' }}
               >
                 Home
               </Link>
@@ -521,17 +541,19 @@ export function Header() {
                 to="/blogs"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-white/80 hover:text-white transition-colors duration-200 py-4 px-4 rounded-lg hover:bg-white/5"
+                style={{ fontFamily: 'ibrand, sans-serif' }}
               >
                 Blogs
               </Link>
               
               {/* Technology Dropdown */}
               <div className="flex flex-col">
-                <div className="py-4 px-4 text-base" style={{ color: '#94BEFC', fontWeight: 'bold' }}>Technology</div>
+                <div className="py-4 px-4 text-base" style={{ color: '#94BEFC', fontWeight: 'bold', fontFamily: 'ibrand, sans-serif' }}>Technology</div>
                 <Link 
                   to="/technology"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                  style={{ fontFamily: 'ibrand, sans-serif' }}
                 >
                   Technology of Eurocoin
                 </Link>
@@ -539,6 +561,7 @@ export function Header() {
                   to="/how-eurocoin-works"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                  style={{ fontFamily: 'ibrand, sans-serif' }}
                 >
                   How Eurocoin Works
                 </Link>
@@ -548,17 +571,19 @@ export function Header() {
                 to="/open-platform"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-white/80 hover:text-white transition-colors duration-200 py-4 px-4 rounded-lg hover:bg-white/5"
+                style={{ fontFamily: 'ibrand, sans-serif' }}
               >
                 How It Works
               </Link>
               
               {/* Why Us Dropdown */}
               <div className="flex flex-col">
-                <div className="py-4 px-4 text-base" style={{ color: '#94BEFC', fontWeight: 'bold' }}>Why Us</div>
+                <div className="py-4 px-4 text-base" style={{ color: '#94BEFC', fontWeight: 'bold', fontFamily: 'ibrand, sans-serif' }}>Why Us</div>
                 <Link 
                   to="/advantage-of-eurocoin"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                  style={{ fontFamily: 'ibrand, sans-serif' }}
                 >
                   Advantage of Eurocoin
                 </Link>
@@ -566,6 +591,7 @@ export function Header() {
                   to="/use-cases-and-solution"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                  style={{ fontFamily: 'ibrand, sans-serif' }}
                 >
                   Use Cases and Solution
                 </Link>
@@ -573,11 +599,12 @@ export function Header() {
               
               {/* About Us Dropdown */}
               <div className="flex flex-col">
-                <div className="py-4 px-4 text-base" style={{ color: '#94BEFC', fontWeight: 'bold' }}>About Us</div>
+                <div className="py-4 px-4 text-base" style={{ color: '#94BEFC', fontWeight: 'bold', fontFamily: 'ibrand, sans-serif' }}>About Us</div>
                 <Link 
                   to="/eurocoin-team"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                  style={{ fontFamily: 'ibrand, sans-serif' }}
                 >
                   Eurocoin Team
                 </Link>
@@ -585,6 +612,7 @@ export function Header() {
                   to="/partners-integrations"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                  style={{ fontFamily: 'ibrand, sans-serif' }}
                 >
                   Partners and Integrations
                 </Link>
@@ -592,6 +620,7 @@ export function Header() {
                   to="/compliance-security"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
+                  style={{ fontFamily: 'ibrand, sans-serif' }}
                 >
                   Compliance & Security
                 </Link>
@@ -601,6 +630,7 @@ export function Header() {
                 to="/faq"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-white/80 hover:text-white transition-colors duration-200 py-4 px-4 rounded-lg hover:bg-white/5"
+                style={{ fontFamily: 'ibrand, sans-serif' }}
               >
                 FAQ
               </Link>

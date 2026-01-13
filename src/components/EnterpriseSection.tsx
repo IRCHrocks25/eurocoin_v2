@@ -17,7 +17,7 @@ export function EnterpriseSection() {
   ];
 
   return (
-    <section className="relative pt-16 md:pt-32 pb-24 md:pb-48 mt-24 md:mt-48 bg-gradient-to-b from-[#0a0e27] via-[#0d1135] to-[#0a0e27] overflow-hidden">
+    <section className="relative pt-16 md:pt-24 pb-16 md:pb-24 mt-8 md:mt-12 bg-gradient-to-b from-[#0a0e27] via-[#0d1135] to-[#0a0e27] overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -26,25 +26,34 @@ export function EnterpriseSection() {
 
       <div className="relative w-full flex flex-col items-center px-4 md:px-6">
         {/* Spacer to push title down */}
-        <div className="h-8 md:h-32"></div>
+        <div className="h-4 md:h-8"></div>
         
         {/* Section Title */}
-        <div className="text-center mb-12 md:mb-20 mt-8 md:mt-32">
+        <div className="text-center mb-12 md:mb-20 mt-4 md:mt-8">
           <div className="inline-block mb-4">
-            <span className="px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-xs md:text-sm">
+            <span 
+              className="px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-xs md:text-sm"
+              style={{ fontFamily: 'ibrand, sans-serif' }}
+            >
               Enterprise Performance
             </span>
           </div>
-          <h2 className="text-white mb-4 md:mb-6 bg-gradient-to-r from-white via-cyan-100 to-blue-100 bg-clip-text text-transparent px-4">
+          <h2 
+            className="text-white mb-4 md:mb-6 bg-gradient-to-r from-white via-cyan-100 to-blue-100 bg-clip-text text-transparent px-4"
+            style={{ fontFamily: 'ibrand, sans-serif' }}
+          >
             Built and Audited for Enterprise-Scale Transactions
           </h2>
-          <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto px-4">
+          <p 
+            className="text-white/60 text-base md:text-lg max-w-2xl mx-auto px-4"
+            style={{ fontFamily: 'ibrand, sans-serif' }}
+          >
             The numbers that matter. Real performance, audited results.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="h-8 md:h-32"></div>
+        <div className="h-4 md:h-8"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16 w-full max-w-7xl">
           {featureCards.map((card, index) => (
             <div

@@ -5,10 +5,10 @@ import backgroundImage from 'figma:asset/ae97827e1ca44e54515fd94859b25a1916f2ecb
 export function WhoEurocoinIsBuiltForSection() {
   return (
     <section 
-      className="relative py-24 md:py-40 bg-[#0a0e27] overflow-hidden" 
+      className="relative py-16 md:py-24 bg-[#0a0e27] overflow-hidden" 
       style={{ 
-        paddingTop: '120px',
-        paddingBottom: '200px',
+        paddingTop: '64px',
+        paddingBottom: '80px',
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -27,12 +27,13 @@ export function WhoEurocoinIsBuiltForSection() {
       <div className="relative w-full px-4 md:px-8">
         <div className="w-full mx-auto">
           
-          <div className="flex flex-col items-center justify-center mb-4 md:mb-8" style={{ marginTop: '120px' }}>
+          <div className="flex flex-col items-center justify-center mb-4 md:mb-8" style={{ marginTop: '24px' }}>
             {/* Badge */}
             <div className="inline-block px-4" style={{ marginBottom: '48px' }}>
               <span 
                 className="px-6 py-2 rounded-full text-white text-xs md:text-sm tracking-wide"
                 style={{
+                  fontFamily: 'ibrand, sans-serif',
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   backdropFilter: 'blur(10px)'
@@ -46,6 +47,7 @@ export function WhoEurocoinIsBuiltForSection() {
             <h2 
               className="text-center text-3xl md:text-5xl lg:text-6xl text-white px-4"
               style={{ 
+                fontFamily: 'ibrand, sans-serif',
                 fontWeight: '800',
                 letterSpacing: '-0.02em',
                 marginBottom: '0px',

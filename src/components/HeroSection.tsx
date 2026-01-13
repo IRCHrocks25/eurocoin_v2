@@ -19,7 +19,10 @@ export function HeroSection() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center">
         {/* Subtitle */}
         <div className="mb-6 md:mb-8">
-          <span className="text-cyan-400 tracking-wider uppercase text-sm md:text-base font-medium">
+          <span 
+            className="text-cyan-400 tracking-wider uppercase text-sm md:text-base font-medium"
+            style={{ fontFamily: 'ibrand, sans-serif' }}
+          >
             EUROCOIN (EURDT)
           </span>
         </div>
@@ -27,6 +30,7 @@ export function HeroSection() {
         {/* Main Heading */}
         <h1 
           style={{ 
+            fontFamily: 'ibrand, sans-serif',
             marginBottom: '2rem',
             fontWeight: '900',
             letterSpacing: '-0.02em'
@@ -38,7 +42,10 @@ export function HeroSection() {
 
         {/* Subheading */}
         <p 
-          style={{ marginBottom: '1rem' }}
+          style={{ 
+            fontFamily: 'ibrand, sans-serif',
+            marginBottom: '1rem' 
+          }}
           className="text-xl md:text-2xl text-white/95 font-medium px-4 md:px-0"
         >
           A new era in digital finance starts here.
@@ -46,7 +53,10 @@ export function HeroSection() {
 
         {/* Description */}
         <p 
-          style={{ marginBottom: '4rem' }}
+          style={{ 
+            fontFamily: 'ibrand, sans-serif',
+            marginBottom: '4rem' 
+          }}
           className="text-white/80 max-w-3xl mx-auto leading-relaxed text-base md:text-lg px-4 md:px-0"
         >
           Eurocoin is the world's first fully MiCA-compliant, euro-backed stablecoin engineered for real-time settlement, gas-free payments, and true institutional trust.

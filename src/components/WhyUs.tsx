@@ -29,7 +29,14 @@ export function WhyUs() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-24 lg:py-32 w-full">
           <div className="max-w-2xl mx-auto">
             {/* Main Heading */}
-            <h1 className="text-white mb-8" style={{ fontSize: 'clamp(40px, 7vw, 64px)', lineHeight: '1.1' }}>
+            <h1 
+              className="text-white mb-8" 
+              style={{ 
+                fontFamily: 'ibrand, sans-serif',
+                fontSize: 'clamp(40px, 7vw, 64px)', 
+                lineHeight: '1.1' 
+              }}
+            >
               Why Eurocoin?
             </h1>
 

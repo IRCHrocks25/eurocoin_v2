@@ -7,8 +7,8 @@ export function ExperienceParadigmSection() {
     <section 
       className="relative overflow-hidden" 
       style={{ 
-        paddingTop: '120px',
-        paddingBottom: '120px',
+        paddingTop: '64px',
+        paddingBottom: '64px',
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -27,11 +27,13 @@ export function ExperienceParadigmSection() {
                 <div className="flex flex-col justify-center">
                   {/* Main Heading */}
                   <h2 
-                    className="text-white mb-6 text-4xl md:text-5xl lg:text-6xl"
+                    className="text-white text-4xl md:text-5xl lg:text-6xl"
                     style={{ 
+                      fontFamily: 'ibrand, sans-serif',
                       fontWeight: '700',
                       lineHeight: '1.1',
-                      letterSpacing: '-0.02em'
+                      letterSpacing: '-0.02em',
+                      marginBottom: '48px'
                     }}
                   >
                     Experience the new Paradigm
@@ -39,11 +41,13 @@ export function ExperienceParadigmSection() {
 
                   {/* First Paragraph */}
                   <p 
-                    className="text-white mb-4 text-base md:text-lg"
+                    className="text-white text-base md:text-lg"
                     style={{ 
+                      fontFamily: 'ibrand, sans-serif',
                       fontWeight: '600',
                       lineHeight: '1.6',
-                      opacity: '0.95'
+                      opacity: '0.95',
+                      marginBottom: '48px'
                     }}
                   >
                     Ready to invest in the euro stablecoin built for tomorrow?
@@ -51,23 +55,41 @@ export function ExperienceParadigmSection() {
 
                   {/* Second Paragraph */}
                   <p 
-                    className="text-white mb-4 text-sm md:text-base"
+                    className="text-white text-sm md:text-base"
                     style={{ 
+                      fontFamily: 'ibrand, sans-serif',
                       fontWeight: '400',
                       lineHeight: '1.6',
-                      opacity: '0.85'
+                      opacity: '0.85',
+                      marginBottom: '48px'
                     }}
                   >
-                    Eurocoin is raising capital to capture the European stablecoin market. This is your opportunity to invest in the infrastructure layer of Finance 2.0.
+                    Eurocoin is raising capital to capture the European stablecoin market.
                   </p>
 
                   {/* Third Paragraph */}
                   <p 
-                    className="text-white mb-8 text-sm md:text-base"
+                    className="text-white text-sm md:text-base"
                     style={{ 
+                      fontFamily: 'ibrand, sans-serif',
                       fontWeight: '400',
                       lineHeight: '1.6',
-                      opacity: '0.85'
+                      opacity: '0.85',
+                      marginBottom: '48px'
+                    }}
+                  >
+                    This is your opportunity to invest in the infrastructure layer of Finance 2.0.
+                  </p>
+
+                  {/* Fourth Paragraph */}
+                  <p 
+                    className="text-white text-sm md:text-base"
+                    style={{ 
+                      fontFamily: 'ibrand, sans-serif',
+                      fontWeight: '400',
+                      lineHeight: '1.6',
+                      opacity: '0.85',
+                      marginBottom: '64px'
                     }}
                   >
                     The paradigm shift is here. The architecture is built. The market is ready.

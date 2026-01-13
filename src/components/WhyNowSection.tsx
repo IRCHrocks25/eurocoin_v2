@@ -7,8 +7,8 @@ export function WhyNowSection() {
     <section 
       className="relative pb-24 md:pb-40 bg-[#0a0e27] overflow-hidden" 
       style={{ 
-        paddingTop: '80px',
-        paddingBottom: '200px',
+        paddingTop: '64px',
+        paddingBottom: '80px',
         backgroundImage: `url(${coinBackgroundImage})`,
         backgroundSize: 'contain',
         backgroundPosition: 'center',
@@ -27,12 +27,13 @@ export function WhyNowSection() {
       <div className="relative w-full px-4 md:px-8">
         <div className="w-full mx-auto">
           
-          <div className="flex flex-col items-center justify-center mb-4 md:mb-8" style={{ marginTop: '60px' }}>
+          <div className="flex flex-col items-center justify-center mb-4 md:mb-8" style={{ marginTop: '24px' }}>
             {/* Badge */}
             <div className="inline-block px-4" style={{ marginBottom: '48px' }}>
               <span 
                 className="px-6 py-2 rounded-full text-white text-xs md:text-sm tracking-wide"
                 style={{
+                  fontFamily: 'ibrand, sans-serif',
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   backdropFilter: 'blur(10px)'
@@ -46,6 +47,7 @@ export function WhyNowSection() {
             <h2 
               className="text-center text-3xl md:text-5xl lg:text-6xl text-white px-4"
               style={{ 
+                fontFamily: 'ibrand, sans-serif',
                 fontWeight: '800',
                 letterSpacing: '-0.02em',
                 marginBottom: '0px',
@@ -59,6 +61,7 @@ export function WhyNowSection() {
             <p 
               className="text-center text-white text-base md:text-xl mt-6 px-4"
               style={{ 
+                fontFamily: 'ibrand, sans-serif',
                 opacity: '0.8',
                 fontWeight: '400'
               }}
@@ -67,7 +70,7 @@ export function WhyNowSection() {
             </p>
           </div>
 
-          <div className="relative flex flex-col items-center justify-center gap-8 md:gap-12" style={{ paddingBottom: '100px', marginTop: '80px' }}>
+          <div className="relative flex flex-col items-center justify-center gap-8 md:gap-12" style={{ paddingBottom: '40px', marginTop: '32px' }}>
             
             {/* Cards Image */}
             <div className="w-full max-w-6xl px-4">
