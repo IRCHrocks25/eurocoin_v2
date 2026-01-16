@@ -17,7 +17,13 @@ export function EnterpriseSection() {
   ];
 
   return (
-    <section className="relative pt-16 md:pt-24 pb-16 md:pb-24 mt-8 md:mt-12 bg-gradient-to-b from-[#0a0e27] via-[#0d1135] to-[#0a0e27] overflow-hidden">
+    <section 
+      className="relative pb-16 md:pb-24 bg-gradient-to-b from-[#0a0e27] via-[#0d1135] to-[#0a0e27] overflow-hidden"
+      style={{ 
+        paddingTop: 'clamp(1rem, 3vw, 2rem)',
+        marginTop: 'clamp(0.25rem, 1vw, 0.75rem)'
+      }}
+    >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -25,36 +31,54 @@ export function EnterpriseSection() {
       </div>
 
       <div className="relative w-full flex flex-col items-center px-4 md:px-6">
-        {/* Spacer to push title down */}
-        <div className="h-4 md:h-8"></div>
-        
         {/* Section Title */}
-        <div className="text-center mb-12 md:mb-20 mt-4 md:mt-8">
-          <div className="inline-block mb-4">
+        <div className="text-center mb-12 md:mb-20">
+          <div className="inline-block" style={{ marginRight: 'clamp(1rem, 3vw, 2rem)', marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
             <span 
-              className="px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-xs md:text-sm"
-              style={{ fontFamily: 'ibrand, sans-serif' }}
+              className="rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400"
+              style={{ 
+                fontFamily: 'ibrand, sans-serif',
+                fontSize: 'clamp(0.875rem, 2vw, 1.125rem)',
+                padding: 'clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem)',
+                display: 'inline-block'
+              }}
             >
               Enterprise Performance
             </span>
           </div>
-          <h2 
-            className="text-white mb-4 md:mb-6 bg-gradient-to-r from-white via-cyan-100 to-blue-100 bg-clip-text text-transparent px-4"
-            style={{ fontFamily: 'ibrand, sans-serif' }}
-          >
-            Built and Audited for Enterprise-Scale Transactions
-          </h2>
-          <p 
-            className="text-white/60 text-base md:text-lg max-w-2xl mx-auto px-4"
-            style={{ fontFamily: 'ibrand, sans-serif' }}
-          >
-            The numbers that matter. Real performance, audited results.
-          </p>
+          <div className="w-full flex flex-col items-center">
+            <h2 
+              className="text-white bg-gradient-to-r from-white via-cyan-100 to-blue-100 bg-clip-text text-transparent text-center"
+              style={{ 
+                fontFamily: 'ibrand, sans-serif',
+                marginBottom: 'clamp(0.5rem, 1.5vw, 0.75rem)',
+                paddingLeft: '1rem',
+                paddingRight: '1rem',
+                width: '100%'
+              }}
+            >
+              Built and Audited for Enterprise-Scale Transactions
+            </h2>
+            <p 
+              className="text-white/60 max-w-2xl text-center"
+              style={{ 
+                fontFamily: 'ibrand, sans-serif',
+                marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)',
+                fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
+                lineHeight: '1.6',
+                paddingLeft: '1rem',
+                paddingRight: '1rem',
+                width: '100%'
+              }}
+            >
+              The numbers that matter. Real performance, audited results.
+            </p>
+          </div>
         </div>
 
         {/* Features Grid */}
         <div className="h-4 md:h-8"></div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16 w-full max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-8 md:mb-16 w-full max-w-7xl" style={{ gap: 'clamp(0.75rem, 2vw, 1.5rem)' }}>
           {featureCards.map((card, index) => (
             <div
               key={index}

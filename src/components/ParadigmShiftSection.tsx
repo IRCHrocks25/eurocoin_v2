@@ -59,10 +59,15 @@ export function ParadigmShiftSection() {
         
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-20 mt-8 md:mt-32">
-          <div className="inline-block mb-4">
+          <div className="inline-block" style={{ marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)', marginLeft: 'clamp(1rem, 3vw, 2rem)', marginRight: 'clamp(1rem, 3vw, 2rem)' }}>
             <span 
-              className="px-4 md:px-5 py-2 md:py-2.5 rounded-full bg-transparent border border-white/20 text-white text-sm md:text-base"
-              style={{ fontFamily: 'ibrand, sans-serif' }}
+              className="rounded-full bg-transparent border border-white/20 text-white"
+              style={{ 
+                fontFamily: 'ibrand, sans-serif',
+                fontSize: 'clamp(0.875rem, 2vw, 1.125rem)',
+                padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem)',
+                display: 'inline-block'
+              }}
             >
               The Problem with Legacy Stablecoins
             </span>
@@ -83,16 +88,16 @@ export function ParadigmShiftSection() {
 
         {/* Problems Grid */}
         <div className="h-8 md:h-16"></div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-16 w-full max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 mb-8 md:mb-16 w-full max-w-6xl px-4 md:px-6">
           {problems.map((problem, index) => (
             <div
               key={index}
               className="group relative w-full"
             >
               {/* Card */}
-              <div className="relative h-full p-6 md:p-8 rounded-xl md:rounded-2xl bg-black/40 border border-white/10 hover:border-red-500/30 transition-all duration-300 backdrop-blur-sm">
+              <div className="relative h-full rounded-xl md:rounded-2xl bg-black/40 border border-white/10 hover:border-red-500/30 transition-all duration-300 backdrop-blur-sm" style={{ padding: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
                 {/* Red Icon Grid */}
-                <div className="mb-4 md:mb-6">
+                <div style={{ marginBottom: 'clamp(1.25rem, 3vw, 2rem)' }}>
                   <div className="grid grid-cols-2 gap-1 w-7">
                     <div className="w-3 h-3 rounded-[3px] bg-red-500"></div>
                     <div className="w-3 h-3 rounded-[3px] bg-red-500"></div>
@@ -103,14 +108,20 @@ export function ParadigmShiftSection() {
 
                 {/* Content */}
                 <h3 
-                  className="text-white mb-2 md:mb-3"
-                  style={{ fontFamily: 'ibrand, sans-serif' }}
+                  className="text-white"
+                  style={{ 
+                    fontFamily: 'ibrand, sans-serif',
+                    marginBottom: 'clamp(0.75rem, 2vw, 1.25rem)'
+                  }}
                 >
                   {problem.title}
                 </h3>
                 <p 
-                  className="text-white/60 text-sm md:text-base leading-relaxed"
-                  style={{ fontFamily: 'ibrand, sans-serif' }}
+                  className="text-white/60 leading-relaxed"
+                  style={{ 
+                    fontFamily: 'ibrand, sans-serif',
+                    fontSize: 'clamp(0.875rem, 2vw, 1.125rem)'
+                  }}
                 >
                   {problem.description}
                 </p>

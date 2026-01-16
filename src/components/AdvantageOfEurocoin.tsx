@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import whyUsBgImage from 'figma:asset/7d2878ebf33fe7240b09a9b5859449df2659760e.png';
-import whyUsCardsFullImage from 'figma:asset/b37a2c7b757eee0c248f6db49ec971bbcae3a133.png';
+import whyUsCardsFullImage from '../assets/Frame 1707482021.png';
 import darkBlueBg from 'figma:asset/b3dbefa83a6eaf34e621974ecb8df2e4e597f109.png';
 import heroBgImage from 'figma:asset/b4ea384d8eb8e231c5607c87c40b03297346549d.png';
 import featureCardsImage from 'figma:asset/5423529f318ab3a74da8abfa2652fadf41541fc8.png';
@@ -13,7 +13,7 @@ export function AdvantageOfEurocoin() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-24 md:pt-32" style={{ backgroundColor: '#000' }}>
+      <section className="relative flex items-center overflow-hidden" style={{ backgroundColor: '#000', minHeight: 'clamp(500px, 70vh, 700px)', paddingTop: 'clamp(100px, 12vh, 140px)', paddingBottom: 'clamp(20px, 3vh, 40px) !important' }}>
         {/* Background Image */}
         <div 
           className="absolute inset-0" 
@@ -26,14 +26,14 @@ export function AdvantageOfEurocoin() {
         />
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-24 lg:py-32 w-full">
-          <div className="max-w-2xl mx-auto" style={{ marginLeft: '80px' }}>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-12 w-full" style={{ paddingTop: 'clamp(2rem, 4vw, 3rem)', paddingBottom: 'clamp(1rem, 2vw, 2rem)' }}>
+          <div className="max-w-2xl" style={{ marginLeft: 'clamp(60px, 10vw, 100px)', marginTop: 'clamp(2rem, 4vw, 3rem)' }}>
             {/* Main Heading */}
             <h1 
               className="text-white mb-8" 
               style={{ 
                 fontFamily: 'ibrand, sans-serif',
-                fontSize: 'clamp(40px, 7vw, 64px)', 
+                fontSize: 'clamp(48px, 8vw, 72px)', 
                 lineHeight: '1.1' 
               }}
             >
@@ -41,15 +41,16 @@ export function AdvantageOfEurocoin() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-white mb-12" style={{ fontSize: 'clamp(16px, 2.5vw, 20px)', lineHeight: '1.4', opacity: '0.95' }}>
+            <p className="text-white mb-12" style={{ fontSize: 'clamp(18px, 3vw, 24px)', lineHeight: '1.4', opacity: '0.95' }}>
               The Competitive Advantages of Europe's Next-Gen Stablecoin
             </p>
 
             {/* CTA Button */}
             <button 
-              className="group relative flex items-center justify-center gap-4 px-12 md:px-20 py-5 md:py-6 rounded-full overflow-hidden transition-all duration-500 hover:scale-105 w-full sm:w-auto" 
+              className="group relative flex items-center justify-center gap-4 rounded-full overflow-hidden transition-all duration-500 hover:scale-105 w-full sm:w-auto" 
               style={{ 
                 marginTop: '2rem',
+                padding: 'clamp(14px, 2.5vw, 20px) clamp(32px, 5vw, 56px)',
                 background: 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)',
                 border: '2px solid rgba(148, 190, 252, 0.5)',
                 backdropFilter: 'blur(20px)',
@@ -80,8 +81,9 @@ export function AdvantageOfEurocoin() {
                 e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.25) 0%, rgba(91, 159, 255, 0.3) 50%, rgba(148, 190, 252, 0.25) 100%)';
               }}
             >
-              <span className="relative z-10 text-white font-semibold text-base md:text-lg" style={{ 
+              <span className="relative z-10 text-white font-semibold" style={{ 
                 fontFamily: 'ibrand, sans-serif',
+                fontSize: 'clamp(14px, 2vw, 18px)',
                 letterSpacing: '0.5px',
                 textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
                 marginLeft: '8px'
@@ -113,12 +115,16 @@ export function AdvantageOfEurocoin() {
         />
 
         {/* Full Cards Image */}
-        <div className="relative z-10 w-full">
+        <div className="relative z-10 w-full flex justify-center">
           <img 
             src={whyUsCardsFullImage} 
             alt="Why Us Features" 
-            className="w-full h-auto"
-            style={{ display: 'block' }}
+            className="h-auto"
+            style={{ 
+              display: 'block',
+              width: 'clamp(60%, 75vw, 85%)',
+              maxWidth: '1200px'
+            }}
           />
         </div>
       </section>
@@ -138,11 +144,12 @@ export function AdvantageOfEurocoin() {
         </div>
 
         {/* Header Content - Overlaid on Background */}
-        <div className="absolute left-0 right-0 z-20 flex justify-center items-center" style={{ top: '160px' }}>
+        <div className="absolute left-0 right-0 z-20 flex justify-center items-center" style={{ top: 'clamp(60px, 8vh, 100px)' }}>
           <div className="w-full max-w-7xl mx-auto px-6 md:px-8 lg:px-12 flex flex-col gap-6 items-center text-center" style={{ marginLeft: '100px' }}>
             {/* Gradient Heading */}
             <h2 
-              className="max-w-4xl mt-8 md:mt-16"
+              className="max-w-4xl"
+              style={{ marginTop: 'clamp(1rem, 2vw, 2rem)' }}
               style={{ 
                 fontSize: 'clamp(32px, 6vw, 64px)',
                 lineHeight: '1.2',
@@ -211,7 +218,7 @@ export function AdvantageOfEurocoin() {
         </div>
 
         {/* Feature Cards Image Overlay */}
-        <div className="absolute left-0 right-0 w-full flex justify-center items-center hidden md:block" style={{ zIndex: 10, top: '480px', transform: 'translateX(60px)', paddingBottom: '120px' }}>
+        <div className="absolute left-0 right-0 w-full flex justify-center items-center hidden md:block" style={{ zIndex: 10, top: 'clamp(420px, 38vh, 450px)', transform: 'translateX(60px)', paddingBottom: '120px' }}>
           <img 
             src={featureCardsImage} 
             alt="Feature Cards" 
@@ -236,7 +243,7 @@ export function AdvantageOfEurocoin() {
           style={{ 
             zIndex: 10000, 
             position: 'absolute',
-            bottom: '80px',
+            bottom: 'clamp(100px, 12vh, 120px)',
             pointerEvents: 'auto',
             transform: 'translateX(calc(-50% + 30px))'
           }}

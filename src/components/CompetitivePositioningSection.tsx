@@ -27,14 +27,17 @@ export function CompetitivePositioningSection() {
           
           <div className="flex flex-col items-center justify-center mb-4 md:mb-8" style={{ marginTop: '24px' }}>
             {/* Badge */}
-            <div className="inline-block px-4" style={{ marginBottom: '48px' }}>
+            <div className="inline-block" style={{ marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)', marginLeft: 'clamp(1rem, 3vw, 2rem)', marginRight: 'clamp(1rem, 3vw, 2rem)' }}>
               <span 
-                className="px-6 py-2 rounded-full text-white text-xs md:text-sm tracking-wide"
+                className="rounded-full text-white tracking-wide"
                 style={{
                   fontFamily: 'ibrand, sans-serif',
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
-                  backdropFilter: 'blur(10px)'
+                  backdropFilter: 'blur(10px)',
+                  fontSize: 'clamp(0.875rem, 2vw, 1.125rem)',
+                  padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem)',
+                  display: 'inline-block'
                 }}
               >
                 How Eurocoin Stacks Up

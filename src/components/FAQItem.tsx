@@ -26,7 +26,7 @@ export function FAQItem({ question, answer }: FAQItemProps) {
           textAlign: 'left',
           cursor: 'pointer',
           transition: 'all 0.3s ease',
-          padding: '28px 32px',
+          padding: 'clamp(1.75rem, 4vw, 2.5rem) clamp(2rem, 5vw, 3rem)',
           boxShadow: isOpen 
             ? '0 8px 24px rgba(138, 99, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1)' 
             : '0 4px 12px rgba(0, 0, 0, 0.2)'
@@ -47,13 +47,14 @@ export function FAQItem({ question, answer }: FAQItemProps) {
         }}
       >
         <span 
-          className="text-white pr-6"
+          className="text-white"
           style={{
             fontFamily: 'ibrand',
-            fontSize: 'clamp(1.25rem, 2vw, 1.5rem)',
+            fontSize: 'clamp(1.5rem, 3vw, 2rem) !important',
             fontWeight: '500',
             lineHeight: '1.4',
-            letterSpacing: '0.01em'
+            letterSpacing: '0.01em',
+            paddingRight: 'clamp(1.5rem, 3vw, 2rem)'
           }}
         >
           {question}
@@ -82,13 +83,18 @@ export function FAQItem({ question, answer }: FAQItemProps) {
           }}
         >
           <div 
-            className="px-8 py-8"
+            className="faq-answer-content"
             style={{
               fontFamily: 'ibrand',
-              fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+              fontSize: 'clamp(1.25rem, 2.5vw, 1.5rem) !important',
               lineHeight: '1.9',
               color: 'rgba(255, 255, 255, 0.9)',
-              letterSpacing: '0.01em'
+              letterSpacing: '0.01em',
+              padding: 'clamp(2rem, 5vw, 3rem) clamp(2rem, 5vw, 3rem)',
+              paddingTop: 'clamp(2rem, 5vw, 3rem)',
+              paddingBottom: 'clamp(2rem, 5vw, 3rem)',
+              paddingLeft: 'clamp(2rem, 5vw, 3rem)',
+              paddingRight: 'clamp(2rem, 5vw, 3rem)'
             }}
           >
             {answer}
@@ -105,6 +111,20 @@ export function FAQItem({ question, answer }: FAQItemProps) {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+        .faq-answer-content p,
+        .faq-answer-content ul,
+        .faq-answer-content ol,
+        .faq-answer-content li,
+        .faq-answer-content div,
+        .faq-answer-content strong {
+          font-size: clamp(1.25rem, 2.5vw, 1.5rem) !important;
+        }
+        .faq-answer-content p {
+          margin-bottom: clamp(1rem, 2vw, 1.5rem) !important;
+        }
+        .faq-answer-content li {
+          margin-bottom: clamp(0.75rem, 1.5vw, 1rem) !important;
         }
       `}</style>
     </div>

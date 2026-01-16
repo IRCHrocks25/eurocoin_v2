@@ -99,9 +99,10 @@ export function ComplianceAndSecurity() {
         <div className="w-full flex justify-center relative z-10">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center" style={{ width: '100%' }}>
           {/* Badge */}
-          <div className="inline-flex items-center px-4 sm:px-5 py-2 rounded-full mb-6 sm:mb-8" style={{
+          <div className="inline-flex items-center px-4 sm:px-5 py-2 rounded-full" style={{
             background: 'rgba(255, 255, 255, 0.05)',
-            border: '1px solid rgba(255, 255, 255, 0.1)'
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)'
           }}>
             <span style={{
               fontFamily: 'Manrope, sans-serif',
@@ -126,7 +127,7 @@ export function ComplianceAndSecurity() {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
-            marginBottom: 'clamp(1.5rem, 4vw, 2rem)',
+            marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)',
             paddingLeft: '1rem',
             paddingRight: '1rem'
           }}>
@@ -140,7 +141,7 @@ export function ComplianceAndSecurity() {
             fontWeight: '400',
             lineHeight: '130%',
             color: '#B8D5FF',
-            marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
+            marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)',
             paddingLeft: '1rem',
             paddingRight: '1rem'
           }}>
@@ -156,7 +157,7 @@ export function ComplianceAndSecurity() {
             maxWidth: '900px',
             marginLeft: 'auto',
             marginRight: 'auto',
-            marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
+            marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)',
             paddingLeft: '1rem',
             paddingRight: '1rem'
           }}>
@@ -192,7 +193,7 @@ export function ComplianceAndSecurity() {
 
       {/* Accordion Section */}
       <section className="bg-[#020219] flex justify-center relative" style={{ 
-        paddingTop: 'clamp(60px, 12vw, 120px)', 
+        paddingTop: 'clamp(20px, 4vw, 40px)', 
         paddingBottom: 'clamp(60px, 12vw, 100px)' 
       }}>
         {/* Animated Background Glow */}
@@ -235,11 +236,11 @@ export function ComplianceAndSecurity() {
             </p>
           </div>
 
-          <div className="space-y-12 md:space-y-16 lg:space-y-20">
+          <div className="space-y-4 md:space-y-6 lg:space-y-8" style={{ marginTop: 'clamp(1rem, 3vw, 2rem)' }}>
           {accordionItems.map((item, index) => (
             <React.Fragment key={index}>
               <div
-                className="rounded-[20px] md:rounded-[24px] overflow-hidden transition-all duration-500 group relative"
+                className="overflow-hidden transition-all duration-500 group relative"
                 style={{
                   background: openAccordion === index 
                     ? 'linear-gradient(135deg, rgba(10, 10, 30, 0.95) 0%, rgba(20, 15, 45, 0.9) 100%)'
@@ -248,6 +249,7 @@ export function ComplianceAndSecurity() {
                   borderColor: openAccordion === index 
                     ? 'rgba(148, 190, 252, 0.5)' 
                     : 'rgba(148, 190, 252, 0.25)',
+                  borderRadius: 'clamp(24px, 5vw, 32px)',
                   boxShadow: openAccordion === index 
                     ? `
                       0 12px 48px rgba(148, 190, 252, 0.3),
@@ -263,7 +265,8 @@ export function ComplianceAndSecurity() {
                   backdropFilter: 'blur(16px) saturate(180%)',
                   WebkitBackdropFilter: 'blur(16px) saturate(180%)',
                   transform: openAccordion === index ? 'scale(1.01)' : 'scale(1)',
-                  transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
+                  transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+                  marginBottom: 'clamp(1rem, 2.5vw, 1.5rem)'
                 }}
                 onMouseEnter={(e) => {
                   if (openAccordion !== index) {
@@ -301,11 +304,12 @@ export function ComplianceAndSecurity() {
                 {/* Accordion Header */}
                 <button
                   onClick={() => setOpenAccordion(openAccordion === index ? null : index)}
-                  className="w-full px-6 sm:px-8 md:px-10 lg:px-12 py-6 sm:py-8 md:py-10 flex items-center justify-between text-left transition-all duration-500 relative group/header overflow-hidden"
+                  className="w-full flex items-center justify-between text-left transition-all duration-500 relative group/header overflow-hidden"
                   style={{
                     background: openAccordion === index 
                       ? 'linear-gradient(135deg, rgba(148, 190, 252, 0.15) 0%, rgba(148, 190, 252, 0.08) 50%, transparent 100%)'
-                      : 'linear-gradient(135deg, transparent 0%, rgba(148, 190, 252, 0.05) 100%)'
+                      : 'linear-gradient(135deg, transparent 0%, rgba(148, 190, 252, 0.05) 100%)',
+                    padding: 'clamp(1rem, 2.5vw, 1.5rem) clamp(1.5rem, 3.5vw, 2.25rem)',
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover/header:opacity-100 transition-opacity duration-500"></div>
@@ -320,7 +324,8 @@ export function ComplianceAndSecurity() {
                     letterSpacing: '0.02em',
                     lineHeight: '1.3',
                     transition: 'all 0.3s ease',
-                    paddingRight: '1rem',
+                    paddingRight: 'clamp(2.25rem, 4.5vw, 3rem)',
+                    paddingLeft: 'clamp(1rem, 2vw, 1.5rem)',
                     flex: 1,
                     position: 'relative',
                     zIndex: 1
@@ -351,10 +356,11 @@ export function ComplianceAndSecurity() {
                 {/* Accordion Content */}
                 {openAccordion === index && (
                   <div 
-                    className="px-6 sm:px-8 md:px-10 lg:px-12 pb-10 sm:pb-12 md:pb-14 border-t border-white/10"
+                    className="px-8 sm:px-12 md:px-20 lg:px-24 pb-10 sm:pb-14 md:pb-20 pt-8 sm:pt-10 md:pt-12 border-t border-white/10"
                     style={{
                       animation: 'fadeInUp 0.6s ease-out',
-                      background: 'linear-gradient(180deg, rgba(148, 190, 252, 0.08) 0%, transparent 100%)'
+                      background: 'linear-gradient(180deg, rgba(148, 190, 252, 0.08) 0%, transparent 100%)',
+                      marginTop: 'clamp(0.5rem, 1.5vw, 1rem)'
                     }}
                   >
                     {item.content.map((section, idx) => (
@@ -363,8 +369,12 @@ export function ComplianceAndSecurity() {
                         className={idx > 0 ? 'mt-8 sm:mt-10 md:mt-12' : ''} 
                         style={{
                           borderTop: idx > 0 ? '1px solid rgba(148, 190, 252, 0.2)' : 'none',
-                          paddingTop: idx > 0 ? 'clamp(24px, 5vw, 32px)' : '0',
-                          animation: `fadeInUp 0.6s ease-out ${idx * 0.1}s both`
+                          paddingTop: idx > 0 ? 'clamp(2rem, 5vw, 3rem)' : 'clamp(0.5rem, 1.5vw, 1rem)',
+                          paddingBottom: 'clamp(1rem, 2.5vw, 1.5rem)',
+                          paddingLeft: 'clamp(0.5rem, 1.5vw, 1rem)',
+                          paddingRight: 'clamp(0.5rem, 1.5vw, 1rem)',
+                          animation: `fadeInUp 0.6s ease-out ${idx * 0.1}s both`,
+                          marginBottom: idx < item.content.length - 1 ? 'clamp(1.5rem, 3vw, 2rem)' : '0'
                         }}
                       >
                         <p style={{
@@ -380,13 +390,13 @@ export function ComplianceAndSecurity() {
                             fontWeight: '700',
                             fontSize: 'clamp(17px, 2.8vw, 22px)',
                             display: 'block',
-                            marginBottom: 'clamp(12px, 2.5vw, 16px)',
+                            marginBottom: 'clamp(1rem, 2.5vw, 1.5rem)',
                             background: 'linear-gradient(135deg, #B8D5FF 0%, #94BEFC 100%)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
                             backgroundClip: 'text'
                           }}>{section.subtitle}</strong>
-                          <span style={{ color: 'rgba(255, 255, 255, 0.8)', display: 'block', lineHeight: '1.7' }}>{section.text}</span>
+                          <span style={{ color: 'rgba(255, 255, 255, 0.8)', display: 'block', lineHeight: '1.7', marginTop: 'clamp(0.5rem, 1.5vw, 1rem)' }}>{section.text}</span>
                         </p>
                       </div>
                     ))}

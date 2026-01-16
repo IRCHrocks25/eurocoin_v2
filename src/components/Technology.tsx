@@ -28,9 +28,14 @@ export function Technology() {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-24 lg:py-32 text-center">
           {/* Powered by text */}
-          <div className="mb-8 md:mb-12">
-            <span className="inline-block px-6 py-3 rounded-full border border-cyan-400/30 text-cyan-400 text-sm md:text-base">
-              Powered by Billion Unites
+          <div style={{ marginBottom: 'clamp(2rem, 5vw, 3.5rem)' }}>
+            <span className="inline-block rounded-full border border-cyan-400/30 text-cyan-400" style={{
+              fontFamily: 'ibrand, sans-serif',
+              fontSize: 'clamp(0.75rem, 1.75vw, 1rem)',
+              padding: 'clamp(0.625rem, 1.5vw, 0.875rem) clamp(1.25rem, 3vw, 2rem)',
+              display: 'inline-block'
+            }}>
+              Powered by Billion Group
             </span>
           </div>
 
@@ -40,7 +45,11 @@ export function Technology() {
           </h1>
 
           {/* Description */}
-          <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed max-w-4xl mx-auto px-4" style={{ marginBottom: '5rem' }}>
+          <p className="text-white/80 leading-relaxed max-w-4xl mx-auto px-4" style={{ 
+            marginBottom: '5rem',
+            fontSize: 'clamp(1.125rem, 2.5vw, 1.5rem)',
+            lineHeight: '1.6'
+          }}>
             Purpose-built for the future of regulated digital finance, Eurocoin (EURDT) runs on Billon's Unified Enterprise DLT System, a next-generation distributed ledger that bridges compliance, speed, and scalability for Europe's digital economy.
           </p>
 
@@ -222,68 +231,76 @@ export function Technology() {
         {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
           {/* Heading */}
-          <h2 className="text-white text-center mb-8" style={{ fontSize: 'clamp(28px, 5vw, 48px)', lineHeight: '1.2', paddingTop: '60px' }}>
+          <h2 className="text-white text-center" style={{ fontSize: 'clamp(28px, 5vw, 48px)', lineHeight: '1.2', paddingTop: '60px', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
             Technology That Redefines Digital Money
           </h2>
 
           {/* Subtitle */}
-          <p className="text-white/90 text-center mb-6 max-w-4xl mx-auto" style={{ fontSize: 'clamp(16px, 2vw, 18px)', lineHeight: '1.6' }}>
+          <p className="text-white/90 text-center max-w-4xl mx-auto" style={{ 
+            fontSize: 'clamp(18px, 2.5vw, 22px)', 
+            lineHeight: '1.6',
+            marginBottom: 'clamp(1.5rem, 3vw, 2.5rem)'
+          }}>
             Powered by Billon's enterprise-grade DLT, Eurocoin merges real-time liquidity, institutional compliance, and unmatched performance into one unified ecosystem.
           </p>
 
           {/* Body Paragraph */}
-          <p className="text-white/70 text-center mb-16 max-w-4xl mx-auto" style={{ fontSize: 'clamp(14px, 2vw, 15px)', lineHeight: '1.7' }}>
+          <p className="text-white/70 text-center max-w-4xl mx-auto" style={{ 
+            fontSize: 'clamp(16px, 2.25vw, 18px)', 
+            lineHeight: '1.7',
+            marginBottom: 'clamp(2.5rem, 5vw, 4rem)'
+          }}>
             Eurocoin's strength lies in its foundation: a regulated, enterprise-grade DLT designed for real-world financial systems, not crypto experiments. It's where liquidity meets compliance, and speed meets sustainability. Every layer of its architecture has one goal: to make digital money work seamlessly, securely, and responsibly at scale.
           </p>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto" style={{ gap: 'clamp(1.5rem, 3vw, 2.5rem)', marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
             {/* Feature 1 */}
-            <div>
-              <h3 className="text-green-400 mb-2" style={{ fontSize: 'clamp(14px, 2vw, 16px)' }}>
+            <div style={{ marginBottom: 'clamp(1rem, 2vw, 1.5rem)' }}>
+              <h3 className="text-green-400" style={{ fontSize: 'clamp(16px, 2.25vw, 18px)', marginBottom: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
                 Instant, on-demand minting
               </h3>
-              <p className="text-white/70" style={{ fontSize: 'clamp(13px, 2vw, 15px)', lineHeight: '1.6' }}>
+              <p className="text-white/70" style={{ fontSize: 'clamp(15px, 2.25vw, 17px)', lineHeight: '1.6' }}>
                 — tokens are created the moment euros move, unlocking real liquidity with zero delays.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div>
-              <h3 className="text-green-400 mb-2" style={{ fontSize: 'clamp(14px, 2vw, 16px)' }}>
+            <div style={{ marginBottom: 'clamp(1rem, 2vw, 1.5rem)' }}>
+              <h3 className="text-green-400" style={{ fontSize: 'clamp(16px, 2.25vw, 18px)', marginBottom: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
                 Gas-free and energy-efficient
               </h3>
-              <p className="text-white/70" style={{ fontSize: 'clamp(13px, 2vw, 15px)', lineHeight: '1.6' }}>
+              <p className="text-white/70" style={{ fontSize: 'clamp(15px, 2.25vw, 17px)', lineHeight: '1.6' }}>
                 — sustainable, costless transactions aligned with EU climate goals.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div>
-              <h3 className="text-green-400 mb-2" style={{ fontSize: 'clamp(14px, 2vw, 16px)' }}>
+            <div style={{ marginBottom: 'clamp(1rem, 2vw, 1.5rem)' }}>
+              <h3 className="text-green-400" style={{ fontSize: 'clamp(16px, 2.25vw, 18px)', marginBottom: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
                 Enterprise-scale performance
               </h3>
-              <p className="text-white/70" style={{ fontSize: 'clamp(13px, 2vw, 15px)', lineHeight: '1.6' }}>
+              <p className="text-white/70" style={{ fontSize: 'clamp(15px, 2.25vw, 17px)', lineHeight: '1.6' }}>
                 — audited throughput exceeding 500K TPS and settlement in seconds.
               </p>
             </div>
 
             {/* Feature 4 */}
-            <div>
-              <h3 className="text-green-400 mb-2" style={{ fontSize: 'clamp(14px, 2vw, 16px)' }}>
+            <div style={{ marginBottom: 'clamp(1rem, 2vw, 1.5rem)' }}>
+              <h3 className="text-green-400" style={{ fontSize: 'clamp(16px, 2.25vw, 18px)', marginBottom: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
                 Enterprise-ready foundation
               </h3>
-              <p className="text-white/70" style={{ fontSize: 'clamp(13px, 2vw, 15px)', lineHeight: '1.6' }}>
+              <p className="text-white/70" style={{ fontSize: 'clamp(15px, 2.25vw, 17px)', lineHeight: '1.6' }}>
                 — powering digital cash, secure data, and tokenized real-world assets.
               </p>
             </div>
 
             {/* Feature 5 - Full Width */}
-            <div className="md:col-span-2">
-              <h3 className="text-green-400 mb-2" style={{ fontSize: 'clamp(14px, 2vw, 16px)' }}>
+            <div className="md:col-span-2" style={{ marginBottom: 'clamp(1rem, 2vw, 1.5rem)' }}>
+              <h3 className="text-green-400" style={{ fontSize: 'clamp(16px, 2.25vw, 18px)', marginBottom: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
                 Compliance-first architecture
               </h3>
-              <p className="text-white/70" style={{ fontSize: 'clamp(13px, 2vw, 15px)', lineHeight: '1.6' }}>
+              <p className="text-white/70" style={{ fontSize: 'clamp(15px, 2.25vw, 17px)', lineHeight: '1.6' }}>
                 — built-in AML, KYC, and GDPR for security and regulatory trust.
               </p>
             </div>

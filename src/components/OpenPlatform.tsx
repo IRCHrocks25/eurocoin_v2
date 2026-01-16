@@ -208,7 +208,7 @@ export function OpenPlatform() {
 
             {/* Right Column - Euro Coin Image */}
             <div className="hidden lg:flex items-center justify-center px-8 lg:px-16">
-              <div className="relative w-full max-w-md lg:max-w-lg">
+              <div className="relative w-full max-w-xs lg:max-w-sm">
                 {/* Glow effect behind coin */}
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-amber-500/20 to-orange-500/20 blur-3xl rounded-full scale-110" />
                 
@@ -219,7 +219,8 @@ export function OpenPlatform() {
                   className="relative z-10 w-full h-auto drop-shadow-2xl"
                   style={{
                     maxWidth: '100%',
-                    height: 'auto'
+                    height: 'auto',
+                    maxHeight: 'clamp(300px, 40vh, 400px)'
                   }}
                 />
               </div>
@@ -229,7 +230,7 @@ export function OpenPlatform() {
       </section>
 
       {/* For Digital Money Section */}
-      <section className="relative w-full py-8 md:py-12 lg:py-16 overflow-hidden" style={{ backgroundColor: '#000' }}>
+      <section className="relative w-full py-6 md:py-8 lg:py-10 overflow-hidden" style={{ backgroundColor: '#000' }}>
         {/* Background Pattern */}
         <img 
           src={newBgPattern} 
@@ -241,9 +242,9 @@ export function OpenPlatform() {
           <img 
             src={forDigitalMoney} 
             alt="For Digital Money" 
-            className="w-full max-w-full md:max-w-3xl lg:max-w-4xl h-auto"
+            className="w-full h-auto"
             style={{
-              maxWidth: '100%',
+              maxWidth: 'clamp(280px, 85vw, 600px)',
               height: 'auto'
             }}
           />
@@ -251,7 +252,7 @@ export function OpenPlatform() {
       </section>
 
       {/* With You Banner Section */}
-      <section className="relative w-full py-8 md:py-12 lg:py-16 overflow-hidden" style={{ backgroundColor: '#000' }}>
+      <section className="relative w-full py-6 md:py-8 lg:py-10 overflow-hidden" style={{ backgroundColor: '#000' }}>
         {/* Background Pattern */}
         <img 
           src={newBgPattern} 
@@ -265,7 +266,7 @@ export function OpenPlatform() {
             alt="With You Banner" 
             className="w-full h-auto"
             style={{
-              maxWidth: '100%',
+              maxWidth: 'clamp(280px, 85vw, 600px)',
               height: 'auto'
             }}
           />
@@ -273,7 +274,7 @@ export function OpenPlatform() {
       </section>
 
       {/* How Eurocoin Works Section */}
-      <section className="relative w-full py-8 md:py-12 lg:py-16 overflow-hidden" style={{ backgroundColor: '#000' }}>
+      <section className="relative w-full py-6 md:py-8 lg:py-10 overflow-hidden" style={{ backgroundColor: '#000' }}>
         {/* Background Pattern */}
         <img 
           src={newBgPattern} 
@@ -285,9 +286,9 @@ export function OpenPlatform() {
           <img 
             src={howEurocoinWorks} 
             alt="How Eurocoin Works" 
-            className="w-full max-w-full md:max-w-3xl lg:max-w-4xl h-auto"
+            className="w-full h-auto"
             style={{
-              maxWidth: '100%',
+              maxWidth: 'clamp(280px, 85vw, 600px)',
               height: 'auto'
             }}
           />
@@ -295,21 +296,21 @@ export function OpenPlatform() {
       </section>
 
       {/* Why Eurocoin Section */}
-      <section className="relative w-full py-12 md:py-16 lg:py-24 overflow-hidden flex items-center justify-center" style={{ backgroundColor: '#000' }}>
+      <section className="relative w-full py-12 md:py-16 lg:py-20 overflow-hidden flex items-center justify-center" style={{ backgroundColor: 'transparent' }}>
         {/* Background Pattern */}
         <img 
           src={newBgPattern} 
           alt="Background Pattern" 
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
         
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             {/* Left Column - Euro Coin Image */}
-            <div className="flex items-center justify-center lg:justify-start order-2 lg:order-1">
-              <div className="relative w-full max-w-xs md:max-w-md lg:max-w-lg">
+            <div className="flex items-center justify-center lg:justify-start order-2 lg:order-1" style={{ paddingTop: 'clamp(2rem, 4vw, 3rem)', paddingBottom: 'clamp(2rem, 4vw, 3rem)' }}>
+              <div className="relative w-full flex justify-center lg:justify-start" style={{ maxWidth: 'clamp(200px, 35vw, 320px)' }}>
                 {/* Glow effect behind coin */}
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-amber-500/20 to-orange-500/20 blur-3xl rounded-full scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-amber-500/20 to-orange-500/20 blur-3xl rounded-full scale-110" style={{ width: '100%', height: '100%' }} />
                 
                 {/* Gold Coin Image */}
                 <img 
@@ -319,58 +320,63 @@ export function OpenPlatform() {
                   style={{
                     maxWidth: '100%',
                     height: 'auto',
-                    transform: 'scale(0.75)',
-                    transformOrigin: 'center'
+                    maxHeight: 'clamp(250px, 35vh, 350px)',
+                    objectFit: 'contain'
                   }}
                 />
               </div>
             </div>
 
             {/* Right Column - Content */}
-            <div className="order-1 lg:order-2 text-center lg:text-left" style={{ paddingLeft: '0', paddingRight: '0' }}>
+            <div className="order-1 lg:order-2 text-center lg:text-left" style={{ paddingLeft: 'clamp(1rem, 3vw, 2rem)', paddingRight: 'clamp(1rem, 3vw, 2rem)' }}>
               {/* Section Title */}
-              <h2 className="text-white mb-8 md:mb-12" style={{ 
+              <h2 className="text-white mb-6 md:mb-8 lg:mb-10" style={{ 
                 fontFamily: 'ibrand, sans-serif',
-                fontSize: 'clamp(2rem, 6vw, 3rem)',
+                fontSize: 'clamp(1.75rem, 5vw, 2.5rem)',
                 lineHeight: '1.2',
-                fontWeight: '600'
+                fontWeight: '600',
+                marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)'
               }}>
                 Why Eurocoin?
               </h2>
 
               {/* Features Grid */}
-              <div className="space-y-6 md:space-y-8">
+              <div className="space-y-5 md:space-y-6 lg:space-y-7">
                 {/* Feature 1 */}
-                <div>
-                  <h3 className="text-cyan-400 mb-3" style={{ 
+                <div style={{ marginBottom: 'clamp(1.25rem, 3vw, 1.75rem)' }}>
+                  <h3 className="text-cyan-400 mb-2 md:mb-3" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(1.25rem, 4vw, 1.75rem)',
-                    fontWeight: '600'
+                    fontSize: 'clamp(1.125rem, 3vw, 1.5rem)',
+                    fontWeight: '600',
+                    marginBottom: 'clamp(0.75rem, 2vw, 1rem)'
                   }}>
                     Stable & Secure
                   </h3>
                   <p className="text-white/70" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
-                    lineHeight: '1.6'
+                    fontSize: 'clamp(0.875rem, 2vw, 1.0625rem)',
+                    lineHeight: '1.6',
+                    marginBottom: '0'
                   }}>
                     Backed 1:1 by euro reserves held in regulated European banks, ensuring full transparency and trust.
                   </p>
                 </div>
 
                 {/* Feature 2 */}
-                <div>
-                  <h3 className="text-cyan-400 mb-3" style={{ 
+                <div style={{ marginBottom: 'clamp(1.25rem, 3vw, 1.75rem)' }}>
+                  <h3 className="text-cyan-400 mb-2 md:mb-3" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(1.25rem, 4vw, 1.75rem)',
-                    fontWeight: '600'
+                    fontSize: 'clamp(1.125rem, 3vw, 1.5rem)',
+                    fontWeight: '600',
+                    marginBottom: 'clamp(0.75rem, 2vw, 1rem)'
                   }}>
                     Fast Transactions
                   </h3>
                   <p className="text-white/70" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
-                    lineHeight: '1.6'
+                    fontSize: 'clamp(0.875rem, 2vw, 1.0625rem)',
+                    lineHeight: '1.6',
+                    marginBottom: '0'
                   }}>
                     Instant settlement across borders with minimal fees—no delays, no intermediaries.
                   </p>
@@ -378,17 +384,19 @@ export function OpenPlatform() {
 
                 {/* Feature 3 */}
                 <div>
-                  <h3 className="text-cyan-400 mb-3" style={{ 
+                  <h3 className="text-cyan-400 mb-2 md:mb-3" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(1.25rem, 4vw, 1.75rem)',
-                    fontWeight: '600'
+                    fontSize: 'clamp(1.125rem, 3vw, 1.5rem)',
+                    fontWeight: '600',
+                    marginBottom: 'clamp(0.75rem, 2vw, 1rem)'
                   }}>
                     Fully Regulated
                   </h3>
                   <p className="text-white/70" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
-                    lineHeight: '1.6'
+                    fontSize: 'clamp(0.875rem, 2vw, 1.0625rem)',
+                    lineHeight: '1.6',
+                    marginBottom: '0'
                   }}>
                     Compliant with EU financial regulations, including MiCA and AML standards, for peace of mind.
                   </p>
@@ -401,9 +409,9 @@ export function OpenPlatform() {
 
       {/* Get Started Section */}
       <section className="relative w-full overflow-hidden flex items-center justify-center" style={{ 
-        minHeight: 'clamp(500px, 70vh, 700px)',
-        paddingTop: 'clamp(60px, 12vw, 80px)',
-        paddingBottom: 'clamp(60px, 12vw, 80px)'
+        minHeight: 'clamp(350px, 50vh, 500px)',
+        paddingTop: 'clamp(40px, 8vw, 60px)',
+        paddingBottom: 'clamp(40px, 8vw, 60px)'
       }}>
         {/* Background with hero image */}
         <div className="absolute inset-0">
@@ -412,8 +420,6 @@ export function OpenPlatform() {
             alt="Background" 
             className="w-full h-full object-cover"
           />
-          {/* Enhanced dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/50" />
         </div>
         
         <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center flex flex-col items-center justify-center">

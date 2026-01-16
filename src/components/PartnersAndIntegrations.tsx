@@ -5,6 +5,12 @@ import { ArrowRight, ChevronUp, ChevronDown, Check } from 'lucide-react';
 import heroBackground from 'figma:asset/08506d8d54cc0c81255ff5a4a877d6d18be5c1f9.png';
 import partnerLogos from 'figma:asset/ee2130bfeeb33e6e4cb9524c18fbafe1a9b73937.png';
 import fundingLogos from 'figma:asset/d536fdd327324e286f3a100ebf44c77a80080882.png';
+import logo1 from 'figma:asset/79e53e43f54955baa10a6160005e96098961fed9.png';
+import logo2 from 'figma:asset/5cccc936053070237625c05852495dfe3beb848b.png';
+import logo3 from 'figma:asset/7f315a52bb09ed5f877f1a0a77b82c76057ed929.png';
+import logo4 from 'figma:asset/eed24f9db749ab49164a4588f07e92a88624f3c1.png';
+import logo5 from 'figma:asset/466525b1ecc7324ec3ac30777c45e7aa8bf67fea.png';
+import logo6 from 'figma:asset/143bca35117a640a6323db2a894ce91290ae4bcc.png';
 import cardsBgImage from 'figma:asset/b663ed1323f80faa8a6d5936d660c511164a294f.png';
 import card1Image from 'figma:asset/11b558fc972dc3b9a4cbcd6367bd09be0cf71a78.png';
 import card2Image from 'figma:asset/10970c32021bbc1010b86cb928bfac655bb134f7.png';
@@ -83,19 +89,73 @@ export function PartnersAndIntegrations() {
             Building Europe's Trusted Digital Finance Network
           </h1>
 
-          {/* Partnerships Section - Static Logo Display */}
+          {/* Partnerships Section - Carousel Logo Display */}
           <div className="mt-12 sm:mt-20 mb-12 sm:mb-20 relative">
-            <div className="flex items-center justify-center mb-8 px-2 sm:px-4">
-              <img 
-                src={partnerLogos} 
-                alt="Partner Organizations" 
-                className="w-full max-w-5xl opacity-60 hover:opacity-100 transition-opacity duration-300"
-                style={{
-                  filter: 'brightness(1.1)'
-                }}
-              />
-            </div>
+            {(() => {
+              const partners = [
+                { name: 'Partner 1', logo: logo1 },
+                { name: 'Partner 2', logo: logo2 },
+                { name: 'Partner 3', logo: logo3 },
+                { name: 'Partner 4', logo: logo4 },
+                { name: 'Partner 5', logo: logo5 },
+                { name: 'Partner 6', logo: logo6 },
+              ];
+              const duplicatedPartners = [...partners, ...partners];
+              
+              return (
+                <div className="w-full max-w-[90rem] mx-auto px-4 md:px-6 overflow-hidden">
+                  <div className="relative w-full" style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
+                    <div 
+                      className="flex"
+                      style={{
+                        animation: 'scrollPartners 30s linear infinite',
+                        width: 'max-content'
+                      }}
+                    >
+                      {duplicatedPartners.map((partner, index) => (
+                        <div
+                          key={index}
+                          className="flex-shrink-0 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity"
+                          style={{ 
+                            width: 'clamp(90px, 16vw, 160px)',
+                            marginRight: 'clamp(0.5rem, 1.5vw, 1rem)',
+                          }}
+                        >
+                          {partner.logo ? (
+                            <div className="w-full flex items-center justify-center" style={{ height: 'clamp(1.75rem, 4vw, 3rem)' }}>
+                              <img 
+                                src={partner.logo} 
+                                alt={partner.name} 
+                                className="max-w-full max-h-full object-contain" 
+                                style={{ maxWidth: '100%', maxHeight: '100%' }}
+                              />
+                            </div>
+                          ) : (
+                            <div className="w-full bg-white/10 rounded-lg flex items-center justify-center border border-white/20" style={{ height: 'clamp(1.75rem, 4vw, 3rem)' }}>
+                              <span className="text-white/70 text-xs md:text-sm font-medium px-3 md:px-4 text-center">
+                                {partner.name}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
           </div>
+
+          <style>{`
+            @keyframes scrollPartners {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-50%);
+              }
+            }
+          `}</style>
 
           {/* Funding Section */}
           <div className="mt-12 sm:mt-32 pt-6 sm:pt-16 border-t border-white/20" style={{
@@ -121,8 +181,9 @@ export function PartnersAndIntegrations() {
               <img 
                 src={fundingLogos} 
                 alt="Funding Partners" 
-                className="w-full max-w-4xl"
+                className="w-full"
                 style={{
+                  maxWidth: 'clamp(800px, 95vw, 1400px)',
                   filter: 'brightness(1.3) contrast(1.1)',
                   opacity: 0.95
                 }}
@@ -345,15 +406,17 @@ export function PartnersAndIntegrations() {
             </p>
           </div>
 
-          <div className="space-y-6 md:space-y-8">
+          <div className="space-y-4 md:space-y-6 lg:space-y-8" style={{ marginTop: 'clamp(1rem, 3vw, 2rem)' }}>
           {/* Enterprise Adoption & Industry Leaders */}
           <div 
-            className="accordion-item rounded-[20px] md:rounded-[16px] overflow-hidden transition-all duration-500 group"
+            className="accordion-item overflow-hidden transition-all duration-500 group"
             style={{
               background: 'linear-gradient(135deg, rgba(10, 10, 30, 0.95) 0%, rgba(20, 15, 45, 0.9) 100%)',
               backdropFilter: 'blur(16px)',
               border: '2px solid rgba(121, 97, 255, 0.3)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(121, 97, 255, 0.1)'
+              borderRadius: 'clamp(24px, 5vw, 32px)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(121, 97, 255, 0.1)',
+              marginBottom: 'clamp(1rem, 2.5vw, 1.5rem)'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = 'rgba(121, 97, 255, 0.6)';
@@ -368,7 +431,7 @@ export function PartnersAndIntegrations() {
           >
             <button
               onClick={() => toggleSection('enterprise')}
-              className="w-full px-4 sm:px-8 md:px-12 lg:px-20 py-6 sm:py-8 md:py-10 lg:py-14 flex items-center justify-between text-left transition-all duration-300 relative overflow-hidden"
+              className="w-full px-10 sm:px-12 md:px-16 lg:px-24 py-8 sm:py-9 md:py-11 lg:py-14 flex items-center justify-between text-left transition-all duration-300 relative overflow-hidden"
               style={{
                 background: openSection === 'enterprise' 
                   ? 'linear-gradient(135deg, rgba(121, 97, 255, 0.15) 0%, rgba(86, 70, 212, 0.1) 100%)'
@@ -385,7 +448,8 @@ export function PartnersAndIntegrations() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                paddingRight: '1rem',
+                paddingRight: 'clamp(2rem, 4vw, 2.5rem)',
+                paddingLeft: 'clamp(0.75rem, 1.5vw, 1.25rem)',
                 position: 'relative',
                 zIndex: 1,
                 transition: 'all 0.3s ease'
@@ -406,8 +470,9 @@ export function PartnersAndIntegrations() {
             </button>
             
             {openSection === 'enterprise' && (
-              <div className="accordion-content px-10 sm:px-16 md:px-24 lg:px-28 pb-16 sm:pb-24 pt-10 sm:pt-12 border-t border-white/10" style={{
-                background: 'linear-gradient(180deg, rgba(121, 97, 255, 0.08) 0%, transparent 100%)'
+              <div className="accordion-content px-8 sm:px-12 md:px-20 lg:px-24 pb-10 sm:pb-14 md:pb-20 pt-8 sm:pt-10 md:pt-12 border-t border-white/10" style={{
+                background: 'linear-gradient(180deg, rgba(121, 97, 255, 0.08) 0%, transparent 100%)',
+                marginTop: 'clamp(0.5rem, 1.5vw, 1rem)'
               }}>
                 <p style={{
                   fontFamily: 'Manrope, sans-serif',
@@ -415,13 +480,14 @@ export function PartnersAndIntegrations() {
                   fontWeight: '400',
                   lineHeight: '160%',
                   color: 'rgba(255, 255, 255, 0.85)',
-                  marginBottom: 'clamp(2.5rem, 6vw, 3rem)',
-                  paddingLeft: '0.5rem'
+                  marginBottom: 'clamp(2rem, 5vw, 3rem)',
+                  paddingLeft: 'clamp(1rem, 2vw, 1.5rem)',
+                  paddingRight: 'clamp(1rem, 2vw, 1.5rem)'
                 }}>
                   Eurocoin's underlying technology is trusted by global organizations, demonstrating scalability and trust
                 </p>
                 
-                <div className="space-y-10 sm:space-y-12">
+                <div className="space-y-6 sm:space-y-8 md:space-y-10" style={{ paddingLeft: 'clamp(0.5rem, 1.5vw, 1rem)', paddingRight: 'clamp(0.5rem, 1.5vw, 1rem)' }}>
                   {[
                     {
                       title: 'Raiffeisen Bank International (RBI)',
@@ -442,9 +508,12 @@ export function PartnersAndIntegrations() {
                   ].map((item, i) => (
                     <div 
                       key={i} 
-                      className="accordion-list-item flex items-start gap-6 sm:gap-7 p-6 sm:p-7 rounded-lg transition-all duration-300 hover:bg-white/5"
+                      className="accordion-list-item flex items-start gap-4 sm:gap-6 p-5 sm:p-7 md:p-8 lg:p-9 rounded-lg transition-all duration-300 hover:bg-white/5"
                       style={{
-                        animationDelay: `${i * 0.1}s`
+                        animationDelay: `${i * 0.1}s`,
+                        marginBottom: 'clamp(0.75rem, 2vw, 1.25rem)',
+                        marginLeft: 'clamp(0.5rem, 1.5vw, 1rem)',
+                        marginRight: 'clamp(0.5rem, 1.5vw, 1rem)'
                       }}
                     >
                       <div className="accordion-check-icon flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center mt-0.5 transition-all duration-300" style={{
@@ -472,12 +541,14 @@ export function PartnersAndIntegrations() {
 
           {/* Financial & Payment Infrastructure */}
           <div 
-            className="accordion-item rounded-[20px] md:rounded-[16px] overflow-hidden transition-all duration-500 group"
+            className="accordion-item overflow-hidden transition-all duration-500 group"
             style={{
               background: 'linear-gradient(135deg, rgba(10, 10, 30, 0.95) 0%, rgba(20, 15, 45, 0.9) 100%)',
               backdropFilter: 'blur(16px)',
               border: '2px solid rgba(121, 97, 255, 0.3)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(121, 97, 255, 0.1)'
+              borderRadius: 'clamp(24px, 5vw, 32px)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(121, 97, 255, 0.1)',
+              marginBottom: 'clamp(1rem, 2.5vw, 1.5rem)'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = 'rgba(121, 97, 255, 0.6)';
@@ -492,7 +563,7 @@ export function PartnersAndIntegrations() {
           >
             <button
               onClick={() => toggleSection('payment')}
-              className="w-full px-4 sm:px-8 md:px-12 lg:px-20 py-6 sm:py-8 md:py-10 lg:py-14 flex items-center justify-between text-left transition-all duration-300 relative overflow-hidden"
+              className="w-full px-10 sm:px-12 md:px-16 lg:px-24 py-8 sm:py-9 md:py-11 lg:py-14 flex items-center justify-between text-left transition-all duration-300 relative overflow-hidden"
               style={{
                 background: openSection === 'payment' 
                   ? 'linear-gradient(135deg, rgba(121, 97, 255, 0.15) 0%, rgba(86, 70, 212, 0.1) 100%)'
@@ -509,7 +580,8 @@ export function PartnersAndIntegrations() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                paddingRight: '1rem',
+                paddingRight: 'clamp(2rem, 4vw, 2.5rem)',
+                paddingLeft: 'clamp(0.75rem, 1.5vw, 1.25rem)',
                 position: 'relative',
                 zIndex: 1
               }}>
@@ -529,10 +601,11 @@ export function PartnersAndIntegrations() {
             </button>
             
             {openSection === 'payment' && (
-              <div className="accordion-content px-10 sm:px-16 md:px-24 lg:px-28 pb-16 sm:pb-24 pt-10 sm:pt-12 border-t border-white/10" style={{
-                background: 'linear-gradient(180deg, rgba(121, 97, 255, 0.08) 0%, transparent 100%)'
+              <div className="accordion-content px-8 sm:px-12 md:px-20 lg:px-24 pb-10 sm:pb-14 md:pb-20 pt-8 sm:pt-10 md:pt-12 border-t border-white/10" style={{
+                background: 'linear-gradient(180deg, rgba(121, 97, 255, 0.08) 0%, transparent 100%)',
+                marginTop: 'clamp(0.5rem, 1.5vw, 1rem)'
               }}>
-                <div className="space-y-10 sm:space-y-12">
+                <div className="space-y-6 sm:space-y-8 md:space-y-10" style={{ paddingLeft: 'clamp(0.5rem, 1.5vw, 1rem)', paddingRight: 'clamp(0.5rem, 1.5vw, 1rem)' }}>
                   {[
                     {
                       title: 'SEPA & SWIFT',
@@ -549,9 +622,12 @@ export function PartnersAndIntegrations() {
                   ].map((item, i) => (
                     <div 
                       key={i} 
-                      className="accordion-list-item flex items-start gap-6 sm:gap-7 p-6 sm:p-7 rounded-lg transition-all duration-300 hover:bg-white/5"
+                      className="accordion-list-item flex items-start gap-4 sm:gap-6 p-5 sm:p-7 md:p-8 lg:p-9 rounded-lg transition-all duration-300 hover:bg-white/5"
                       style={{
-                        animationDelay: `${i * 0.1}s`
+                        animationDelay: `${i * 0.1}s`,
+                        marginBottom: 'clamp(0.75rem, 2vw, 1.25rem)',
+                        marginLeft: 'clamp(0.5rem, 1.5vw, 1rem)',
+                        marginRight: 'clamp(0.5rem, 1.5vw, 1rem)'
                       }}
                     >
                       <div className="accordion-check-icon flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center mt-0.5 transition-all duration-300" style={{
@@ -579,12 +655,14 @@ export function PartnersAndIntegrations() {
 
           {/* Government & Regulatory Partnerships */}
           <div 
-            className="accordion-item rounded-[20px] md:rounded-[16px] overflow-hidden transition-all duration-500 group"
+            className="accordion-item overflow-hidden transition-all duration-500 group"
             style={{
               background: 'linear-gradient(135deg, rgba(10, 10, 30, 0.95) 0%, rgba(20, 15, 45, 0.9) 100%)',
               backdropFilter: 'blur(16px)',
               border: '2px solid rgba(121, 97, 255, 0.3)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(121, 97, 255, 0.1)'
+              borderRadius: 'clamp(24px, 5vw, 32px)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(121, 97, 255, 0.1)',
+              marginBottom: 'clamp(1rem, 2.5vw, 1.5rem)'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = 'rgba(121, 97, 255, 0.6)';
@@ -599,7 +677,7 @@ export function PartnersAndIntegrations() {
           >
             <button
               onClick={() => toggleSection('regulatory')}
-              className="w-full px-4 sm:px-8 md:px-12 lg:px-20 py-6 sm:py-8 md:py-10 lg:py-14 flex items-center justify-between text-left transition-all duration-300 relative overflow-hidden"
+              className="w-full px-10 sm:px-12 md:px-16 lg:px-24 py-8 sm:py-9 md:py-11 lg:py-14 flex items-center justify-between text-left transition-all duration-300 relative overflow-hidden"
               style={{
                 background: openSection === 'regulatory' 
                   ? 'linear-gradient(135deg, rgba(121, 97, 255, 0.15) 0%, rgba(86, 70, 212, 0.1) 100%)'
@@ -616,7 +694,8 @@ export function PartnersAndIntegrations() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                paddingRight: '1rem',
+                paddingRight: 'clamp(2rem, 4vw, 2.5rem)',
+                paddingLeft: 'clamp(0.75rem, 1.5vw, 1.25rem)',
                 position: 'relative',
                 zIndex: 1
               }}>
@@ -636,8 +715,9 @@ export function PartnersAndIntegrations() {
             </button>
             
             {openSection === 'regulatory' && (
-              <div className="accordion-content px-10 sm:px-16 md:px-24 lg:px-28 pb-16 sm:pb-24 pt-10 sm:pt-12 border-t border-white/10" style={{
-                background: 'linear-gradient(180deg, rgba(121, 97, 255, 0.08) 0%, transparent 100%)'
+              <div className="accordion-content px-8 sm:px-12 md:px-20 lg:px-24 pb-10 sm:pb-14 md:pb-20 pt-8 sm:pt-10 md:pt-12 border-t border-white/10" style={{
+                background: 'linear-gradient(180deg, rgba(121, 97, 255, 0.08) 0%, transparent 100%)',
+                marginTop: 'clamp(0.5rem, 1.5vw, 1rem)'
               }}>
                 <p style={{
                   fontFamily: 'Manrope, sans-serif',
@@ -645,13 +725,14 @@ export function PartnersAndIntegrations() {
                   fontWeight: '400',
                   lineHeight: '160%',
                   color: 'rgba(255, 255, 255, 0.85)',
-                  marginBottom: 'clamp(3rem, 7vw, 3.5rem)',
-                  paddingLeft: '0.5rem'
+                  marginBottom: 'clamp(2rem, 5vw, 3rem)',
+                  paddingLeft: 'clamp(1rem, 2vw, 1.5rem)',
+                  paddingRight: 'clamp(1rem, 2vw, 1.5rem)'
                 }}>
                   Eurocoin bridges traditional finance and regulation while maintaining full compliance across European jurisdictions.
                 </p>
                 
-                <div className="space-y-10 sm:space-y-12">
+                <div className="space-y-6 sm:space-y-8 md:space-y-10" style={{ paddingLeft: 'clamp(0.5rem, 1.5vw, 1rem)', paddingRight: 'clamp(0.5rem, 1.5vw, 1rem)' }}>
                   {[
                     {
                       title: 'MiCA Compliance Framework',
@@ -668,9 +749,12 @@ export function PartnersAndIntegrations() {
                   ].map((item, i) => (
                     <div 
                       key={i} 
-                      className="accordion-list-item flex items-start gap-6 sm:gap-7 p-6 sm:p-7 rounded-lg transition-all duration-300 hover:bg-white/5"
+                      className="accordion-list-item flex items-start gap-4 sm:gap-6 p-5 sm:p-7 md:p-8 lg:p-9 rounded-lg transition-all duration-300 hover:bg-white/5"
                       style={{
-                        animationDelay: `${i * 0.1}s`
+                        animationDelay: `${i * 0.1}s`,
+                        marginBottom: 'clamp(0.75rem, 2vw, 1.25rem)',
+                        marginLeft: 'clamp(0.5rem, 1.5vw, 1rem)',
+                        marginRight: 'clamp(0.5rem, 1.5vw, 1rem)'
                       }}
                     >
                       <div className="accordion-check-icon flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center mt-0.5 transition-all duration-300" style={{
@@ -698,12 +782,14 @@ export function PartnersAndIntegrations() {
 
           {/* Ecosystem Expansion: Open Integration */}
           <div 
-            className="accordion-item rounded-[20px] md:rounded-[16px] overflow-hidden transition-all duration-500 group"
+            className="accordion-item overflow-hidden transition-all duration-500 group"
             style={{
               background: 'linear-gradient(135deg, rgba(10, 10, 30, 0.95) 0%, rgba(20, 15, 45, 0.9) 100%)',
               backdropFilter: 'blur(16px)',
               border: '2px solid rgba(121, 97, 255, 0.3)',
-              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(121, 97, 255, 0.1)'
+              borderRadius: 'clamp(24px, 5vw, 32px)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(121, 97, 255, 0.1)',
+              marginBottom: 'clamp(1rem, 2.5vw, 1.5rem)'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = 'rgba(121, 97, 255, 0.6)';
@@ -718,7 +804,7 @@ export function PartnersAndIntegrations() {
           >
             <button
               onClick={() => toggleSection('ecosystem')}
-              className="w-full px-4 sm:px-8 md:px-12 lg:px-20 py-6 sm:py-8 md:py-10 lg:py-14 flex items-center justify-between text-left transition-all duration-300 relative overflow-hidden"
+              className="w-full px-10 sm:px-12 md:px-16 lg:px-24 py-8 sm:py-9 md:py-11 lg:py-14 flex items-center justify-between text-left transition-all duration-300 relative overflow-hidden"
               style={{
                 background: openSection === 'ecosystem' 
                   ? 'linear-gradient(135deg, rgba(121, 97, 255, 0.15) 0%, rgba(86, 70, 212, 0.1) 100%)'
@@ -735,7 +821,8 @@ export function PartnersAndIntegrations() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                paddingRight: '1rem',
+                paddingRight: 'clamp(2rem, 4vw, 2.5rem)',
+                paddingLeft: 'clamp(0.75rem, 1.5vw, 1.25rem)',
                 position: 'relative',
                 zIndex: 1
               }}>
@@ -755,8 +842,9 @@ export function PartnersAndIntegrations() {
             </button>
             
             {openSection === 'ecosystem' && (
-              <div className="accordion-content px-10 sm:px-16 md:px-24 lg:px-28 pb-16 sm:pb-24 pt-10 sm:pt-12 border-t border-white/10" style={{
-                background: 'linear-gradient(180deg, rgba(121, 97, 255, 0.08) 0%, transparent 100%)'
+              <div className="accordion-content px-8 sm:px-12 md:px-20 lg:px-24 pb-10 sm:pb-14 md:pb-20 pt-8 sm:pt-10 md:pt-12 border-t border-white/10" style={{
+                background: 'linear-gradient(180deg, rgba(121, 97, 255, 0.08) 0%, transparent 100%)',
+                marginTop: 'clamp(0.5rem, 1.5vw, 1rem)'
               }}>
                 <p style={{
                   fontFamily: 'Manrope, sans-serif',
@@ -764,13 +852,14 @@ export function PartnersAndIntegrations() {
                   fontWeight: '400',
                   lineHeight: '160%',
                   color: 'rgba(255, 255, 255, 0.85)',
-                  marginBottom: 'clamp(3rem, 7vw, 3.5rem)',
-                  paddingLeft: '0.5rem'
+                  marginBottom: 'clamp(2rem, 5vw, 3rem)',
+                  paddingLeft: 'clamp(1rem, 2vw, 1.5rem)',
+                  paddingRight: 'clamp(1rem, 2vw, 1.5rem)'
                 }}>
                   Built for interoperability across multiple blockchain ecosystems and traditional finance rails.
                 </p>
                 
-                <div className="space-y-10 sm:space-y-12">
+                <div className="space-y-6 sm:space-y-8 md:space-y-10" style={{ paddingLeft: 'clamp(0.5rem, 1.5vw, 1rem)', paddingRight: 'clamp(0.5rem, 1.5vw, 1rem)' }}>
                   {[
                     {
                       title: 'Multi-chain Support',
@@ -791,9 +880,12 @@ export function PartnersAndIntegrations() {
                   ].map((item, i) => (
                     <div 
                       key={i} 
-                      className="accordion-list-item flex items-start gap-6 sm:gap-7 p-6 sm:p-7 rounded-lg transition-all duration-300 hover:bg-white/5"
+                      className="accordion-list-item flex items-start gap-4 sm:gap-6 p-5 sm:p-7 md:p-8 lg:p-9 rounded-lg transition-all duration-300 hover:bg-white/5"
                       style={{
-                        animationDelay: `${i * 0.1}s`
+                        animationDelay: `${i * 0.1}s`,
+                        marginBottom: 'clamp(0.75rem, 2vw, 1.25rem)',
+                        marginLeft: 'clamp(0.5rem, 1.5vw, 1rem)',
+                        marginRight: 'clamp(0.5rem, 1.5vw, 1rem)'
                       }}
                     >
                       <div className="accordion-check-icon flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center mt-0.5 transition-all duration-300" style={{

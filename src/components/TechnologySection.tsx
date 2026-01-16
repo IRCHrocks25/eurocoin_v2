@@ -17,14 +17,18 @@ export function TechnologySection() {
           
           <div className="flex flex-col items-center justify-center mb-12 md:mb-20" style={{ paddingTop: '200px' }}>
             {/* The Technology Badge */}
-            <div className="inline-block px-4" style={{ marginBottom: '48px' }}>
+            <div className="inline-block" style={{ marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)', marginLeft: 'clamp(1rem, 3vw, 2rem)', marginRight: 'clamp(1rem, 3vw, 2rem)' }}>
               <span 
-                className="px-6 md:px-8 py-3 rounded-full text-white text-xs md:text-sm tracking-wider uppercase"
+                className="rounded-full text-white tracking-wider uppercase"
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   backdropFilter: 'blur(10px)',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)'
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+                  fontFamily: 'ibrand, sans-serif',
+                  fontSize: 'clamp(0.75rem, 1.75vw, 1rem)',
+                  padding: 'clamp(0.625rem, 1.5vw, 0.875rem) clamp(1.25rem, 3vw, 2rem)',
+                  display: 'inline-block'
                 }}
               >
                 The Technology

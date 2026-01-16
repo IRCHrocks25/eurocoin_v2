@@ -15,7 +15,7 @@ body {
   color: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: 'ibrand', sans-serif !important;
 }
 
@@ -37,10 +37,14 @@ h3 {
   font-weight: 600;
 }
 
+h4, h5, h6 {
+  font-family: sans-serif !important;
+}
+
 p {
   font-size: 1rem;
   line-height: 1.6;
-  font-family: 'ibrand', sans-serif !important;
+  font-family: sans-serif !important;
 }
 
 button {

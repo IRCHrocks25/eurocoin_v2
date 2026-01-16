@@ -3,7 +3,13 @@ import bgImage from 'figma:asset/b4ea384d8eb8e231c5607c87c40b03297346549d.png';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20" 
+      style={{ 
+        paddingBottom: 'clamp(0.5rem, 1vw, 1rem)',
+        paddingTop: 'clamp(2.5rem, 5vw, 3.5rem)'
+      }}
+    >
       {/* Background with uploaded image */}
       <div className="absolute inset-0">
         <img 
@@ -16,7 +22,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center" style={{ marginTop: 'clamp(-4rem, -8vw, -5rem)' }}>
         {/* Subtitle */}
         <div className="mb-6 md:mb-8">
           <span 
@@ -31,7 +37,7 @@ export function HeroSection() {
         <h1 
           style={{ 
             fontFamily: 'ibrand, sans-serif',
-            marginBottom: '2rem',
+            marginBottom: '1.75rem',
             fontWeight: '900',
             letterSpacing: '-0.02em'
           }}
@@ -44,9 +50,11 @@ export function HeroSection() {
         <p 
           style={{ 
             fontFamily: 'ibrand, sans-serif',
-            marginBottom: '1rem' 
+            marginBottom: '0.875rem',
+            fontSize: 'clamp(1.25rem, 3.5vw, 2rem)',
+            lineHeight: '1.3'
           }}
-          className="text-xl md:text-2xl text-white/95 font-medium px-4 md:px-0"
+          className="text-white/95 font-medium px-4 md:px-0"
         >
           A new era in digital finance starts here.
         </p>
@@ -55,9 +63,11 @@ export function HeroSection() {
         <p 
           style={{ 
             fontFamily: 'ibrand, sans-serif',
-            marginBottom: '4rem' 
+            marginBottom: 'clamp(1.5rem, 3vw, 2rem)',
+            fontSize: 'clamp(1rem, 2vw, 1.25rem)',
+            lineHeight: '1.6'
           }}
-          className="text-white/80 max-w-3xl mx-auto leading-relaxed text-base md:text-lg px-4 md:px-0"
+          className="text-white/80 max-w-3xl mx-auto leading-relaxed px-4 md:px-0"
         >
           Eurocoin is the world's first fully MiCA-compliant, euro-backed stablecoin engineered for real-time settlement, gas-free payments, and true institutional trust.
         </p>
@@ -188,7 +198,7 @@ export function HeroSection() {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0e27] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0a0e27] to-transparent" style={{ height: 'clamp(2rem, 4vw, 4rem)' }} />
     </section>
   );
 }

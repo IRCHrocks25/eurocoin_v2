@@ -48,13 +48,30 @@ export function FAQ() {
           <div className="flex flex-col items-center text-center max-w-5xl w-full">
             {/* FAQ Badge */}
             <div 
-              className="inline-block px-5 py-2 rounded-full mb-8"
+              className="inline-block rounded-full"
               style={{
-                border: '1px solid rgba(255, 255, 255, 0.3)',
-                backgroundColor: 'transparent'
+                border: '1px solid #8A55FF',
+                background: 'rgba(138, 85, 255, 0.15)',
+                boxShadow: '0 0 20px rgba(138, 85, 255, 0.5), inset 0 0 10px rgba(138, 85, 255, 0.2)',
+                marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
+                marginLeft: 'clamp(0.5rem, 2vw, 1rem)',
+                marginRight: 'clamp(0.5rem, 2vw, 1rem)'
               }}
             >
-              <span className="text-white" style={{ fontFamily: 'ibrand', fontSize: '0.875rem' }}>FAQ</span>
+              <span 
+                className="text-white" 
+                style={{ 
+                  fontFamily: 'ibrand', 
+                  fontSize: 'clamp(0.625rem, 1.5vw, 0.875rem)',
+                  padding: 'clamp(0.5rem, 1.25vw, 0.75rem) clamp(1rem, 2.5vw, 1.5rem)',
+                  display: 'inline-block',
+                  color: '#B794FF',
+                  textShadow: '0 0 10px rgba(138, 85, 255, 0.8), 0 0 20px rgba(138, 85, 255, 0.5)',
+                  fontWeight: '600'
+                }}
+              >
+                FAQ
+              </span>
             </div>
             
             {/* Heading */}

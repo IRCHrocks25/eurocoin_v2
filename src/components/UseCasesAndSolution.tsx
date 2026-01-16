@@ -52,12 +52,14 @@ export function UseCasesAndSolution() {
           }}
         >
           {/* Badge */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center" style={{ marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
             <div 
-              className="px-6 py-2 rounded-full border"
+              className="rounded-full border"
               style={{
                 fontFamily: 'ibrand, sans-serif',
-                fontSize: 'clamp(12px, 2vw, 14px)',
+                fontSize: 'clamp(0.65rem, 1.5vw, 0.875rem)',
+                padding: 'clamp(0.5rem, 1.2vw, 0.75rem) clamp(1rem, 2.5vw, 1.75rem)',
+                display: 'inline-block',
                 color: '#FFFFFF',
                 borderColor: 'rgba(255, 255, 255, 0.3)',
                 backgroundColor: 'rgba(255, 255, 255, 0.05)'

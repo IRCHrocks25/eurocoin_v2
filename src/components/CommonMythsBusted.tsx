@@ -91,7 +91,7 @@ export function CommonMythsBusted() {
                 className="mb-4"
                 style={{
                   fontFamily: 'ibrand',
-                  fontSize: '0.75rem',
+                  fontSize: 'clamp(0.875rem, 1.5vw, 1rem) !important',
                   color: '#8A55FF',
                   letterSpacing: '0.1em',
                   fontWeight: '600',
@@ -106,7 +106,7 @@ export function CommonMythsBusted() {
                 className="mb-6"
                 style={{
                   fontFamily: 'ibrand',
-                  fontSize: '1.125rem',
+                  fontSize: 'clamp(1.25rem, 2.5vw, 1.5rem) !important',
                   color: 'white',
                   lineHeight: '1.6',
                   fontStyle: 'italic',
@@ -121,7 +121,7 @@ export function CommonMythsBusted() {
                 <span 
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: '0.875rem',
+                    fontSize: 'clamp(1rem, 2vw, 1.125rem) !important',
                     color: '#8A55FF',
                     fontWeight: '600'
                   }}
@@ -131,7 +131,7 @@ export function CommonMythsBusted() {
                 <span 
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: '0.875rem',
+                    fontSize: 'clamp(1rem, 2vw, 1.125rem) !important',
                     color: 'rgba(255, 255, 255, 0.8)',
                     lineHeight: '1.8'
                   }}

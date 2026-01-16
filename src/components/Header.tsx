@@ -108,7 +108,7 @@ export function Header() {
                             letterSpacing: '0.015em',
                             lineHeight: '1.5',
                             whiteSpace: 'nowrap'
-                          }}>Technology of Eurocoin</div>
+                          }}>Eurocoin Technology</div>
                         </div>
                         <div className="flex-shrink-0 flex items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" style={{
                           width: '40px',
@@ -234,7 +234,7 @@ export function Header() {
                             letterSpacing: '0.015em',
                             lineHeight: '1.5',
                             whiteSpace: 'nowrap'
-                          }}>Advantage of Eurocoin</div>
+                          }}>Eurocoin Advantage</div>
                         </div>
                         <div className="flex-shrink-0 flex items-center justify-center rounded-full transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" style={{
                           width: '40px',
@@ -555,7 +555,7 @@ export function Header() {
                   className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
                   style={{ fontFamily: 'ibrand, sans-serif' }}
                 >
-                  Technology of Eurocoin
+                  Eurocoin Technology
                 </Link>
                 <Link 
                   to="/how-eurocoin-works"
@@ -585,7 +585,7 @@ export function Header() {
                   className="text-[#94BEFC] hover:text-white transition-colors duration-200 py-3 px-8 rounded-lg hover:bg-white/5"
                   style={{ fontFamily: 'ibrand, sans-serif' }}
                 >
-                  Advantage of Eurocoin
+                  Eurocoin Advantage
                 </Link>
                 <Link 
                   to="/use-cases-and-solution"

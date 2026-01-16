@@ -22,16 +22,16 @@ export function HowEurocoinWorks() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          minHeight: 'clamp(500px, 80vh, 700px)',
+          minHeight: 'clamp(450px, 70vh, 700px)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          paddingTop: 'clamp(100px, 15vh, 150px)',
+          paddingTop: 'clamp(120px, 15vh, 150px)',
           paddingBottom: 'clamp(60px, 10vh, 100px)'
         }}
       >
         <div className="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex justify-center">
-          <div className="flex flex-col items-center text-center max-w-4xl w-full">
+          <div className="flex flex-col items-center text-center max-w-6xl w-full">
             {/* Badge */}
             <div 
               className="inline-flex"
@@ -62,11 +62,12 @@ export function HowEurocoinWorks() {
               className="text-white"
               style={{ 
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(2rem, 8vw, 4.5rem)',
-                lineHeight: '1.15',
-                marginBottom: 'clamp(1.5rem, 4vw, 2rem)',
+                fontSize: 'clamp(2.25rem, 6.5vw, 4rem) !important',
+                lineHeight: '1.2',
+                marginBottom: 'clamp(1rem, 2.5vw, 1.5rem)',
                 paddingLeft: '1rem',
-                paddingRight: '1rem'
+                paddingRight: '1rem',
+                fontWeight: '700'
               }}
             >
               Simple. Instant. Secure.
@@ -77,12 +78,13 @@ export function HowEurocoinWorks() {
               className="text-white"
               style={{ 
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(1.125rem, 4vw, 2rem)',
+                fontSize: 'clamp(1.25rem, 4vw, 2rem) !important',
                 lineHeight: '1.3',
                 opacity: 0.9,
-                marginBottom: 'clamp(1.5rem, 4vw, 2rem)',
+                marginBottom: 'clamp(1rem, 2.5vw, 1.5rem)',
                 paddingLeft: '1rem',
-                paddingRight: '1rem'
+                paddingRight: '1rem',
+                fontWeight: '600'
               }}
             >
               The Fastest Path to Regulated Digital Cash
@@ -93,11 +95,11 @@ export function HowEurocoinWorks() {
               className="text-white"
               style={{ 
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
-                lineHeight: '1.7',
+                fontSize: 'clamp(1.125rem, 3vw, 1.25rem) !important',
+                lineHeight: '1.6',
                 opacity: 0.85,
-                maxWidth: '800px',
-                marginBottom: 'clamp(1.5rem, 4vw, 2rem)',
+                maxWidth: '700px',
+                marginBottom: 'clamp(1rem, 2.5vw, 1.5rem)',
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 paddingLeft: '1rem',
@@ -112,8 +114,8 @@ export function HowEurocoinWorks() {
               className="text-white"
               style={{ 
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(0.9rem, 2.5vw, 1.125rem)',
-                lineHeight: '1.7',
+                fontSize: 'clamp(1.125rem, 3vw, 1.25rem) !important',
+                lineHeight: '1.6',
                 opacity: 0.85,
                 marginLeft: 'auto',
                 marginRight: 'auto',
@@ -127,14 +129,14 @@ export function HowEurocoinWorks() {
         </div>
       </section>
 
-      <main className="pb-20">
+      <main className="pb-12 md:pb-16">
         {/* Process Steps Section - Transition Background */}
         <section 
           className="relative w-full flex items-center justify-center"
           style={{
             background: 'linear-gradient(to bottom, rgba(5, 8, 25, 1) 0%, rgba(8, 12, 35, 0.95) 50%, rgba(10, 15, 40, 0.7) 100%)',
-            paddingTop: 'clamp(40px, 8vw, 80px)',
-            paddingBottom: 'clamp(40px, 8vw, 80px)'
+            paddingTop: 'clamp(30px, 5vw, 50px)',
+            paddingBottom: 'clamp(30px, 5vw, 50px)'
           }}
         >
           <div className="w-full flex justify-center px-4 md:px-6 lg:px-8">
@@ -142,10 +144,13 @@ export function HowEurocoinWorks() {
               <img 
                 src={processSteps}
                 alt="How Eurocoin Works - Process Steps"
-                className="w-full h-auto max-w-7xl mx-auto"
+                className="w-full h-auto mx-auto"
                 style={{
-                  maxWidth: '100%',
-                  height: 'auto'
+                  maxWidth: 'clamp(600px, 75vw, 900px)',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  borderRadius: 'clamp(12px, 2vw, 20px)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
                 }}
               />
             </div>
@@ -160,8 +165,8 @@ export function HowEurocoinWorks() {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            paddingTop: 'clamp(60px, 12vw, 100px)',
-            paddingBottom: 'clamp(60px, 12vw, 120px)'
+            paddingTop: 'clamp(40px, 6vw, 60px)',
+            paddingBottom: 'clamp(40px, 6vw, 70px)'
           }}
         >
           <div className="w-full max-w-6xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col items-center">
@@ -170,10 +175,10 @@ export function HowEurocoinWorks() {
               className="text-white text-center w-full"
               style={{
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(1.75rem, 6vw, 3.5rem)',
+                fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
                 lineHeight: '1.2',
                 fontWeight: '600',
-                marginBottom: 'clamp(2rem, 6vw, 4rem)',
+                marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)',
                 paddingLeft: '1rem',
                 paddingRight: '1rem'
               }}
@@ -182,17 +187,17 @@ export function HowEurocoinWorks() {
             </h2>
 
             {/* Three Feature Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10 w-full max-w-5xl mx-auto" style={{ marginTop: 'clamp(2rem, 6vw, 6rem)', marginBottom: 'clamp(2rem, 6vw, 4rem)' }}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full max-w-5xl mx-auto" style={{ marginTop: 'clamp(1.5rem, 4vw, 2.5rem)', marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
               {/* Card 1 - Instant Minting */}
               <div 
-                className="rounded-2xl md:rounded-3xl"
+                className="rounded-xl md:rounded-2xl"
                 style={{
                   background: 'linear-gradient(135deg, rgba(56, 68, 150, 0.5) 0%, rgba(40, 50, 120, 0.5) 100%)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   backdropFilter: 'blur(10px)',
-                  padding: 'clamp(24px, 5vw, 45px) clamp(20px, 4vw, 50px)',
+                  padding: 'clamp(20px, 4vw, 32px) clamp(18px, 3vw, 32px)',
                   textAlign: 'center',
-                  minHeight: 'clamp(200px, 40vw, 280px)',
+                  minHeight: 'clamp(160px, 30vw, 220px)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
@@ -203,10 +208,10 @@ export function HowEurocoinWorks() {
                   className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: 'clamp(1.25rem, 4vw, 1.75rem)',
+                    fontSize: 'clamp(1.125rem, 3vw, 1.5rem)',
                     fontWeight: '600',
                     lineHeight: '1.2',
-                    marginBottom: 'clamp(12px, 3vw, 16px)'
+                    marginBottom: 'clamp(10px, 2vw, 14px)'
                   }}
                 >
                   Instant Minting
@@ -215,7 +220,7 @@ export function HowEurocoinWorks() {
                   className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
+                    fontSize: 'clamp(0.875rem, 2vw, 1rem)',
                     lineHeight: '1.5',
                     opacity: 0.85
                   }}
@@ -226,14 +231,14 @@ export function HowEurocoinWorks() {
 
               {/* Card 2 - Unbreakable Trust */}
               <div 
-                className="rounded-2xl md:rounded-3xl"
+                className="rounded-xl md:rounded-2xl"
                 style={{
                   background: 'linear-gradient(135deg, rgba(56, 68, 150, 0.5) 0%, rgba(40, 50, 120, 0.5) 100%)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   backdropFilter: 'blur(10px)',
-                  padding: 'clamp(24px, 5vw, 45px) clamp(20px, 4vw, 50px)',
+                  padding: 'clamp(20px, 4vw, 32px) clamp(18px, 3vw, 32px)',
                   textAlign: 'center',
-                  minHeight: 'clamp(200px, 40vw, 280px)',
+                  minHeight: 'clamp(160px, 30vw, 220px)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
@@ -244,10 +249,10 @@ export function HowEurocoinWorks() {
                   className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: 'clamp(1.25rem, 4vw, 1.75rem)',
+                    fontSize: 'clamp(1.125rem, 3vw, 1.5rem)',
                     fontWeight: '600',
                     lineHeight: '1.2',
-                    marginBottom: 'clamp(12px, 3vw, 16px)'
+                    marginBottom: 'clamp(10px, 2vw, 14px)'
                   }}
                 >
                   Unbreakable Trust
@@ -256,7 +261,7 @@ export function HowEurocoinWorks() {
                   className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
+                    fontSize: 'clamp(0.875rem, 2vw, 1rem)',
                     lineHeight: '1.5',
                     opacity: 0.85
                   }}
@@ -267,14 +272,14 @@ export function HowEurocoinWorks() {
 
               {/* Card 3 - Fully Backed */}
               <div 
-                className="rounded-2xl md:rounded-3xl"
+                className="rounded-xl md:rounded-2xl"
                 style={{
                   background: 'linear-gradient(135deg, rgba(56, 68, 150, 0.5) 0%, rgba(40, 50, 120, 0.5) 100%)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   backdropFilter: 'blur(10px)',
-                  padding: 'clamp(24px, 5vw, 45px) clamp(20px, 4vw, 50px)',
+                  padding: 'clamp(20px, 4vw, 32px) clamp(18px, 3vw, 32px)',
                   textAlign: 'center',
-                  minHeight: 'clamp(200px, 40vw, 280px)',
+                  minHeight: 'clamp(160px, 30vw, 220px)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'center',
@@ -285,10 +290,10 @@ export function HowEurocoinWorks() {
                   className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: 'clamp(1.25rem, 4vw, 1.75rem)',
+                    fontSize: 'clamp(1.125rem, 3vw, 1.5rem)',
                     fontWeight: '600',
                     lineHeight: '1.2',
-                    marginBottom: 'clamp(12px, 3vw, 16px)'
+                    marginBottom: 'clamp(10px, 2vw, 14px)'
                   }}
                 >
                   Fully Backed, Fully Redeemable
@@ -297,7 +302,7 @@ export function HowEurocoinWorks() {
                   className="text-white"
                   style={{
                     fontFamily: 'ibrand',
-                    fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
+                    fontSize: 'clamp(0.875rem, 2vw, 1rem)',
                     lineHeight: '1.5',
                     opacity: 0.85
                   }}
@@ -308,12 +313,12 @@ export function HowEurocoinWorks() {
             </div>
 
             {/* Centered Coin Image */}
-            <div className="flex justify-center px-4">
+            <div className="flex justify-center px-4 mt-4">
               <img 
                 src={coinImage}
                 alt="Eurocoin"
                 style={{
-                  maxWidth: 'clamp(280px, 60vw, 500px)',
+                  maxWidth: 'clamp(200px, 45vw, 350px)',
                   width: '100%',
                   height: 'auto'
                 }}
@@ -326,9 +331,9 @@ export function HowEurocoinWorks() {
         <section 
           className="relative w-full flex items-center justify-center overflow-hidden"
           style={{
-            paddingTop: 'clamp(80px, 15vw, 120px)',
-            paddingBottom: 'clamp(80px, 15vw, 120px)',
-            minHeight: 'clamp(500px, 70vh, 700px)'
+            paddingTop: 'clamp(50px, 8vw, 80px)',
+            paddingBottom: 'clamp(50px, 8vw, 80px)',
+            minHeight: 'clamp(350px, 50vh, 500px)'
           }}
         >
           {/* Background with hero image */}
@@ -348,10 +353,10 @@ export function HowEurocoinWorks() {
               className="text-white w-full"
               style={{
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(2rem, 7vw, 3.5rem)',
-                lineHeight: '1.15',
+                fontSize: 'clamp(1.5rem, 5vw, 2.5rem)',
+                lineHeight: '1.2',
                 fontWeight: '600',
-                marginBottom: 'clamp(1.5rem, 5vw, 2.5rem)',
+                marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
                 paddingLeft: '0.5rem',
                 paddingRight: '0.5rem',
                 letterSpacing: '-0.02em'
@@ -365,13 +370,13 @@ export function HowEurocoinWorks() {
               className="text-white w-full"
               style={{
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(1rem, 3vw, 1.25rem)',
-                lineHeight: '1.7',
+                fontSize: 'clamp(0.875rem, 2.5vw, 1.125rem)',
+                lineHeight: '1.6',
                 opacity: 0.95,
-                marginBottom: 'clamp(1.5rem, 5vw, 2.5rem)',
+                marginBottom: 'clamp(1rem, 3vw, 1.5rem)',
                 paddingLeft: '1rem',
                 paddingRight: '1rem',
-                maxWidth: '700px',
+                maxWidth: '600px',
                 marginLeft: 'auto',
                 marginRight: 'auto'
               }}
@@ -384,10 +389,10 @@ export function HowEurocoinWorks() {
               className="text-white w-full"
               style={{
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(0.95rem, 2.8vw, 1.125rem)',
+                fontSize: 'clamp(0.875rem, 2.5vw, 1rem)',
                 lineHeight: '1.6',
                 opacity: 0.9,
-                marginBottom: 'clamp(2.5rem, 6vw, 4rem)',
+                marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)',
                 paddingLeft: '1rem',
                 paddingRight: '1rem',
                 fontWeight: '500'

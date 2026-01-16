@@ -15,9 +15,15 @@ export function PartnershipsSection() {
     { name: 'Partner 6', logo: logo6 },
   ];
 
+  // Duplicate partners for seamless infinite scroll
+  const duplicatedPartners = [...partners, ...partners];
+
   return (
-    <section className="relative py-12 md:py-16 pb-16 md:pb-24 bg-[#0a0e27] border-none">
-      <div className="w-full flex flex-col items-center -mt-20 md:-mt-40">
+    <section 
+      className="relative py-12 md:py-16 bg-[#0a0e27] border-none pt-16 md:pt-24"
+      style={{ paddingBottom: 'clamp(3rem, 6vw, 6rem)' }}
+    >
+      <div className="w-full flex flex-col items-center">
         {/* Section Title */}
         <div className="text-center mb-8 md:mb-12">
           <span 
@@ -26,32 +32,59 @@ export function PartnershipsSection() {
           >
             PARTNERSHIPS
           </span>
-        </div>
+        </div><br></br>
 
-        {/* Partner Logos Grid */}
-        <div className="max-w-5xl mx-auto px-4 md:px-6">
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 lg:gap-12">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity"
-              >
-                {partner.logo ? (
-                  <div className="w-24 md:w-32 h-10 md:h-12 flex items-center justify-center">
-                    <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain" />
-                  </div>
-                ) : (
-                  <div className="w-24 md:w-32 h-10 md:h-12 bg-white/10 rounded-lg flex items-center justify-center border border-white/20">
-                    <span className="text-white/70 text-xs md:text-sm font-medium px-3 md:px-4 text-center">
-                      {partner.name}
-                    </span>
-                  </div>
-                )}
-              </div>
-            ))}
+        {/* Partner Logos Carousel */}
+        <div className="w-full max-w-[90rem] mx-auto px-4 md:px-6 overflow-hidden">
+          <div className="relative w-full" style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}>
+            <div 
+              className="flex"
+              style={{
+                animation: 'scroll 30s linear infinite',
+                width: 'max-content'
+              }}
+            >
+              {duplicatedPartners.map((partner, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity"
+                  style={{ 
+                    width: 'clamp(160px, 25vw, 280px)',
+                    marginRight: 'clamp(1.5rem, 4vw, 3rem)',
+                  }}
+                >
+                  {partner.logo ? (
+                    <div className="w-full flex items-center justify-center" style={{ height: 'clamp(3rem, 6vw, 5rem)' }}>
+                      <img 
+                        src={partner.logo} 
+                        alt={partner.name} 
+                        className="max-w-full max-h-full object-contain" 
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-full bg-white/10 rounded-lg flex items-center justify-center border border-white/20" style={{ height: 'clamp(3rem, 6vw, 5rem)' }}>
+                      <span className="text-white/70 text-xs md:text-sm font-medium px-3 md:px-4 text-center">
+                        {partner.name}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 }

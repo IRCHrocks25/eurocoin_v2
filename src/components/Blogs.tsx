@@ -64,20 +64,34 @@ export function Blogs() {
           {/* Hero Section */}
           <div className="text-center w-full flex flex-col items-center">
             {/* Our Blogs Label */}
-            <div className="mb-8">
-              <span className="px-6 py-2 border border-white/30 rounded-full text-white/80 text-sm md:text-base inline-block">
+            <div style={{ marginBottom: 'clamp(1rem, 2vw, 1.5rem)', marginLeft: 'clamp(1rem, 3vw, 2rem)', marginRight: 'clamp(1rem, 3vw, 2rem)' }}>
+              <span className="border border-white/30 rounded-full text-white/80 inline-block" style={{
+                fontFamily: 'ibrand, sans-serif',
+                fontSize: 'clamp(0.75rem, 1.75vw, 1rem)',
+                padding: 'clamp(0.625rem, 1.5vw, 0.875rem) clamp(1.25rem, 3vw, 2rem)',
+                display: 'inline-block'
+              }}>
                 Our Blogs
               </span>
             </div>
             
             {/* Main Heading */}
-            <h1 className="text-white w-full" style={{ fontSize: 'clamp(32px, 5vw, 56px)', lineHeight: '1.2', marginBottom: '2rem' }}>
+            <h1 
+              className="w-full bg-gradient-to-r from-white via-cyan-100 to-blue-100 bg-clip-text text-transparent" 
+              style={{ 
+                fontSize: 'clamp(32px, 5vw, 56px)', 
+                lineHeight: '1.2', 
+                marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
+                fontFamily: 'ibrand, sans-serif',
+                fontWeight: '700'
+              }}
+            >
               Stay Ahead with Eurocoin
             </h1>
             
             {/* Description Paragraphs */}
             <div className="max-w-4xl mx-auto w-full">
-              <p className="text-white/70 text-center" style={{ fontSize: 'clamp(16px, 2vw, 20px)', lineHeight: '1.6', marginBottom: '2rem', marginLeft: 'auto', marginRight: 'auto' }}>
+              <p className="text-white/70 text-center" style={{ fontSize: 'clamp(16px, 2vw, 20px)', lineHeight: '1.6', marginBottom: 'clamp(0.75rem, 1.5vw, 1rem)', marginLeft: 'auto', marginRight: 'auto' }}>
                 As Europe's digital finance landscape evolves, Eurocoin is at the center defining best practices, sharing regulatory updates, and spotlighting the technology shaping the next generation of money.
               </p>
               <p className="text-white/70 text-center" style={{ fontSize: 'clamp(16px, 2vw, 20px)', lineHeight: '1.6', marginLeft: 'auto', marginRight: 'auto' }}>
@@ -96,7 +110,7 @@ export function Blogs() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          paddingTop: '10rem',
+          paddingTop: 'clamp(3rem, 6vw, 5rem)',
           paddingBottom: '6rem'
         }}
       >
@@ -105,9 +119,9 @@ export function Blogs() {
           <h2 className="text-white text-center w-full" style={{ 
             fontSize: 'clamp(28px, 4vw, 42px)', 
             lineHeight: '1.2', 
-            marginTop: '-2rem',
-            marginBottom: '4rem',
-            paddingBottom: '2rem',
+            marginTop: '0',
+            marginBottom: 'clamp(2rem, 4vw, 3rem)',
+            paddingBottom: '0',
             fontWeight: '600',
             textShadow: `
               0 0 20px rgba(255, 255, 255, 0.5),
@@ -121,18 +135,20 @@ export function Blogs() {
           </h2>
           
           {/* Blog Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center w-full" style={{ gap: 'clamp(2rem, 4vw, 3rem)', paddingLeft: 'clamp(1rem, 3vw, 2rem)', paddingRight: 'clamp(1rem, 3vw, 2rem)' }}>
             {blogPosts.map((post, index) => (
               <div 
                 key={index} 
-                className="rounded-3xl overflow-hidden transition-all duration-300 backdrop-blur-sm w-full max-w-[380px] hover:scale-105 hover:shadow-2xl"
+                className="overflow-hidden transition-all duration-300 backdrop-blur-sm w-full max-w-[380px] hover:scale-105 hover:shadow-2xl"
                 style={{
                   background: 'linear-gradient(135deg, rgba(165, 191, 255, 0.95) 0%, rgba(111, 75, 255, 0.95) 50%, rgba(13, 0, 66, 0.98) 100%)',
                   border: '2px solid rgba(255, 255, 255, 0.3)',
                   boxShadow: '0 10px 40px rgba(139, 92, 246, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
                   minHeight: '500px',
                   display: 'flex',
-                  flexDirection: 'column'
+                  flexDirection: 'column',
+                  marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
+                  borderRadius: '0'
                 }}
               >
                 {/* Image */}
@@ -147,26 +163,28 @@ export function Blogs() {
                 </div>
                 
                 {/* Content */}
-                <div className="p-7 flex-1 flex flex-col" style={{ paddingBottom: '2rem', background: 'rgba(0, 0, 0, 0.2)' }}>
+                <div className="flex-1 flex flex-col" style={{ 
+                  background: 'rgba(0, 0, 0, 0.2)',
+                  margin: 'clamp(1rem, 2vw, 1.5rem)'
+                }}>
                   {/* Title */}
-                  <h3 className="text-white mb-5 font-bold" style={{ 
-                    fontSize: 'clamp(18px, 2vw, 22px)', 
+                  <h3 className="text-white font-bold" style={{ 
+                    fontSize: 'clamp(16px, 1.75vw, 20px)', 
                     lineHeight: '1.5', 
                     fontWeight: '700',
                     letterSpacing: '0.01em',
-                    wordSpacing: '0.05em',
                     textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
-                    paddingBottom: '0.5rem'
+                    marginBottom: 'clamp(0.75rem, 1.5vw, 1rem)'
                   }}>
                     {post.title}
                   </h3>
                   
                   {/* Author */}
                   {post.author && (
-                    <div className="flex items-center gap-2 mb-5" style={{ marginTop: '0.5rem' }}>
+                    <div className="flex items-center gap-2" style={{ marginBottom: 'clamp(0.75rem, 1.5vw, 1rem)' }}>
                       <User className="w-4 h-4 text-white/90" style={{ filter: 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5))' }} />
                       <span className="text-white/90 font-medium" style={{ 
-                        fontSize: 'clamp(14px, 1.5vw, 16px)',
+                        fontSize: 'clamp(12px, 1.25vw, 14px)',
                         letterSpacing: '0.02em',
                         textShadow: '0 1px 4px rgba(0, 0, 0, 0.5)'
                       }}>
@@ -177,13 +195,10 @@ export function Blogs() {
                   
                   {/* Description */}
                   <p className="text-white/95 flex-1" style={{ 
-                    fontSize: 'clamp(15px, 1.8vw, 17px)', 
-                    lineHeight: '2',
-                    letterSpacing: '0.02em',
-                    wordSpacing: '0.1em',
-                    textShadow: '0 1px 4px rgba(0, 0, 0, 0.5)',
-                    marginTop: '0.5rem',
-                    paddingTop: '0.5rem'
+                    fontSize: 'clamp(13px, 1.5vw, 15px)', 
+                    lineHeight: '1.6',
+                    letterSpacing: '0.01em',
+                    textShadow: '0 1px 4px rgba(0, 0, 0, 0.5)'
                   }}>
                     {post.description}
                   </p>
