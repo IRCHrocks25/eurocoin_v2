@@ -47,15 +47,16 @@ export function PartnersAndIntegrations() {
 
         <div className="w-full max-w-[1440px] mx-auto text-center relative z-10 px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Badge */}
-          <div className="inline-flex items-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-full mb-8 sm:mb-16 shadow-lg" style={{
+          <div className="inline-flex items-center rounded-full mb-8 sm:mb-16 shadow-lg" style={{
             background: 'rgba(255, 255, 255, 0.08)',
             border: '1.5px solid rgba(148, 190, 252, 0.3)',
             backdropFilter: 'blur(10px)',
-            boxShadow: '0 4px 20px rgba(148, 190, 252, 0.15)'
+            boxShadow: '0 4px 20px rgba(148, 190, 252, 0.15)',
+            padding: 'clamp(9px, 2.25vw, 14px) clamp(18px, 3.75vw, 28px)'
           }}>
             <span style={{
               fontFamily: 'Manrope, sans-serif',
-              fontSize: 'clamp(13px, 3.5vw, 20px)',
+              fontSize: 'clamp(14px, 3.5vw, 22px)',
               fontWeight: '700',
               background: 'linear-gradient(90deg, #94BEFC 0%, #FFFFFF 100%)',
               WebkitBackgroundClip: 'text',
@@ -109,16 +110,16 @@ export function PartnersAndIntegrations() {
                       className="flex"
                       style={{
                         animation: 'scrollPartners 30s linear infinite',
-                        width: 'max-content'
+                        width: 'max-content',
+                        gap: '0'
                       }}
                     >
                       {duplicatedPartners.map((partner, index) => (
                         <div
                           key={index}
-                          className="flex-shrink-0 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity"
+                          className="flex-shrink-0 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity partners-integrations-carousel-item"
                           style={{ 
                             width: 'clamp(90px, 16vw, 160px)',
-                            marginRight: 'clamp(0.5rem, 1.5vw, 1rem)',
                           }}
                         >
                           {partner.logo ? (
@@ -154,6 +155,9 @@ export function PartnersAndIntegrations() {
               100% {
                 transform: translateX(-50%);
               }
+            }
+            .partners-integrations-carousel-item {
+              margin-right: clamp(0.1rem, 0.75vw, 0.5rem) !important;
             }
           `}</style>
 
@@ -450,6 +454,8 @@ export function PartnersAndIntegrations() {
                 backgroundClip: 'text',
                 paddingRight: 'clamp(2rem, 4vw, 2.5rem)',
                 paddingLeft: 'clamp(0.75rem, 1.5vw, 1.25rem)',
+                marginTop: 'clamp(0.5rem, 1.5vw, 1rem)',
+                marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)',
                 position: 'relative',
                 zIndex: 1,
                 transition: 'all 0.3s ease'
@@ -582,6 +588,8 @@ export function PartnersAndIntegrations() {
                 backgroundClip: 'text',
                 paddingRight: 'clamp(2rem, 4vw, 2.5rem)',
                 paddingLeft: 'clamp(0.75rem, 1.5vw, 1.25rem)',
+                marginTop: 'clamp(0.5rem, 1.5vw, 1rem)',
+                marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)',
                 position: 'relative',
                 zIndex: 1
               }}>
@@ -696,6 +704,8 @@ export function PartnersAndIntegrations() {
                 backgroundClip: 'text',
                 paddingRight: 'clamp(2rem, 4vw, 2.5rem)',
                 paddingLeft: 'clamp(0.75rem, 1.5vw, 1.25rem)',
+                marginTop: 'clamp(0.5rem, 1.5vw, 1rem)',
+                marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)',
                 position: 'relative',
                 zIndex: 1
               }}>
@@ -823,6 +833,8 @@ export function PartnersAndIntegrations() {
                 backgroundClip: 'text',
                 paddingRight: 'clamp(2rem, 4vw, 2.5rem)',
                 paddingLeft: 'clamp(0.75rem, 1.5vw, 1.25rem)',
+                marginTop: 'clamp(0.5rem, 1.5vw, 1rem)',
+                marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)',
                 position: 'relative',
                 zIndex: 1
               }}>

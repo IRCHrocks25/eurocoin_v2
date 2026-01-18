@@ -41,13 +41,14 @@ export function ExperienceParadigmSection() {
 
                   {/* First Paragraph */}
                   <p 
-                    className="text-white text-base md:text-lg"
+                    className="text-white"
                     style={{ 
                       fontFamily: 'ibrand, sans-serif',
                       fontWeight: '600',
+                      fontSize: 'clamp(1.125rem, 2.5vw, 1.5rem)',
                       lineHeight: '1.6',
                       opacity: '0.95',
-                      marginBottom: '48px'
+                      marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)'
                     }}
                   >
                     Ready to invest in the euro stablecoin built for tomorrow?
@@ -55,13 +56,14 @@ export function ExperienceParadigmSection() {
 
                   {/* Second Paragraph */}
                   <p 
-                    className="text-white text-sm md:text-base"
+                    className="text-white"
                     style={{ 
                       fontFamily: 'ibrand, sans-serif',
                       fontWeight: '400',
+                      fontSize: 'clamp(1rem, 2.25vw, 1.375rem)',
                       lineHeight: '1.6',
                       opacity: '0.85',
-                      marginBottom: '48px'
+                      marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)'
                     }}
                   >
                     Eurocoin is raising capital to capture the European stablecoin market.
@@ -69,13 +71,14 @@ export function ExperienceParadigmSection() {
 
                   {/* Third Paragraph */}
                   <p 
-                    className="text-white text-sm md:text-base"
+                    className="text-white"
                     style={{ 
                       fontFamily: 'ibrand, sans-serif',
                       fontWeight: '400',
+                      fontSize: 'clamp(1rem, 2.25vw, 1.375rem)',
                       lineHeight: '1.6',
                       opacity: '0.85',
-                      marginBottom: '48px'
+                      marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)'
                     }}
                   >
                     This is your opportunity to invest in the infrastructure layer of Finance 2.0.
@@ -83,13 +86,14 @@ export function ExperienceParadigmSection() {
 
                   {/* Fourth Paragraph */}
                   <p 
-                    className="text-white text-sm md:text-base"
+                    className="text-white"
                     style={{ 
                       fontFamily: 'ibrand, sans-serif',
                       fontWeight: '400',
+                      fontSize: 'clamp(1rem, 2.25vw, 1.375rem)',
                       lineHeight: '1.6',
                       opacity: '0.85',
-                      marginBottom: '64px'
+                      marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)'
                     }}
                   >
                     The paradigm shift is here. The architecture is built. The market is ready.

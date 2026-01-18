@@ -389,7 +389,7 @@ export function HowEurocoinWorks() {
               className="text-white w-full"
               style={{
                 fontFamily: 'ibrand',
-                fontSize: 'clamp(0.875rem, 2.5vw, 1rem)',
+                fontSize: 'clamp(0.75rem, 2vw, 0.875rem)',
                 lineHeight: '1.6',
                 opacity: 0.9,
                 marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)',
@@ -402,63 +402,56 @@ export function HowEurocoinWorks() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center w-full max-w-2xl mx-auto px-2 sm:px-4">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-stretch sm:items-center w-full max-w-2xl mx-auto px-2 sm:px-4" style={{ marginTop: 'clamp(1rem, 2vw, 2rem)' }}>
               {/* Contact Us Button - Premium Style */}
               <Link to="/contact-us" className="w-full sm:w-auto sm:flex-1">
                 <button
-                  className="group relative flex items-center justify-center gap-3 md:gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 active:scale-95 w-full"
+                  className="group relative flex items-center justify-center gap-2 rounded-full transition-all duration-300 ease-out overflow-hidden hover:scale-105 active:scale-95 w-full"
                   style={{
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(1rem, 3vw, 1.25rem)',
-                    fontWeight: '700',
-                    padding: 'clamp(18px, 5vw, 24px) clamp(32px, 7vw, 48px)',
+                    fontSize: 'clamp(0.75rem, 2vw, 0.875rem)',
+                    fontWeight: '600',
+                    padding: 'clamp(8px, 2vw, 10px) clamp(16px, 3.5vw, 24px)',
                     cursor: 'pointer',
-                    minHeight: '56px',
-                    background: 'linear-gradient(135deg, #FFFFFF 0%, #E6F0FF 100%)',
-                    border: '2px solid rgba(255, 255, 255, 0.9)',
+                    minHeight: '36px',
+                    background: '#FFFFFF',
+                    border: '1px solid rgba(255, 255, 255, 0.8)',
                     boxShadow: `
-                      0 8px 32px rgba(148, 190, 252, 0.3),
-                      0 0 0 1px rgba(255, 255, 255, 0.5) inset,
-                      inset 0 1px 0 rgba(255, 255, 255, 0.9),
-                      inset 0 -1px 0 rgba(0, 0, 0, 0.05),
-                      0 4px 16px rgba(148, 190, 252, 0.2)
+                      0 2px 8px rgba(148, 190, 252, 0.2),
+                      0 0 0 0.5px rgba(0, 0, 0, 0.05) inset
                     `,
                     color: '#000000',
-                    position: 'relative'
+                    position: 'relative',
+                    whiteSpace: 'nowrap'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.boxShadow = `
-                      0 12px 48px rgba(148, 190, 252, 0.5),
-                      0 0 0 2px rgba(255, 255, 255, 0.6) inset,
-                      inset 0 1px 0 rgba(255, 255, 255, 1),
-                      inset 0 -1px 0 rgba(0, 0, 0, 0.08),
-                      0 0 40px rgba(148, 190, 252, 0.3)
+                      0 4px 12px rgba(148, 190, 252, 0.3),
+                      0 0 0 1px rgba(0, 0, 0, 0.08) inset
                     `;
                     e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 1)';
-                    e.currentTarget.style.background = 'linear-gradient(135deg, #FFFFFF 0%, #F0F7FF 100%)';
+                    e.currentTarget.style.background = '#F8FAFF';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.boxShadow = `
-                      0 8px 32px rgba(148, 190, 252, 0.3),
-                      0 0 0 1px rgba(255, 255, 255, 0.5) inset,
-                      inset 0 1px 0 rgba(255, 255, 255, 0.9),
-                      inset 0 -1px 0 rgba(0, 0, 0, 0.05)
+                      0 2px 8px rgba(148, 190, 252, 0.2),
+                      0 0 0 0.5px rgba(0, 0, 0, 0.05) inset
                     `;
                     e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.8)';
-                    e.currentTarget.style.background = 'linear-gradient(135deg, #FFFFFF 0%, #E6F0FF 100%)';
+                    e.currentTarget.style.background = '#FFFFFF';
                   }}
                 >
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-in-out"></span>
-                  <span className="relative z-10 flex items-center justify-center gap-3 md:gap-4" style={{ letterSpacing: '0.02em', whiteSpace: 'nowrap' }}>
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-500"></span>
+                  <span className="relative z-10 flex items-center justify-center gap-2" style={{ letterSpacing: '0.01em', whiteSpace: 'nowrap' }}>
                     Contact Us for Onboarding
                     <div className="relative z-10 flex items-center justify-center rounded-full bg-[#0a0e27] transition-all duration-300 group-hover:scale-110" style={{
-                      width: 'clamp(38px, 9vw, 44px)',
-                      height: 'clamp(38px, 9vw, 44px)',
-                      boxShadow: '0 4px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
-                      border: '1.5px solid rgba(0, 0, 0, 0.3)',
+                      width: 'clamp(24px, 5vw, 28px)',
+                      height: 'clamp(24px, 5vw, 28px)',
+                      boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
+                      border: '1px solid rgba(0, 0, 0, 0.2)',
                       flexShrink: 0
                     }}>
-                      <ArrowRight className="text-white group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.8', fill: 'white', width: 'clamp(22px, 5.5vw, 26px)', height: 'clamp(22px, 5.5vw, 26px)' }} />
+                      <ArrowRight className="text-white group-hover:translate-x-0.5 transition-transform duration-300" style={{ strokeWidth: '2.5', fill: 'white', width: 'clamp(14px, 3.5vw, 16px)', height: 'clamp(14px, 3.5vw, 16px)' }} />
                     </div>
                   </span>
                 </button>
@@ -470,59 +463,55 @@ export function HowEurocoinWorks() {
                   // Navigate to technology page or open docs
                   window.open('#', '_blank');
                 }}
-                className="group relative flex items-center justify-center gap-3 md:gap-4 rounded-full transition-all duration-500 ease-out overflow-hidden hover:scale-105 active:scale-95 w-full sm:w-auto sm:flex-1"
+                className="group relative flex items-center justify-center gap-2 rounded-full transition-all duration-300 ease-out overflow-hidden hover:scale-105 active:scale-95 w-full sm:w-auto"
                 style={{
                   fontFamily: 'ibrand, sans-serif',
-                  fontSize: 'clamp(1rem, 3vw, 1.25rem)',
-                  fontWeight: '700',
-                  padding: 'clamp(18px, 5vw, 24px) clamp(32px, 7vw, 48px)',
+                  fontSize: 'clamp(0.75rem, 2vw, 0.875rem)',
+                  fontWeight: '600',
+                  padding: 'clamp(8px, 2vw, 10px) clamp(16px, 3.5vw, 24px)',
                   cursor: 'pointer',
-                  minHeight: '56px',
-                  background: 'linear-gradient(135deg, rgba(148, 190, 252, 0.3) 0%, rgba(91, 159, 255, 0.35) 50%, rgba(148, 190, 252, 0.3) 100%)',
-                  border: '2px solid rgba(148, 190, 252, 0.6)',
-                  backdropFilter: 'blur(20px)',
-                  WebkitBackdropFilter: 'blur(20px)',
+                  minHeight: '36px',
+                  background: 'rgba(148, 190, 252, 0.15)',
+                  border: '1px solid rgba(148, 190, 252, 0.4)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
                   boxShadow: `
-                    0 8px 32px rgba(148, 190, 252, 0.35),
-                    0 0 0 1px rgba(255, 255, 255, 0.15) inset,
-                    0 2px 8px rgba(0, 0, 0, 0.2),
-                    0 4px 16px rgba(148, 190, 252, 0.25)
+                    0 2px 8px rgba(148, 190, 252, 0.2),
+                    0 0 0 0.5px rgba(255, 255, 255, 0.1) inset
                   `,
                   color: '#FFFFFF',
-                  position: 'relative'
+                  position: 'relative',
+                  marginLeft: 'clamp(1rem, 2vw, 2rem)',
+                  whiteSpace: 'nowrap'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = `
-                    0 12px 48px rgba(148, 190, 252, 0.5),
-                    0 0 0 2px rgba(255, 255, 255, 0.25) inset,
-                    0 4px 16px rgba(0, 0, 0, 0.3),
-                    0 0 60px rgba(148, 190, 252, 0.4)
+                    0 4px 12px rgba(148, 190, 252, 0.3),
+                    0 0 0 1px rgba(255, 255, 255, 0.15) inset
                   `;
-                  e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.85)';
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.4) 0%, rgba(91, 159, 255, 0.45) 50%, rgba(148, 190, 252, 0.4) 100%)';
+                  e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.6)';
+                  e.currentTarget.style.background = 'rgba(148, 190, 252, 0.2)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.boxShadow = `
-                    0 8px 32px rgba(148, 190, 252, 0.35),
-                    0 0 0 1px rgba(255, 255, 255, 0.15) inset,
-                    0 2px 8px rgba(0, 0, 0, 0.2),
-                    0 4px 16px rgba(148, 190, 252, 0.25)
+                    0 2px 8px rgba(148, 190, 252, 0.2),
+                    0 0 0 0.5px rgba(255, 255, 255, 0.1) inset
                   `;
-                  e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.6)';
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(148, 190, 252, 0.3) 0%, rgba(91, 159, 255, 0.35) 50%, rgba(148, 190, 252, 0.3) 100%)';
+                  e.currentTarget.style.borderColor = 'rgba(148, 190, 252, 0.4)';
+                  e.currentTarget.style.background = 'rgba(148, 190, 252, 0.15)';
                 }}
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000"></span>
-                <span className="relative z-10 flex items-center justify-center gap-3 md:gap-4 text-white font-medium" style={{ fontFamily: 'ibrand, sans-serif', letterSpacing: '0.02em', textShadow: '0 2px 4px rgba(0,0,0,0.2)', whiteSpace: 'nowrap' }}>
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-500"></span>
+                <span className="relative z-10 flex items-center justify-center gap-2 text-white font-medium" style={{ fontFamily: 'ibrand, sans-serif', letterSpacing: '0.01em', whiteSpace: 'nowrap' }}>
                   View Integration Docs
-                  <div className="relative z-10 flex items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:scale-110" style={{
-                    width: 'clamp(38px, 9vw, 44px)',
-                    height: 'clamp(38px, 9vw, 44px)',
-                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.9)',
-                    border: '1.5px solid rgba(0, 0, 0, 0.1)',
+                  <div className="relative z-10 flex items-center justify-center rounded-full bg-white/90 transition-all duration-300 group-hover:scale-110" style={{
+                    width: 'clamp(24px, 5vw, 28px)',
+                    height: 'clamp(24px, 5vw, 28px)',
+                    boxShadow: '0 2px 6px rgba(0, 0, 0, 0.2)',
+                    border: '1px solid rgba(0, 0, 0, 0.08)',
                     flexShrink: 0
                   }}>
-                    <ArrowRight className="text-[#0a0e27] group-hover:translate-x-1 transition-transform duration-300" style={{ strokeWidth: '2.8', fill: '#0a0e27', width: 'clamp(22px, 5.5vw, 26px)', height: 'clamp(22px, 5.5vw, 26px)' }} />
+                    <ArrowRight className="text-[#0a0e27] group-hover:translate-x-0.5 transition-transform duration-300" style={{ strokeWidth: '2.5', fill: '#0a0e27', width: 'clamp(14px, 3.5vw, 16px)', height: 'clamp(14px, 3.5vw, 16px)' }} />
                   </div>
                 </span>
               </button>

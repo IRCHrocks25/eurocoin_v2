@@ -26,12 +26,23 @@ export function PartnershipsSection() {
       <div className="w-full flex flex-col items-center">
         {/* Section Title */}
         <div className="text-center mb-8 md:mb-12">
-          <span 
-            className="text-cyan-400 tracking-wider uppercase text-sm md:text-base font-medium"
-            style={{ fontFamily: 'ibrand, sans-serif' }}
-          >
-            PARTNERSHIPS
-          </span>
+          <div className="inline-block" style={{ marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)', marginLeft: 'clamp(1rem, 3vw, 2rem)', marginRight: 'clamp(1rem, 3vw, 2rem)' }}>
+            <span 
+              className="rounded-full text-white tracking-wide"
+              style={{
+                fontFamily: "'ibrand'",
+                background: 'rgba(255, 255, 255, 0.1)',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+                fontSize: 'clamp(0.875rem, 2vw, 1.125rem)',
+                padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem)',
+                display: 'inline-block'
+              }}
+            >
+              Partnerships
+            </span>
+          </div>
         </div><br></br>
 
         {/* Partner Logos Carousel */}
@@ -41,16 +52,16 @@ export function PartnershipsSection() {
               className="flex"
               style={{
                 animation: 'scroll 30s linear infinite',
-                width: 'max-content'
+                width: 'max-content',
+                gap: '0'
               }}
             >
               {duplicatedPartners.map((partner, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity"
+                  className="flex-shrink-0 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity partnerships-carousel-item"
                   style={{ 
                     width: 'clamp(160px, 25vw, 280px)',
-                    marginRight: 'clamp(1.5rem, 4vw, 3rem)',
                   }}
                 >
                   {partner.logo ? (
@@ -83,6 +94,9 @@ export function PartnershipsSection() {
           100% {
             transform: translateX(-50%);
           }
+        }
+        .partnerships-carousel-item {
+          margin-right: clamp(0.1rem, 0.75vw, 0.5rem) !important;
         }
       `}</style>
     </section>

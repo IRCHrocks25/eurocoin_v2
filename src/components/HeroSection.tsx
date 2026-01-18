@@ -27,7 +27,7 @@ export function HeroSection() {
         <div className="mb-6 md:mb-8">
           <span 
             className="text-cyan-400 tracking-wider uppercase text-sm md:text-base font-medium"
-            style={{ fontFamily: 'ibrand, sans-serif' }}
+            style={{ fontFamily: "'ibrand'" }}
           >
             EUROCOIN (EURDT)
           </span>
@@ -39,7 +39,8 @@ export function HeroSection() {
             fontFamily: 'ibrand, sans-serif',
             marginBottom: '1.75rem',
             fontWeight: '900',
-            letterSpacing: '-0.02em'
+            letterSpacing: '-0.02em',
+            fontSize: 'clamp(2.5rem, 8vw, 5rem)'
           }}
           className="bg-gradient-to-r from-white via-white to-white/90 bg-clip-text text-transparent px-4 md:px-0"
         >

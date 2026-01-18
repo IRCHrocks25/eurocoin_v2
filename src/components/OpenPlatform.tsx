@@ -15,6 +15,11 @@ import whyEurocoin from 'figma:asset/f78ba638aacf4b8949847458660a8d1bc52e81e7.pn
 import earthHorizonBg from 'figma:asset/af3c6efc6ea179431e93dd83377ab1f5e7f65967.png';
 import getStartedContent from 'figma:asset/9389c6bf1d37120b432ba486610aca23b7f21ac4.png';
 import heroBgImage from 'figma:asset/b4ea384d8eb8e231c5607c87c40b03297346549d.png';
+import card1 from '../assets/cards/card1.png';
+import card2 from '../assets/cards/card2.png';
+import card3 from '../assets/cards/card3.png';
+import card4 from '../assets/cards/card4.png';
+import card5 from '../assets/cards/card5.png';
 
 export function OpenPlatform() {
   return (
@@ -208,7 +213,7 @@ export function OpenPlatform() {
 
             {/* Right Column - Euro Coin Image */}
             <div className="hidden lg:flex items-center justify-center px-8 lg:px-16">
-              <div className="relative w-full max-w-xs lg:max-w-sm">
+              <div className="relative" style={{ maxWidth: 'clamp(250px, 30vw, 350px)', width: 'auto' }}>
                 {/* Glow effect behind coin */}
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-amber-500/20 to-orange-500/20 blur-3xl rounded-full scale-110" />
                 
@@ -216,11 +221,14 @@ export function OpenPlatform() {
                 <img 
                   src={euroCoinGold} 
                   alt="Euro Coin" 
-                  className="relative z-10 w-full h-auto drop-shadow-2xl"
+                  className="relative z-10 drop-shadow-2xl"
                   style={{
-                    maxWidth: '100%',
+                    width: '100%',
                     height: 'auto',
-                    maxHeight: 'clamp(300px, 40vh, 400px)'
+                    maxWidth: 'clamp(250px, 30vw, 350px)',
+                    maxHeight: 'clamp(300px, 40vh, 400px)',
+                    objectFit: 'contain',
+                    display: 'block'
                   }}
                 />
               </div>
@@ -229,25 +237,83 @@ export function OpenPlatform() {
         </div>
       </section>
 
-      {/* For Digital Money Section */}
-      <section className="relative w-full py-6 md:py-8 lg:py-10 overflow-hidden" style={{ backgroundColor: '#000' }}>
-        {/* Background Pattern */}
-        <img 
-          src={newBgPattern} 
-          alt="Background Pattern" 
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        
-        <div className="relative z-10 flex items-center justify-center px-4 sm:px-6 md:px-8">
-          <img 
-            src={forDigitalMoney} 
-            alt="For Digital Money" 
-            className="w-full h-auto"
-            style={{
-              maxWidth: 'clamp(280px, 85vw, 600px)',
-              height: 'auto'
-            }}
-          />
+      {/* A New Standard for Digital Money Section */}
+      <section className="relative py-16 md:py-24 bg-[#0a0e27] overflow-hidden" style={{ paddingTop: 'clamp(4rem, 8vw, 6rem)', paddingBottom: 'clamp(4rem, 8vw, 6rem)' }}>
+        <div className="relative w-full px-4 md:px-8">
+          <div className="w-full mx-auto">
+            {/* Badge */}
+            <div className="flex flex-col items-center justify-center mb-8 md:mb-12">
+              <div className="inline-block" style={{ marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)', marginLeft: 'clamp(1rem, 3vw, 2rem)', marginRight: 'clamp(1rem, 3vw, 2rem)' }}>
+                <span 
+                  className="rounded-full text-white tracking-wide"
+                  style={{
+                    fontFamily: "'ibrand'",
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    backdropFilter: 'blur(10px)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+                    fontSize: 'clamp(0.875rem, 2vw, 1.125rem)',
+                    padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem)',
+                    display: 'inline-block'
+                  }}
+                >
+                  Redefining Value in the Digital Age
+                </span>
+              </div>
+            </div>
+
+            {/* Main Heading */}
+            <div className="flex flex-col items-center justify-center mb-6 md:mb-8">
+              <h2 
+                className="text-center text-white px-4"
+                style={{ 
+                  fontFamily: "'ibrand'",
+                  fontSize: 'clamp(2rem, 6vw, 4rem)',
+                  fontWeight: '800',
+                  letterSpacing: '-0.02em',
+                  marginBottom: 'clamp(0.75rem, 2vw, 1rem)'
+                }}
+              >
+                A New Standard for Digital Money
+              </h2>
+              <p 
+                className="text-white/70 text-center px-4"
+                style={{
+                  fontFamily: 'sans-serif',
+                  fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
+                  lineHeight: '1.6',
+                  marginBottom: 'clamp(2rem, 4vw, 3rem)'
+                }}
+              >
+                Digital money is evolving—and this new standard sets the pace.
+              </p>
+            </div>
+
+            {/* Cards Grid - Two per line */}
+            <div className="flex justify-center w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12" style={{ maxWidth: 'clamp(1100px, 90vw, 1600px)', width: '100%' }}>
+                <div className="w-full flex justify-center">
+                  <img src={card1} alt="Instant Minting - No More Pre-Minting Bottlenecks" className="h-auto" style={{ maxWidth: 'clamp(500px, 52vw, 750px)', objectFit: 'contain', width: 'auto' }} />
+                </div>
+
+                <div className="w-full flex justify-center">
+                  <img src={card2} alt="True 1:1 Fiat Backing, Always Redeemable" className="h-auto" style={{ maxWidth: 'clamp(500px, 52vw, 750px)', objectFit: 'contain', width: 'auto' }} />
+                </div>
+
+                <div className="w-full flex justify-center">
+                  <img src={card3} alt="Card 3" className="h-auto" style={{ maxWidth: 'clamp(500px, 52vw, 750px)', objectFit: 'contain', width: 'auto' }} />
+                </div>
+
+                <div className="w-full flex justify-center">
+                  <img src={card4} alt="Card 4" className="h-auto" style={{ maxWidth: 'clamp(500px, 52vw, 750px)', objectFit: 'contain', width: 'auto' }} />
+                </div>
+
+                <div className="w-full md:col-span-2 flex justify-center">
+                  <img src={card5} alt="Card 5" className="h-auto" style={{ maxWidth: 'clamp(500px, 52vw, 750px)', objectFit: 'contain', width: 'auto' }} />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -266,7 +332,7 @@ export function OpenPlatform() {
             alt="With You Banner" 
             className="w-full h-auto"
             style={{
-              maxWidth: 'clamp(280px, 85vw, 600px)',
+              maxWidth: 'clamp(400px, 90vw, 1200px)',
               height: 'auto'
             }}
           />

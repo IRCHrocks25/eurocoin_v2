@@ -47,7 +47,7 @@ export function EnterpriseSection() {
             </span>
           </div>
           <div className="w-full flex flex-col items-center">
-            <h2 
+          <h2 
               className="text-white bg-gradient-to-r from-white via-cyan-100 to-blue-100 bg-clip-text text-transparent text-center"
               style={{ 
                 fontFamily: 'ibrand, sans-serif',
@@ -56,10 +56,10 @@ export function EnterpriseSection() {
                 paddingRight: '1rem',
                 width: '100%'
               }}
-            >
-              Built and Audited for Enterprise-Scale Transactions
-            </h2>
-            <p 
+          >
+            Built and Audited for Enterprise-Scale Transactions
+          </h2>
+          <p 
               className="text-white/60 max-w-2xl text-center"
               style={{ 
                 fontFamily: 'ibrand, sans-serif',
@@ -70,9 +70,9 @@ export function EnterpriseSection() {
                 paddingRight: '1rem',
                 width: '100%'
               }}
-            >
-              The numbers that matter. Real performance, audited results.
-            </p>
+          >
+            The numbers that matter. Real performance, audited results.
+          </p>
           </div>
         </div>
 

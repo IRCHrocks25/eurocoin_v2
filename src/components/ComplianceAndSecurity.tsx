@@ -9,7 +9,6 @@ import React from 'react';
 
 export function ComplianceAndSecurity() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
-  const [isExpanded, setIsExpanded] = useState(false);
 
   const accordionItems = [
     {
@@ -96,17 +95,18 @@ export function ComplianceAndSecurity() {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#020219]/70 via-[#020219]/50 to-[#020219]/80 pointer-events-none"></div>
 
-        <div className="w-full flex justify-center relative z-10">
+        <div className="w-full flex justify-center relative z-10" style={{ marginTop: 'clamp(-2rem, -4vw, -1rem)' }}>
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center" style={{ width: '100%' }}>
           {/* Badge */}
-          <div className="inline-flex items-center px-4 sm:px-5 py-2 rounded-full" style={{
+          <div className="inline-flex items-center rounded-full" style={{
             background: 'rgba(255, 255, 255, 0.05)',
             border: '1px solid rgba(255, 255, 255, 0.1)',
-            marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)'
+            marginBottom: 'clamp(0.5rem, 1.5vw, 1rem)',
+            padding: 'clamp(9px, 2.25vw, 14px) clamp(18px, 3.75vw, 28px)'
           }}>
             <span style={{
               fontFamily: 'Manrope, sans-serif',
-              fontSize: 'clamp(14px, 3vw, 20px)',
+              fontSize: 'clamp(14px, 3.5vw, 22px)',
               fontWeight: '700',
               background: 'linear-gradient(90deg, #94BEFC 0%, #FFFFFF 100%)',
               WebkitBackgroundClip: 'text',
@@ -164,29 +164,6 @@ export function ComplianceAndSecurity() {
             Eurocoin isn't just another digital currency — it's the first Euro-native stablecoin built from the ground up to meet European regulatory standards. With full MiCA compliance, institutional-grade security, and transparent reserve management, Eurocoin provides the trust and protection that users, businesses, and institutions demand in the digital economy.
           </p>
 
-          {/* Expand/Collapse Button */}
-          <button
-            className="inline-flex items-center text-sm font-medium text-blue-500 hover:text-blue-700 transition-colors"
-            style={{ 
-              marginBottom: '0', 
-              marginTop: '0',
-              fontSize: 'clamp(13px, 2vw, 16px)',
-              padding: '0.5rem 1rem'
-            }}
-            onClick={() => setIsExpanded(!isExpanded)}
-          >
-            {isExpanded ? (
-              <>
-                <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Show Less
-              </>
-            ) : (
-              <>
-                <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                Show More
-              </>
-            )}
-          </button>
           </div>
         </div>
       </section>
