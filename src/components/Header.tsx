@@ -23,7 +23,7 @@ export function Header() {
           }
         }
       `}} />
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0e27]/90 backdrop-blur-xl" style={{ paddingTop: 'clamp(0.25rem, 0.75vw, 0.5rem)' }}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0e27]/90 backdrop-blur-xl" style={{ paddingTop: 'clamp(0.25rem, 0.75vw, 0.5rem)', paddingBottom: 'clamp(0.5rem, 1.5vw, 1rem)' }}>
       <div className="w-full px-4 md:px-8 pt-4 pb-3 md:pt-5 md:pb-4">
         <div className="flex items-center justify-between md:justify-center md:gap-16">
           {/* Logo */}

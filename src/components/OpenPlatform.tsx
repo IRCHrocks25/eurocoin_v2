@@ -354,7 +354,7 @@ export function OpenPlatform() {
             alt="How Eurocoin Works" 
             className="w-full h-auto"
             style={{
-              maxWidth: 'clamp(280px, 85vw, 600px)',
+              maxWidth: 'clamp(320px, 90vw, 700px)',
               height: 'auto'
             }}
           />
@@ -362,7 +362,7 @@ export function OpenPlatform() {
       </section>
 
       {/* Why Eurocoin Section */}
-      <section className="relative w-full py-12 md:py-16 lg:py-20 overflow-hidden flex items-center justify-center" style={{ backgroundColor: 'transparent' }}>
+      <section className="relative w-full overflow-hidden flex items-center justify-center" style={{ backgroundColor: 'transparent', paddingTop: 'clamp(3rem, 6vw, 5rem)', paddingBottom: 'clamp(3rem, 6vw, 5rem)' }}>
         {/* Background Pattern */}
         <img 
           src={newBgPattern} 
@@ -373,8 +373,8 @@ export function OpenPlatform() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             {/* Left Column - Euro Coin Image */}
-            <div className="flex items-center justify-center lg:justify-start order-2 lg:order-1" style={{ paddingTop: 'clamp(2rem, 4vw, 3rem)', paddingBottom: 'clamp(2rem, 4vw, 3rem)' }}>
-              <div className="relative w-full flex justify-center lg:justify-start" style={{ maxWidth: 'clamp(200px, 35vw, 320px)' }}>
+            <div className="flex items-center justify-center lg:justify-start order-2 lg:order-1" style={{ paddingTop: 'clamp(2rem, 4vw, 3rem)', paddingBottom: 'clamp(2rem, 4vw, 3rem)', paddingLeft: 'clamp(3rem, 8vw, 6rem)' }}>
+              <div className="relative w-full flex justify-center lg:justify-start" style={{ maxWidth: 'clamp(280px, 45vw, 450px)' }}>
                 {/* Glow effect behind coin */}
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-amber-500/20 to-orange-500/20 blur-3xl rounded-full scale-110" style={{ width: '100%', height: '100%' }} />
                 
@@ -386,7 +386,7 @@ export function OpenPlatform() {
                   style={{
                     maxWidth: '100%',
                     height: 'auto',
-                    maxHeight: 'clamp(250px, 35vh, 350px)',
+                    maxHeight: 'clamp(340px, 45vh, 480px)',
                     objectFit: 'contain'
                   }}
                 />
@@ -398,7 +398,7 @@ export function OpenPlatform() {
               {/* Section Title */}
               <h2 className="text-white mb-6 md:mb-8 lg:mb-10" style={{ 
                 fontFamily: 'ibrand, sans-serif',
-                fontSize: 'clamp(1.75rem, 5vw, 2.5rem)',
+                fontSize: 'clamp(2rem, 6vw, 3rem)',
                 lineHeight: '1.2',
                 fontWeight: '600',
                 marginBottom: 'clamp(1.5rem, 4vw, 2.5rem)'
@@ -412,7 +412,7 @@ export function OpenPlatform() {
                 <div style={{ marginBottom: 'clamp(1.25rem, 3vw, 1.75rem)' }}>
                   <h3 className="text-cyan-400 mb-2 md:mb-3" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(1.125rem, 3vw, 1.5rem)',
+                    fontSize: 'clamp(1.25rem, 3.5vw, 1.75rem)',
                     fontWeight: '600',
                     marginBottom: 'clamp(0.75rem, 2vw, 1rem)'
                   }}>
@@ -420,7 +420,7 @@ export function OpenPlatform() {
                   </h3>
                   <p className="text-white/70" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(0.875rem, 2vw, 1.0625rem)',
+                    fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
                     lineHeight: '1.6',
                     marginBottom: '0'
                   }}>
@@ -432,7 +432,7 @@ export function OpenPlatform() {
                 <div style={{ marginBottom: 'clamp(1.25rem, 3vw, 1.75rem)' }}>
                   <h3 className="text-cyan-400 mb-2 md:mb-3" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(1.125rem, 3vw, 1.5rem)',
+                    fontSize: 'clamp(1.25rem, 3.5vw, 1.75rem)',
                     fontWeight: '600',
                     marginBottom: 'clamp(0.75rem, 2vw, 1rem)'
                   }}>
@@ -440,7 +440,7 @@ export function OpenPlatform() {
                   </h3>
                   <p className="text-white/70" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(0.875rem, 2vw, 1.0625rem)',
+                    fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
                     lineHeight: '1.6',
                     marginBottom: '0'
                   }}>
@@ -452,7 +452,7 @@ export function OpenPlatform() {
                 <div>
                   <h3 className="text-cyan-400 mb-2 md:mb-3" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(1.125rem, 3vw, 1.5rem)',
+                    fontSize: 'clamp(1.25rem, 3.5vw, 1.75rem)',
                     fontWeight: '600',
                     marginBottom: 'clamp(0.75rem, 2vw, 1rem)'
                   }}>
@@ -460,7 +460,7 @@ export function OpenPlatform() {
                   </h3>
                   <p className="text-white/70" style={{ 
                     fontFamily: 'ibrand, sans-serif',
-                    fontSize: 'clamp(0.875rem, 2vw, 1.0625rem)',
+                    fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
                     lineHeight: '1.6',
                     marginBottom: '0'
                   }}>
